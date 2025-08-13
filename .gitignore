@@ -1,0 +1,17 @@
+.DS_Store
+.vscode
+.vs
+.vsconfig
+Library
+Logs
+Temp
+UserSettings
+obj
+bin
+Binaries
+examples/SampleProj/Assembly-CSharp-Editor.csproj
+examples/SampleProj/Assembly-CSharp.csproj
+examples/SampleProj/SampleProj.sln
+examples/SampleProj2/Assembly-CSharp-Editor.csproj
+examples/SampleProj2/Assembly-CSharp.csproj
+examples/SampleProj2/SampleProj2.sln

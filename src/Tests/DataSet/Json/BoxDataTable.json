@@ -1,0 +1,35 @@
+{
+  "$type": "Tests.RefId.BoxDataTable, xpTURN.TableSet.ForTests",
+  "Map": {
+    "2100001": {
+      "Id": 2100001,
+      "IdAlias": "box_1001",
+      "NameRefId": 0,
+      "NameRefIdAlias": "box_name_1001",
+      "List": [
+        {
+          "Slot": 1,
+          "ItemRefId": 0,
+          "ItemRefIdAlias": "item_1001"
+        }
+      ]
+    },
+    "2100002": {
+      "Id": 2100002,
+      "IdAlias": "box_1002",
+      "NameRefId": 0,
+      "NameRefIdAlias": "box_name_1002",
+      "List": [
+        {
+          "Slot": 99,
+          "ItemRefId": 0,
+          "ItemRefIdAlias": "item_1002"
+        }
+      ]
+    }
+  },
+  "MetaNestedData": {
+    "MapIdOffset": {},
+    "MapAliasOffset": {}
+  }
+}

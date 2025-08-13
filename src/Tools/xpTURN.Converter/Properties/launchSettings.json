@@ -1,0 +1,9 @@
+{
+  "profiles": {
+    "xpTURN.Converter": {
+      "commandName": "Project",
+      "commandLineArgs": "--input=\"../../../Samples/DataSet/Sample1\" --output=\"../../../Samples/DataSet/Sample1/[Result]\" --namespace=\"Samples\" --tableset=\"Sample1TableSet\"",
+      "workingDirectory": ""
+    }
+  }
+}

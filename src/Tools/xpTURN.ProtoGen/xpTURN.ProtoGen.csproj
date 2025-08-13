@@ -1,0 +1,41 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>Exe</OutputType>
+    <TargetFrameworks>net8.0</TargetFrameworks>
+    <LangVersion>9.0</LangVersion>
+    <ImplicitUsings>disable</ImplicitUsings>
+    <Nullable>disable</Nullable>
+    <AllowUnsafeBlocks>True</AllowUnsafeBlocks>
+    <BaseOutputPath>..\..\Binaries\</BaseOutputPath>
+    <Copyright>Copyright 2025 xpTURN. All rights reserved.</Copyright>
+    <Authors>DongHun Jung</Authors>
+    <Version>1.0.0</Version>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="CommandLineParser" Version="2.9.1" />
+    <PackageReference Include="System.CodeDom" Version="9.0.6" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\..\Libs\protobuf-net\protobuf-net.Reflection\protobuf-net.Reflection.csproj" />
+    <ProjectReference Include="..\..\Libs\xpTURN.Common\xpTURN.Common.csproj" />
+    <ProjectReference Include="..\..\Libs\xpTURN.Protobuf\xpTURN.Protobuf.csproj" />
+    <ProjectReference Include="..\..\Libs\xpTURN.MegaData\xpTURN.MegaData.csproj" />
+    <ProjectReference Include="..\..\Libs\xpTURN.Tool.Common\xpTURN.Tool.Common.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Include="../../../LICENSE.md">
+      <Pack>true</Pack>
+      <PackagePath></PackagePath>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="../../../doc/NOTICE.md">
+      <Pack>true</Pack>
+      <PackagePath></PackagePath>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+  </ItemGroup>
+</Project>

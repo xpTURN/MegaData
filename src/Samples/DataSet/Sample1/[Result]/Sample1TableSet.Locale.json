@@ -1,0 +1,864 @@
+{
+  "$type": "Samples.Sample1TableSet, xpTURN.TableSet.Samples",
+  "Header": {
+    "Space": "Samples",
+    "Name": "Sample1TableSet",
+    "Subset": "Locale",
+    "MetaHash": "kYMPTU+UnnSO+7GIKHSS7w==",
+    "DataHash": "pLGkl9lH9cmzp7HC9DBa5g=="
+  },
+  "MetaDataTable": {
+    "MapAliasData": {
+      "box_0001": {
+        "Id": 2000001,
+        "TableId": 1
+      },
+      "box_0002": {
+        "Id": 2000002,
+        "TableId": 1
+      },
+      "box_0003": {
+        "Id": 2000003,
+        "TableId": 1
+      },
+      "box_0004": {
+        "Id": 2000004,
+        "TableId": 1
+      },
+      "box_0005": {
+        "Id": 2000005,
+        "TableId": 1
+      },
+      "box_0006": {
+        "Id": 2000006,
+        "TableId": 1
+      },
+      "box_0007": {
+        "Id": 2000007,
+        "TableId": 1
+      },
+      "box_0008": {
+        "Id": 2000008,
+        "TableId": 1
+      },
+      "box_0009": {
+        "Id": 2000009,
+        "TableId": 1
+      },
+      "box_0010": {
+        "Id": 2000010,
+        "TableId": 1
+      },
+      "box_0011": {
+        "Id": 2000011,
+        "TableId": 1
+      },
+      "box_0012": {
+        "Id": 2000012,
+        "TableId": 1
+      },
+      "box_0013": {
+        "Id": 2000013,
+        "TableId": 1
+      },
+      "box_0014": {
+        "Id": 2000014,
+        "TableId": 1
+      },
+      "box_0101": {
+        "Id": 2001001,
+        "TableId": 1
+      },
+      "box_0102": {
+        "Id": 2001002,
+        "TableId": 1
+      },
+      "box_0103": {
+        "Id": 2001003,
+        "TableId": 1
+      },
+      "box_0104": {
+        "Id": 2001004,
+        "TableId": 1
+      },
+      "box_0105": {
+        "Id": 2001005,
+        "TableId": 1
+      },
+      "box_0106": {
+        "Id": 2001006,
+        "TableId": 1
+      },
+      "box_0107": {
+        "Id": 2001007,
+        "TableId": 1
+      },
+      "box_0108": {
+        "Id": 2001008,
+        "TableId": 1
+      },
+      "box_0109": {
+        "Id": 2001009,
+        "TableId": 1
+      },
+      "box_0110": {
+        "Id": 2001010,
+        "TableId": 1
+      },
+      "box_0111": {
+        "Id": 2001011,
+        "TableId": 1
+      },
+      "box_0112": {
+        "Id": 2001012,
+        "TableId": 1
+      },
+      "box_0113": {
+        "Id": 2001013,
+        "TableId": 1
+      },
+      "box_0114": {
+        "Id": 2001014,
+        "TableId": 1
+      },
+      "ids_f01": {
+        "Id": 10001,
+        "TableId": 2
+      },
+      "ids_f02": {
+        "Id": 10002,
+        "TableId": 2
+      },
+      "ids_f03": {
+        "Id": 10003,
+        "TableId": 2
+      },
+      "ids_f04": {
+        "Id": 10004,
+        "TableId": 2
+      },
+      "ids_f05": {
+        "Id": 10005,
+        "TableId": 2
+      },
+      "ids_f06": {
+        "Id": 10006,
+        "TableId": 2
+      },
+      "dice_box_0001": {
+        "Id": 3000001,
+        "TableId": 3
+      },
+      "dice_box_0002": {
+        "Id": 3000002,
+        "TableId": 3
+      },
+      "dice_box_0003": {
+        "Id": 3000003,
+        "TableId": 3
+      },
+      "dice_box_0004": {
+        "Id": 3000004,
+        "TableId": 3
+      },
+      "posion_0001": {
+        "Id": 100001,
+        "TableId": 4
+      },
+      "posion_0002": {
+        "Id": 100002,
+        "TableId": 4
+      },
+      "posion_0003": {
+        "Id": 100003,
+        "TableId": 4
+      },
+      "posion_0004": {
+        "Id": 100004,
+        "TableId": 4
+      },
+      "equip_0001": {
+        "Id": 100005,
+        "TableId": 4
+      },
+      "equip_0002": {
+        "Id": 100006,
+        "TableId": 4
+      },
+      "equip_0003": {
+        "Id": 100007,
+        "TableId": 4
+      },
+      "equip_0004": {
+        "Id": 100008,
+        "TableId": 4
+      },
+      "equip_0005": {
+        "Id": 100009,
+        "TableId": 4
+      },
+      "vehicle_0001": {
+        "Id": 100010,
+        "TableId": 4
+      },
+      "vehicle_0002": {
+        "Id": 100011,
+        "TableId": 4
+      },
+      "vehicle_0003": {
+        "Id": 100012,
+        "TableId": 4
+      },
+      "vehicle_0004": {
+        "Id": 100013,
+        "TableId": 4
+      },
+      "vehicle_0005": {
+        "Id": 100014,
+        "TableId": 4
+      },
+      "pawn_mark_one": {
+        "Id": 1808777167,
+        "TableId": 5
+      },
+      "pawn_mark_two": {
+        "Id": 6927192,
+        "TableId": 5
+      },
+      "pawn_mark_three": {
+        "Id": 1476745763,
+        "TableId": 5
+      },
+      "pawn_mark_four": {
+        "Id": 1370609903,
+        "TableId": 5
+      },
+      "box_name_0001": {
+        "Id": -306147680,
+        "TableId": 5
+      },
+      "box_name_0002": {
+        "Id": 1959386906,
+        "TableId": 5
+      },
+      "box_name_0003": {
+        "Id": 63893388,
+        "TableId": 5
+      },
+      "box_name_0004": {
+        "Id": -1649771985,
+        "TableId": 5
+      },
+      "box_name_0005": {
+        "Id": -357741895,
+        "TableId": 5
+      },
+      "box_name_0006": {
+        "Id": 1940134659,
+        "TableId": 5
+      },
+      "box_name_0007": {
+        "Id": 77802389,
+        "TableId": 5
+      },
+      "box_name_0008": {
+        "Id": -1810090492,
+        "TableId": 5
+      },
+      "box_name_0009": {
+        "Id": -484768110,
+        "TableId": 5
+      },
+      "box_name_0010": {
+        "Id": -2082697353,
+        "TableId": 5
+      },
+      "box_name_0011": {
+        "Id": -186925087,
+        "TableId": 5
+      },
+      "box_name_0012": {
+        "Id": 1842540123,
+        "TableId": 5
+      },
+      "box_name_0013": {
+        "Id": 450223821,
+        "TableId": 5
+      },
+      "box_name_0014": {
+        "Id": -2068755602,
+        "TableId": 5
+      },
+      "posion_name_0001": {
+        "Id": -262434395,
+        "TableId": 5
+      },
+      "posion_name_0002": {
+        "Id": 1767030815,
+        "TableId": 5
+      },
+      "posion_name_0003": {
+        "Id": 508948617,
+        "TableId": 5
+      },
+      "posion_name_0004": {
+        "Id": -2144246486,
+        "TableId": 5
+      },
+      "equip_name_0001": {
+        "Id": -1355512135,
+        "TableId": 5
+      },
+      "equip_name_0002": {
+        "Id": 910022403,
+        "TableId": 5
+      },
+      "equip_name_0003": {
+        "Id": 1094379413,
+        "TableId": 5
+      },
+      "equip_name_0004": {
+        "Id": -547458506,
+        "TableId": 5
+      },
+      "equip_name_0005": {
+        "Id": -1470545248,
+        "TableId": 5
+      },
+      "vehicle_name_0001": {
+        "Id": -879399999,
+        "TableId": 5
+      },
+      "vehicle_name_0002": {
+        "Id": 1385970299,
+        "TableId": 5
+      },
+      "vehicle_name_0003": {
+        "Id": 630917869,
+        "TableId": 5
+      },
+      "vehicle_name_0004": {
+        "Id": -1140875442,
+        "TableId": 5
+      },
+      "vehicle_name_0005": {
+        "Id": -856117288,
+        "TableId": 5
+      }
+    },
+    "MapMetaData": {
+      "LocaleDataTable": {
+        "Name": "LocaleDataTable",
+        "Offset": 2268
+      },
+      "TextDataTable": {
+        "Name": "TextDataTable",
+        "Offset": 2289
+      },
+      "TranslatedDataTable": {
+        "Name": "TranslatedDataTable",
+        "Offset": 2294
+      }
+    }
+  },
+  "Tables": {
+    "LocaleDataTable": {
+      "$type": "Samples.LocaleDataTable, xpTURN.TableSet.Samples",
+      "MetaNestedData": {
+        "MapIdOffset": {
+          "1042": 696,
+          "1033": 1829
+        },
+        "MapAliasOffset": {},
+        "ListOnDemandData": [
+          {
+            "$type": "Samples.TextDataTable, xpTURN.TableSet.Samples",
+            "Id": 1042,
+            "MetaNestedData": {
+              "MapIdOffset": {
+                "1808777167": 0,
+                "6927192": 21,
+                "1476745763": 35,
+                "1370609903": 50,
+                "-306147680": 71,
+                "1959386906": 99,
+                "63893388": 122,
+                "-1649771985": 144,
+                "-357741895": 172,
+                "1940134659": 200,
+                "77802389": 223,
+                "-1810090492": 245,
+                "-484768110": 273,
+                "-2082697353": 301,
+                "-186925087": 329,
+                "1842540123": 357,
+                "450223821": 380,
+                "-2068755602": 403,
+                "-262434395": 431,
+                "1767030815": 451,
+                "508948617": 466,
+                "-2144246486": 481,
+                "-1355512135": 501,
+                "910022403": 521,
+                "1094379413": 536,
+                "-547458506": 551,
+                "-1470545248": 571,
+                "-879399999": 591,
+                "1385970299": 614,
+                "630917869": 632,
+                "-1140875442": 650,
+                "-856117288": 673
+              },
+              "MapAliasOffset": {},
+              "ListOnDemandData": [
+                {
+                  "$type": "Samples.TextData, xpTURN.TableSet.Samples",
+                  "Id": 1808777167,
+                  "IdAlias": "",
+                  "Text": "아비가엘"
+                },
+                {
+                  "$type": "Samples.TextData, xpTURN.TableSet.Samples",
+                  "Id": 6927192,
+                  "IdAlias": "",
+                  "Text": "아델"
+                },
+                {
+                  "$type": "Samples.TextData, xpTURN.TableSet.Samples",
+                  "Id": 1476745763,
+                  "IdAlias": "",
+                  "Text": "벨라"
+                },
+                {
+                  "$type": "Samples.TextData, xpTURN.TableSet.Samples",
+                  "Id": 1370609903,
+                  "IdAlias": "",
+                  "Text": "카산드라"
+                },
+                {
+                  "$type": "Samples.TextData, xpTURN.TableSet.Samples",
+                  "Id": -306147680,
+                  "IdAlias": "",
+                  "Text": "보물상자01"
+                },
+                {
+                  "$type": "Samples.TextData, xpTURN.TableSet.Samples",
+                  "Id": 1959386906,
+                  "IdAlias": "",
+                  "Text": "보물상자02"
+                },
+                {
+                  "$type": "Samples.TextData, xpTURN.TableSet.Samples",
+                  "Id": 63893388,
+                  "IdAlias": "",
+                  "Text": "보물상자03"
+                },
+                {
+                  "$type": "Samples.TextData, xpTURN.TableSet.Samples",
+                  "Id": -1649771985,
+                  "IdAlias": "",
+                  "Text": "보물상자04"
+                },
+                {
+                  "$type": "Samples.TextData, xpTURN.TableSet.Samples",
+                  "Id": -357741895,
+                  "IdAlias": "",
+                  "Text": "보물상자05"
+                },
+                {
+                  "$type": "Samples.TextData, xpTURN.TableSet.Samples",
+                  "Id": 1940134659,
+                  "IdAlias": "",
+                  "Text": "보물상자06"
+                },
+                {
+                  "$type": "Samples.TextData, xpTURN.TableSet.Samples",
+                  "Id": 77802389,
+                  "IdAlias": "",
+                  "Text": "보물상자07"
+                },
+                {
+                  "$type": "Samples.TextData, xpTURN.TableSet.Samples",
+                  "Id": -1810090492,
+                  "IdAlias": "",
+                  "Text": "보물상자08"
+                },
+                {
+                  "$type": "Samples.TextData, xpTURN.TableSet.Samples",
+                  "Id": -484768110,
+                  "IdAlias": "",
+                  "Text": "보물상자09"
+                },
+                {
+                  "$type": "Samples.TextData, xpTURN.TableSet.Samples",
+                  "Id": -2082697353,
+                  "IdAlias": "",
+                  "Text": "보물상자10"
+                },
+                {
+                  "$type": "Samples.TextData, xpTURN.TableSet.Samples",
+                  "Id": -186925087,
+                  "IdAlias": "",
+                  "Text": "보물상자11"
+                },
+                {
+                  "$type": "Samples.TextData, xpTURN.TableSet.Samples",
+                  "Id": 1842540123,
+                  "IdAlias": "",
+                  "Text": "보물상자12"
+                },
+                {
+                  "$type": "Samples.TextData, xpTURN.TableSet.Samples",
+                  "Id": 450223821,
+                  "IdAlias": "",
+                  "Text": "보물상자13"
+                },
+                {
+                  "$type": "Samples.TextData, xpTURN.TableSet.Samples",
+                  "Id": -2068755602,
+                  "IdAlias": "",
+                  "Text": "보물상자14"
+                },
+                {
+                  "$type": "Samples.TextData, xpTURN.TableSet.Samples",
+                  "Id": -262434395,
+                  "IdAlias": "",
+                  "Text": "독약"
+                },
+                {
+                  "$type": "Samples.TextData, xpTURN.TableSet.Samples",
+                  "Id": 1767030815,
+                  "IdAlias": "",
+                  "Text": "독약"
+                },
+                {
+                  "$type": "Samples.TextData, xpTURN.TableSet.Samples",
+                  "Id": 508948617,
+                  "IdAlias": "",
+                  "Text": "독약"
+                },
+                {
+                  "$type": "Samples.TextData, xpTURN.TableSet.Samples",
+                  "Id": -2144246486,
+                  "IdAlias": "",
+                  "Text": "독약"
+                },
+                {
+                  "$type": "Samples.TextData, xpTURN.TableSet.Samples",
+                  "Id": -1355512135,
+                  "IdAlias": "",
+                  "Text": "갑옷"
+                },
+                {
+                  "$type": "Samples.TextData, xpTURN.TableSet.Samples",
+                  "Id": 910022403,
+                  "IdAlias": "",
+                  "Text": "갑옷"
+                },
+                {
+                  "$type": "Samples.TextData, xpTURN.TableSet.Samples",
+                  "Id": 1094379413,
+                  "IdAlias": "",
+                  "Text": "갑옷"
+                },
+                {
+                  "$type": "Samples.TextData, xpTURN.TableSet.Samples",
+                  "Id": -547458506,
+                  "IdAlias": "",
+                  "Text": "갑옷"
+                },
+                {
+                  "$type": "Samples.TextData, xpTURN.TableSet.Samples",
+                  "Id": -1470545248,
+                  "IdAlias": "",
+                  "Text": "갑옷"
+                },
+                {
+                  "$type": "Samples.TextData, xpTURN.TableSet.Samples",
+                  "Id": -879399999,
+                  "IdAlias": "",
+                  "Text": "독수리"
+                },
+                {
+                  "$type": "Samples.TextData, xpTURN.TableSet.Samples",
+                  "Id": 1385970299,
+                  "IdAlias": "",
+                  "Text": "독수리"
+                },
+                {
+                  "$type": "Samples.TextData, xpTURN.TableSet.Samples",
+                  "Id": 630917869,
+                  "IdAlias": "",
+                  "Text": "독수리"
+                },
+                {
+                  "$type": "Samples.TextData, xpTURN.TableSet.Samples",
+                  "Id": -1140875442,
+                  "IdAlias": "",
+                  "Text": "독수리"
+                },
+                {
+                  "$type": "Samples.TextData, xpTURN.TableSet.Samples",
+                  "Id": -856117288,
+                  "IdAlias": "",
+                  "Text": "독수리"
+                }
+              ]
+            }
+          },
+          {
+            "$type": "Samples.TextDataTable, xpTURN.TableSet.Samples",
+            "Id": 1033,
+            "MetaNestedData": {
+              "MapIdOffset": {
+                "1808777167": 1126,
+                "6927192": 1142,
+                "1476745763": 1155,
+                "1370609903": 1169,
+                "-306147680": 1187,
+                "1959386906": 1218,
+                "63893388": 1244,
+                "-1649771985": 1269,
+                "-357741895": 1300,
+                "1940134659": 1331,
+                "77802389": 1357,
+                "-1810090492": 1382,
+                "-484768110": 1413,
+                "-2082697353": 1444,
+                "-186925087": 1475,
+                "1842540123": 1506,
+                "450223821": 1532,
+                "-2068755602": 1558,
+                "-262434395": 1589,
+                "1767030815": 1609,
+                "508948617": 1624,
+                "-2144246486": 1639,
+                "-1355512135": 1659,
+                "910022403": 1678,
+                "1094379413": 1692,
+                "-547458506": 1706,
+                "-1470545248": 1725,
+                "-879399999": 1744,
+                "1385970299": 1763,
+                "630917869": 1777,
+                "-1140875442": 1791,
+                "-856117288": 1810
+              },
+              "MapAliasOffset": {},
+              "ListOnDemandData": [
+                {
+                  "$type": "Samples.TextData, xpTURN.TableSet.Samples",
+                  "Id": 1808777167,
+                  "IdAlias": "",
+                  "Text": "Abigail"
+                },
+                {
+                  "$type": "Samples.TextData, xpTURN.TableSet.Samples",
+                  "Id": 6927192,
+                  "IdAlias": "",
+                  "Text": "Adela"
+                },
+                {
+                  "$type": "Samples.TextData, xpTURN.TableSet.Samples",
+                  "Id": 1476745763,
+                  "IdAlias": "",
+                  "Text": "Bella"
+                },
+                {
+                  "$type": "Samples.TextData, xpTURN.TableSet.Samples",
+                  "Id": 1370609903,
+                  "IdAlias": "",
+                  "Text": "Cassandra"
+                },
+                {
+                  "$type": "Samples.TextData, xpTURN.TableSet.Samples",
+                  "Id": -306147680,
+                  "IdAlias": "",
+                  "Text": "Treasure Chest 01"
+                },
+                {
+                  "$type": "Samples.TextData, xpTURN.TableSet.Samples",
+                  "Id": 1959386906,
+                  "IdAlias": "",
+                  "Text": "Treasure Chest 02"
+                },
+                {
+                  "$type": "Samples.TextData, xpTURN.TableSet.Samples",
+                  "Id": 63893388,
+                  "IdAlias": "",
+                  "Text": "Treasure Chest 03"
+                },
+                {
+                  "$type": "Samples.TextData, xpTURN.TableSet.Samples",
+                  "Id": -1649771985,
+                  "IdAlias": "",
+                  "Text": "Treasure Chest 04"
+                },
+                {
+                  "$type": "Samples.TextData, xpTURN.TableSet.Samples",
+                  "Id": -357741895,
+                  "IdAlias": "",
+                  "Text": "Treasure Chest 05"
+                },
+                {
+                  "$type": "Samples.TextData, xpTURN.TableSet.Samples",
+                  "Id": 1940134659,
+                  "IdAlias": "",
+                  "Text": "Treasure Chest 06"
+                },
+                {
+                  "$type": "Samples.TextData, xpTURN.TableSet.Samples",
+                  "Id": 77802389,
+                  "IdAlias": "",
+                  "Text": "Treasure Chest 07"
+                },
+                {
+                  "$type": "Samples.TextData, xpTURN.TableSet.Samples",
+                  "Id": -1810090492,
+                  "IdAlias": "",
+                  "Text": "Treasure Chest 08"
+                },
+                {
+                  "$type": "Samples.TextData, xpTURN.TableSet.Samples",
+                  "Id": -484768110,
+                  "IdAlias": "",
+                  "Text": "Treasure Chest 09"
+                },
+                {
+                  "$type": "Samples.TextData, xpTURN.TableSet.Samples",
+                  "Id": -2082697353,
+                  "IdAlias": "",
+                  "Text": "Treasure Chest 10"
+                },
+                {
+                  "$type": "Samples.TextData, xpTURN.TableSet.Samples",
+                  "Id": -186925087,
+                  "IdAlias": "",
+                  "Text": "Treasure Chest 11"
+                },
+                {
+                  "$type": "Samples.TextData, xpTURN.TableSet.Samples",
+                  "Id": 1842540123,
+                  "IdAlias": "",
+                  "Text": "Treasure Chest 12"
+                },
+                {
+                  "$type": "Samples.TextData, xpTURN.TableSet.Samples",
+                  "Id": 450223821,
+                  "IdAlias": "",
+                  "Text": "Treasure Chest 13"
+                },
+                {
+                  "$type": "Samples.TextData, xpTURN.TableSet.Samples",
+                  "Id": -2068755602,
+                  "IdAlias": "",
+                  "Text": "Treasure Chest 14"
+                },
+                {
+                  "$type": "Samples.TextData, xpTURN.TableSet.Samples",
+                  "Id": -262434395,
+                  "IdAlias": "",
+                  "Text": "Posion"
+                },
+                {
+                  "$type": "Samples.TextData, xpTURN.TableSet.Samples",
+                  "Id": 1767030815,
+                  "IdAlias": "",
+                  "Text": "Posion"
+                },
+                {
+                  "$type": "Samples.TextData, xpTURN.TableSet.Samples",
+                  "Id": 508948617,
+                  "IdAlias": "",
+                  "Text": "Posion"
+                },
+                {
+                  "$type": "Samples.TextData, xpTURN.TableSet.Samples",
+                  "Id": -2144246486,
+                  "IdAlias": "",
+                  "Text": "Posion"
+                },
+                {
+                  "$type": "Samples.TextData, xpTURN.TableSet.Samples",
+                  "Id": -1355512135,
+                  "IdAlias": "",
+                  "Text": "Armor"
+                },
+                {
+                  "$type": "Samples.TextData, xpTURN.TableSet.Samples",
+                  "Id": 910022403,
+                  "IdAlias": "",
+                  "Text": "Armor"
+                },
+                {
+                  "$type": "Samples.TextData, xpTURN.TableSet.Samples",
+                  "Id": 1094379413,
+                  "IdAlias": "",
+                  "Text": "Armor"
+                },
+                {
+                  "$type": "Samples.TextData, xpTURN.TableSet.Samples",
+                  "Id": -547458506,
+                  "IdAlias": "",
+                  "Text": "Armor"
+                },
+                {
+                  "$type": "Samples.TextData, xpTURN.TableSet.Samples",
+                  "Id": -1470545248,
+                  "IdAlias": "",
+                  "Text": "Armor"
+                },
+                {
+                  "$type": "Samples.TextData, xpTURN.TableSet.Samples",
+                  "Id": -879399999,
+                  "IdAlias": "",
+                  "Text": "Eagle"
+                },
+                {
+                  "$type": "Samples.TextData, xpTURN.TableSet.Samples",
+                  "Id": 1385970299,
+                  "IdAlias": "",
+                  "Text": "Eagle"
+                },
+                {
+                  "$type": "Samples.TextData, xpTURN.TableSet.Samples",
+                  "Id": 630917869,
+                  "IdAlias": "",
+                  "Text": "Eagle"
+                },
+                {
+                  "$type": "Samples.TextData, xpTURN.TableSet.Samples",
+                  "Id": -1140875442,
+                  "IdAlias": "",
+                  "Text": "Eagle"
+                },
+                {
+                  "$type": "Samples.TextData, xpTURN.TableSet.Samples",
+                  "Id": -856117288,
+                  "IdAlias": "",
+                  "Text": "Eagle"
+                }
+              ]
+            }
+          }
+        ]
+      }
+    },
+    "TextDataTable": {
+      "$type": "Samples.TextDataTable, xpTURN.TableSet.Samples",
+      "Id": 0,
+      "MetaNestedData": {
+        "MapIdOffset": {},
+        "MapAliasOffset": {}
+      }
+    },
+    "TranslatedDataTable": {
+      "$type": "Samples.TranslatedDataTable, xpTURN.TableSet.Samples",
+      "Map": {},
+      "MetaNestedData": {
+        "MapIdOffset": {},
+        "MapAliasOffset": {}
+      }
+    }
+  }
+}

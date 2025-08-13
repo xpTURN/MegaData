@@ -1,0 +1,37 @@
+{
+  "$type": "Tests.RefId.TranslatedDataTable, xpTURN.TableSet.ForTests",
+  "Map": {
+    "1434249669": {
+      "Id": 1434249669,
+      "IdAlias": "box_name_1001",
+      "Map": {
+        "en-US": "Box 1001"
+      }
+    },
+    "-864700289": {
+      "Id": -864700289,
+      "IdAlias": "box_name_1002",
+      "Map": {
+        "en-US": "Box 1002"
+      }
+    },
+    "-2008260858": {
+      "Id": -2008260858,
+      "IdAlias": "item_name_1001",
+      "Map": {
+        "en-US": "Item 1001"
+      }
+    },
+    "289738428": {
+      "Id": 289738428,
+      "IdAlias": "item_name_1002",
+      "Map": {
+        "en-US": "Item 1002"
+      }
+    }
+  },
+  "MetaNestedData": {
+    "MapIdOffset": {},
+    "MapAliasOffset": {}
+  }
+}

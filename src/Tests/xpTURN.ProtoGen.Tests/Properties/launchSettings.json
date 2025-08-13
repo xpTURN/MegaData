@@ -1,0 +1,8 @@
+{
+  "profiles": {
+    "xpTURN.Proto.Tests": {
+      "commandName": "Project",
+      "workingDirectory": ".\\"
+    }
+  }
+}

@@ -1,7 +1,7 @@
-### xpTURN
+### xpTURN.MegaData
 #### Copyright (c) 2025 DongHun Jung.
 
-The source code of the xpTURN project is distributed under the Apache License, Version 2.0.
+The source code of the xpTURN.MegaData project is distributed under the Apache License, Version 2.0.
 Please refer to the following link for the full license text:
 * https://www.apache.org/licenses/LICENSE-2.0
 

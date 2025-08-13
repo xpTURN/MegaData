@@ -1,0 +1,742 @@
+{
+  "$type": "Tests.Multi1.Multi1TableSet, xpTURN.TableSet.ForTests",
+  "Header": {
+    "Space": "Tests.Multi1",
+    "Name": "Multi1TableSet",
+    "Subset": "Default",
+    "MetaHash": "OO9/CsorocoDP61C+ttiIg==",
+    "DataHash": "TSenzvbziHFJNzUkM+eQJg=="
+  },
+  "MetaDataTable": {
+    "MapAliasData": {
+      "ids_mark01": {
+        "Id": 10001,
+        "TableId": 3
+      },
+      "ids_mark03": {
+        "Id": 10003,
+        "TableId": 3
+      },
+      "ids_mark04": {
+        "Id": 10004,
+        "TableId": 3
+      }
+    },
+    "MapMetaData": {
+      "NumberDataTable": {
+        "Name": "NumberDataTable",
+        "Offset": 0
+      },
+      "NumbersDataTable": {
+        "Name": "NumbersDataTable",
+        "Offset": 146
+      },
+      "SampleDataTable": {
+        "Name": "SampleDataTable",
+        "Offset": 151
+      }
+    }
+  },
+  "Tables": {
+    "NumberDataTable": {
+      "$type": "Tests.Multi1.NumberDataTable, xpTURN.TableSet.ForTests",
+      "Map": {
+        "STAT_STR_BASE": {
+          "Id": 1,
+          "Value": 10
+        },
+        "STAT_AGI_BSSE": {
+          "Id": 2,
+          "Value": 12
+        },
+        "STAT_DEX_BASE": {
+          "Id": 3,
+          "Value": 14
+        },
+        "STAT_CON_BASE": {
+          "Id": 4,
+          "Value": 13
+        },
+        "STAT_INT_BASE": {
+          "Id": 5,
+          "Value": 16
+        },
+        "STAT_WIS_BASE": {
+          "Id": 6,
+          "Value": 11
+        },
+        "STAT_CHA_BASE": {
+          "Id": 7,
+          "Value": 17
+        },
+        "STAT_AUR_BASE": {
+          "Id": 8,
+          "Value": 18
+        },
+        "STAT_LCK_BASE": {
+          "Id": 9,
+          "Value": 19
+        },
+        "STAT_FAT_BASE": {
+          "Id": 10,
+          "Value": 20
+        },
+        "STAT_MGC_BASE": {
+          "Id": 11,
+          "Value": 21
+        },
+        "STAT_WIL_BASE": {
+          "Id": 12,
+          "Value": 22
+        },
+        "STAT_ESS_BASE": {
+          "Id": 13,
+          "Value": 23
+        },
+        "STAT_POW_BASE": {
+          "Id": 14,
+          "Value": 24
+        }
+      },
+      "MetaNestedData": {
+        "MapIdOffset": {},
+        "MapAliasOffset": {}
+      }
+    },
+    "NumbersDataTable": {
+      "$type": "Tests.Multi1.NumbersDataTable, xpTURN.TableSet.ForTests",
+      "Map": {},
+      "MetaNestedData": {
+        "MapIdOffset": {},
+        "MapAliasOffset": {}
+      }
+    },
+    "SampleDataTable": {
+      "$type": "Tests.Multi1.SampleDataTable, xpTURN.TableSet.ForTests",
+      "Map": {
+        "10001": {
+          "SampleId": 10001,
+          "SampleIdAlias": "",
+          "Alias_1": "help 01",
+          "Bytes_1": "",
+          "Int32_1": 1234,
+          "Int64_1": 123456789,
+          "UInt32_1": 4321,
+          "UInt64_1": 987654321,
+          "SInt32_1": 0,
+          "SInt64_1": 0,
+          "Fixed32_1": 0,
+          "Fixed64_1": 0,
+          "SFixed32_1": 5678,
+          "SFixed64_1": 56781234,
+          "Double_1": 1234.56789,
+          "Float_1": 1234.56,
+          "Boolean_1": true,
+          "Enum_1": 11,
+          "ListTextAlias_2": [
+            "kaha1",
+            "kaha2",
+            "kaha3"
+          ],
+          "ListBytes_2": [],
+          "ListInt32_2": [
+            1
+          ],
+          "ListInt64_2": [
+            2
+          ],
+          "ListUInt32_2": [
+            3
+          ],
+          "ListUInt64_2": [
+            4
+          ],
+          "ListSInt32_2": [],
+          "ListSInt64_2": [],
+          "ListFixed32_2": [],
+          "ListFixed64_2": [],
+          "ListSFixed32_2": [
+            5
+          ],
+          "ListSFixed64_2": [
+            6
+          ],
+          "ListDouble_2": [
+            77.7
+          ],
+          "ListFloat_2": [
+            88.8
+          ],
+          "ListBoolean_2": [
+            true
+          ],
+          "ListEnum_2": [
+            12
+          ],
+          "Float_3": 0.0,
+          "Boolean_3": false,
+          "Enum_3": 0,
+          "MapInfo_4": {
+            "20001": {
+              "InfoId": 20001,
+              "DateTime_1": "2023-10-12T00:00:00",
+              "TimeSpan_1": "23:59:59",
+              "Uri_1": "https://xpturn.com/",
+              "Guid_1": "a02ce092-0444-42a2-8fd7-530639716e7e",
+              "DateTime_2": [
+                "2024-10-12T00:00:00",
+                "2025-10-12T00:00:00"
+              ],
+              "TimeSpan_2": [
+                "23:59:59",
+                "22:58:58"
+              ],
+              "Uri_2": [
+                "https://xpturn.com/",
+                "https://www.google.com/"
+              ],
+              "Guid_2": [
+                "a02ce092-0444-42a2-8fd7-530639716e7e",
+                "fb7e945d-73a3-4fae-ab7f-5d923aa018de"
+              ]
+            },
+            "20002": {
+              "InfoId": 20002,
+              "DateTime_1": "2023-10-12T00:00:00",
+              "TimeSpan_1": "23:59:59",
+              "Uri_1": "https://xpturn.com/",
+              "Guid_1": "a02ce092-0444-42a2-8fd7-530639716e7e",
+              "DateTime_2": [
+                "2024-10-12T00:00:00",
+                "2025-10-12T00:00:00"
+              ],
+              "TimeSpan_2": [
+                "23:59:59",
+                "22:58:58"
+              ],
+              "Uri_2": [
+                "https://xpturn.com/",
+                "https://www.google.com/"
+              ],
+              "Guid_2": [
+                "a02ce092-0444-42a2-8fd7-530639716e7e",
+                "fb7e945d-73a3-4fae-ab7f-5d923aa018de"
+              ]
+            },
+            "20003": {
+              "InfoId": 20003,
+              "DateTime_1": "2023-10-12T00:00:00",
+              "TimeSpan_1": "23:59:59",
+              "Uri_1": "https://xpturn.com/",
+              "Guid_1": "a02ce092-0444-42a2-8fd7-530639716e7e",
+              "DateTime_2": [
+                "2024-10-12T00:00:00",
+                "2025-10-12T00:00:00"
+              ],
+              "TimeSpan_2": [
+                "23:59:59",
+                "22:58:58"
+              ],
+              "Uri_2": [
+                "https://xpturn.com/",
+                "https://www.google.com/"
+              ],
+              "Guid_2": [
+                "a02ce092-0444-42a2-8fd7-530639716e7e",
+                "fb7e945d-73a3-4fae-ab7f-5d923aa018de"
+              ]
+            },
+            "20004": {
+              "InfoId": 20004,
+              "DateTime_1": "2023-10-12T00:00:00",
+              "TimeSpan_1": "23:59:59",
+              "Uri_1": "https://xpturn.com/",
+              "Guid_1": "a02ce092-0444-42a2-8fd7-530639716e7e",
+              "DateTime_2": [
+                "2024-10-12T00:00:00",
+                "2025-10-12T00:00:00"
+              ],
+              "TimeSpan_2": [
+                "23:59:59",
+                "22:58:58"
+              ],
+              "Uri_2": [
+                "https://xpturn.com/",
+                "https://www.google.com/"
+              ],
+              "Guid_2": [
+                "a02ce092-0444-42a2-8fd7-530639716e7e",
+                "fb7e945d-73a3-4fae-ab7f-5d923aa018de"
+              ]
+            },
+            "20005": {
+              "InfoId": 20005,
+              "DateTime_1": "2023-10-12T00:00:00",
+              "TimeSpan_1": "23:59:59",
+              "Uri_1": "https://xpturn.com/",
+              "Guid_1": "a02ce092-0444-42a2-8fd7-530639716e7e",
+              "DateTime_2": [
+                "2024-10-12T00:00:00",
+                "2025-10-12T00:00:00"
+              ],
+              "TimeSpan_2": [
+                "23:59:59",
+                "22:58:58"
+              ],
+              "Uri_2": [
+                "https://xpturn.com/",
+                "https://www.google.com/"
+              ],
+              "Guid_2": [
+                "a02ce092-0444-42a2-8fd7-530639716e7e",
+                "fb7e945d-73a3-4fae-ab7f-5d923aa018de"
+              ]
+            },
+            "20006": {
+              "InfoId": 20006,
+              "DateTime_1": "2023-10-12T00:00:00",
+              "TimeSpan_1": "23:59:59",
+              "Uri_1": "https://xpturn.com/",
+              "Guid_1": "a02ce092-0444-42a2-8fd7-530639716e7e",
+              "DateTime_2": [
+                "2024-10-12T00:00:00",
+                "2025-10-12T00:00:00"
+              ],
+              "TimeSpan_2": [
+                "23:59:59",
+                "22:58:58"
+              ],
+              "Uri_2": [
+                "https://xpturn.com/",
+                "https://www.google.com/"
+              ],
+              "Guid_2": [
+                "a02ce092-0444-42a2-8fd7-530639716e7e",
+                "fb7e945d-73a3-4fae-ab7f-5d923aa018de"
+              ]
+            }
+          },
+          "MapInfo_5": {},
+          "Bytes_4": "",
+          "ListBytes_4": []
+        },
+        "10003": {
+          "SampleId": 10003,
+          "SampleIdAlias": "",
+          "Alias_1": "help 01",
+          "Bytes_1": "",
+          "Int32_1": 1234,
+          "Int64_1": 123456789,
+          "UInt32_1": 4321,
+          "UInt64_1": 987654321,
+          "SInt32_1": 0,
+          "SInt64_1": 0,
+          "Fixed32_1": 0,
+          "Fixed64_1": 0,
+          "SFixed32_1": 5678,
+          "SFixed64_1": 56781234,
+          "Double_1": 1234.56789,
+          "Float_1": 1234.56,
+          "Boolean_1": true,
+          "Enum_1": 11,
+          "ListTextAlias_2": [
+            "kaha1",
+            "kaha2",
+            "kaha3"
+          ],
+          "ListBytes_2": [],
+          "ListInt32_2": [
+            1
+          ],
+          "ListInt64_2": [
+            2
+          ],
+          "ListUInt32_2": [
+            3
+          ],
+          "ListUInt64_2": [
+            4
+          ],
+          "ListSInt32_2": [],
+          "ListSInt64_2": [],
+          "ListFixed32_2": [],
+          "ListFixed64_2": [],
+          "ListSFixed32_2": [
+            5
+          ],
+          "ListSFixed64_2": [
+            6
+          ],
+          "ListDouble_2": [
+            77.7
+          ],
+          "ListFloat_2": [
+            88.8
+          ],
+          "ListBoolean_2": [
+            true
+          ],
+          "ListEnum_2": [
+            12
+          ],
+          "Float_3": 0.0,
+          "Boolean_3": false,
+          "Enum_3": 0,
+          "MapInfo_4": {
+            "20013": {
+              "InfoId": 20013,
+              "DateTime_1": "2023-10-12T00:00:00",
+              "TimeSpan_1": "23:59:59",
+              "Uri_1": "https://xpturn.com/",
+              "Guid_1": "a02ce092-0444-42a2-8fd7-530639716e7e",
+              "DateTime_2": [
+                "2024-10-12T00:00:00",
+                "2025-10-12T00:00:00"
+              ],
+              "TimeSpan_2": [
+                "23:59:59",
+                "22:58:58"
+              ],
+              "Uri_2": [
+                "https://xpturn.com/",
+                "https://www.google.com/"
+              ],
+              "Guid_2": [
+                "a02ce092-0444-42a2-8fd7-530639716e7e",
+                "fb7e945d-73a3-4fae-ab7f-5d923aa018de"
+              ]
+            },
+            "20014": {
+              "InfoId": 20014,
+              "DateTime_1": "2023-10-12T00:00:00",
+              "TimeSpan_1": "23:59:59",
+              "Uri_1": "https://xpturn.com/",
+              "Guid_1": "a02ce092-0444-42a2-8fd7-530639716e7e",
+              "DateTime_2": [
+                "2024-10-12T00:00:00",
+                "2025-10-12T00:00:00"
+              ],
+              "TimeSpan_2": [
+                "23:59:59",
+                "22:58:58"
+              ],
+              "Uri_2": [
+                "https://xpturn.com/",
+                "https://www.google.com/"
+              ],
+              "Guid_2": [
+                "a02ce092-0444-42a2-8fd7-530639716e7e",
+                "fb7e945d-73a3-4fae-ab7f-5d923aa018de"
+              ]
+            },
+            "20015": {
+              "InfoId": 20015,
+              "DateTime_1": "2023-10-12T00:00:00",
+              "TimeSpan_1": "23:59:59",
+              "Uri_1": "https://xpturn.com/",
+              "Guid_1": "a02ce092-0444-42a2-8fd7-530639716e7e",
+              "DateTime_2": [
+                "2024-10-12T00:00:00",
+                "2025-10-12T00:00:00"
+              ],
+              "TimeSpan_2": [
+                "23:59:59",
+                "22:58:58"
+              ],
+              "Uri_2": [
+                "https://xpturn.com/",
+                "https://www.google.com/"
+              ],
+              "Guid_2": [
+                "a02ce092-0444-42a2-8fd7-530639716e7e",
+                "fb7e945d-73a3-4fae-ab7f-5d923aa018de"
+              ]
+            },
+            "20016": {
+              "InfoId": 20016,
+              "DateTime_1": "2023-10-12T00:00:00",
+              "TimeSpan_1": "23:59:59",
+              "Uri_1": "https://xpturn.com/",
+              "Guid_1": "a02ce092-0444-42a2-8fd7-530639716e7e",
+              "DateTime_2": [
+                "2024-10-12T00:00:00",
+                "2025-10-12T00:00:00"
+              ],
+              "TimeSpan_2": [
+                "23:59:59",
+                "22:58:58"
+              ],
+              "Uri_2": [
+                "https://xpturn.com/",
+                "https://www.google.com/"
+              ],
+              "Guid_2": [
+                "a02ce092-0444-42a2-8fd7-530639716e7e",
+                "fb7e945d-73a3-4fae-ab7f-5d923aa018de"
+              ]
+            },
+            "20017": {
+              "InfoId": 20017,
+              "DateTime_1": "2023-10-12T00:00:00",
+              "TimeSpan_1": "23:59:59",
+              "Uri_1": "https://xpturn.com/",
+              "Guid_1": "a02ce092-0444-42a2-8fd7-530639716e7e",
+              "DateTime_2": [
+                "2024-10-12T00:00:00",
+                "2025-10-12T00:00:00"
+              ],
+              "TimeSpan_2": [
+                "23:59:59",
+                "22:58:58"
+              ],
+              "Uri_2": [
+                "https://xpturn.com/",
+                "https://www.google.com/"
+              ],
+              "Guid_2": [
+                "a02ce092-0444-42a2-8fd7-530639716e7e",
+                "fb7e945d-73a3-4fae-ab7f-5d923aa018de"
+              ]
+            },
+            "20018": {
+              "InfoId": 20018,
+              "DateTime_1": "2023-10-12T00:00:00",
+              "TimeSpan_1": "23:59:59",
+              "Uri_1": "https://xpturn.com/",
+              "Guid_1": "a02ce092-0444-42a2-8fd7-530639716e7e",
+              "DateTime_2": [
+                "2024-10-12T00:00:00",
+                "2025-10-12T00:00:00"
+              ],
+              "TimeSpan_2": [
+                "23:59:59",
+                "22:58:58"
+              ],
+              "Uri_2": [
+                "https://xpturn.com/",
+                "https://www.google.com/"
+              ],
+              "Guid_2": [
+                "a02ce092-0444-42a2-8fd7-530639716e7e",
+                "fb7e945d-73a3-4fae-ab7f-5d923aa018de"
+              ]
+            }
+          },
+          "MapInfo_5": {},
+          "Bytes_4": "",
+          "ListBytes_4": []
+        },
+        "10004": {
+          "SampleId": 10004,
+          "SampleIdAlias": "",
+          "Alias_1": "help 02",
+          "Bytes_1": "",
+          "Int32_1": 23456,
+          "Int64_1": 234567890,
+          "UInt32_1": 3210,
+          "UInt64_1": 876543210,
+          "SInt32_1": 0,
+          "SInt64_1": 0,
+          "Fixed32_1": 0,
+          "Fixed64_1": 0,
+          "SFixed32_1": 6780,
+          "SFixed64_1": 67812340,
+          "Double_1": 2341.56789,
+          "Float_1": 2341.56,
+          "Boolean_1": false,
+          "Enum_1": 12,
+          "ListTextAlias_2": [
+            "kaha4",
+            "kaha5",
+            "kaha6"
+          ],
+          "ListBytes_2": [],
+          "ListInt32_2": [
+            1
+          ],
+          "ListInt64_2": [
+            2
+          ],
+          "ListUInt32_2": [
+            3
+          ],
+          "ListUInt64_2": [
+            4
+          ],
+          "ListSInt32_2": [],
+          "ListSInt64_2": [],
+          "ListFixed32_2": [],
+          "ListFixed64_2": [],
+          "ListSFixed32_2": [
+            5
+          ],
+          "ListSFixed64_2": [
+            6
+          ],
+          "ListDouble_2": [
+            77.7
+          ],
+          "ListFloat_2": [
+            88.8
+          ],
+          "ListBoolean_2": [
+            true
+          ],
+          "ListEnum_2": [
+            12
+          ],
+          "Float_3": 0.0,
+          "Boolean_3": false,
+          "Enum_3": 0,
+          "MapInfo_4": {
+            "20019": {
+              "InfoId": 20019,
+              "DateTime_1": "2023-10-12T00:00:00",
+              "TimeSpan_1": "23:59:59",
+              "Uri_1": "https://xpturn.com/",
+              "Guid_1": "a02ce092-0444-42a2-8fd7-530639716e7e",
+              "DateTime_2": [
+                "2024-10-12T00:00:00",
+                "2025-10-12T00:00:00"
+              ],
+              "TimeSpan_2": [
+                "23:59:59",
+                "22:58:58"
+              ],
+              "Uri_2": [
+                "https://xpturn.com/",
+                "https://www.google.com/"
+              ],
+              "Guid_2": [
+                "a02ce092-0444-42a2-8fd7-530639716e7e",
+                "fb7e945d-73a3-4fae-ab7f-5d923aa018de"
+              ]
+            },
+            "20020": {
+              "InfoId": 20020,
+              "DateTime_1": "2023-10-12T00:00:00",
+              "TimeSpan_1": "23:59:59",
+              "Uri_1": "https://xpturn.com/",
+              "Guid_1": "a02ce092-0444-42a2-8fd7-530639716e7e",
+              "DateTime_2": [
+                "2024-10-12T00:00:00",
+                "2025-10-12T00:00:00"
+              ],
+              "TimeSpan_2": [
+                "23:59:59",
+                "22:58:58"
+              ],
+              "Uri_2": [
+                "https://xpturn.com/",
+                "https://www.google.com/"
+              ],
+              "Guid_2": [
+                "a02ce092-0444-42a2-8fd7-530639716e7e",
+                "fb7e945d-73a3-4fae-ab7f-5d923aa018de"
+              ]
+            },
+            "20021": {
+              "InfoId": 20021,
+              "DateTime_1": "2023-10-12T00:00:00",
+              "TimeSpan_1": "23:59:59",
+              "Uri_1": "https://xpturn.com/",
+              "Guid_1": "a02ce092-0444-42a2-8fd7-530639716e7e",
+              "DateTime_2": [
+                "2024-10-12T00:00:00",
+                "2025-10-12T00:00:00"
+              ],
+              "TimeSpan_2": [
+                "23:59:59",
+                "22:58:58"
+              ],
+              "Uri_2": [
+                "https://xpturn.com/",
+                "https://www.google.com/"
+              ],
+              "Guid_2": [
+                "a02ce092-0444-42a2-8fd7-530639716e7e",
+                "fb7e945d-73a3-4fae-ab7f-5d923aa018de"
+              ]
+            },
+            "20022": {
+              "InfoId": 20022,
+              "DateTime_1": "2023-10-12T00:00:00",
+              "TimeSpan_1": "23:59:59",
+              "Uri_1": "https://xpturn.com/",
+              "Guid_1": "a02ce092-0444-42a2-8fd7-530639716e7e",
+              "DateTime_2": [
+                "2024-10-12T00:00:00",
+                "2025-10-12T00:00:00"
+              ],
+              "TimeSpan_2": [
+                "23:59:59",
+                "22:58:58"
+              ],
+              "Uri_2": [
+                "https://xpturn.com/",
+                "https://www.google.com/"
+              ],
+              "Guid_2": [
+                "a02ce092-0444-42a2-8fd7-530639716e7e",
+                "fb7e945d-73a3-4fae-ab7f-5d923aa018de"
+              ]
+            },
+            "20023": {
+              "InfoId": 20023,
+              "DateTime_1": "2023-10-12T00:00:00",
+              "TimeSpan_1": "23:59:59",
+              "Uri_1": "https://xpturn.com/",
+              "Guid_1": "a02ce092-0444-42a2-8fd7-530639716e7e",
+              "DateTime_2": [
+                "2024-10-12T00:00:00",
+                "2025-10-12T00:00:00"
+              ],
+              "TimeSpan_2": [
+                "23:59:59",
+                "22:58:58"
+              ],
+              "Uri_2": [
+                "https://xpturn.com/",
+                "https://www.google.com/"
+              ],
+              "Guid_2": [
+                "a02ce092-0444-42a2-8fd7-530639716e7e",
+                "fb7e945d-73a3-4fae-ab7f-5d923aa018de"
+              ]
+            },
+            "20024": {
+              "InfoId": 20024,
+              "DateTime_1": "2023-10-12T00:00:00",
+              "TimeSpan_1": "23:59:59",
+              "Uri_1": "https://xpturn.com/",
+              "Guid_1": "a02ce092-0444-42a2-8fd7-530639716e7e",
+              "DateTime_2": [
+                "2024-10-12T00:00:00",
+                "2025-10-12T00:00:00"
+              ],
+              "TimeSpan_2": [
+                "23:59:59",
+                "22:58:58"
+              ],
+              "Uri_2": [
+                "https://xpturn.com/",
+                "https://www.google.com/"
+              ],
+              "Guid_2": [
+                "a02ce092-0444-42a2-8fd7-530639716e7e",
+                "fb7e945d-73a3-4fae-ab7f-5d923aa018de"
+              ]
+            }
+          },
+          "MapInfo_5": {},
+          "Bytes_4": "",
+          "ListBytes_4": []
+        }
+      },
+      "MetaNestedData": {
+        "MapIdOffset": {},
+        "MapAliasOffset": {}
+      }
+    }
+  }
+}

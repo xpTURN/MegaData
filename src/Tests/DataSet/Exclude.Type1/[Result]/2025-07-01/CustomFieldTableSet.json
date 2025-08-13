@@ -1,0 +1,79 @@
+{
+  "$type": "Tests.CustomField.CustomFieldTableSet, xpTURN.TableSet.ForTests",
+  "Header": {
+    "Space": "Tests.CustomField",
+    "Name": "CustomFieldTableSet",
+    "Subset": "Default",
+    "MetaHash": "JXF/t3iKLdbiGpQYvdYm2Q==",
+    "DataHash": "wr3WU6AaExNHrT7RrnUUew=="
+  },
+  "MetaDataTable": {
+    "MapAliasData": {
+      "ids_mark01": {
+        "Id": 10001,
+        "TableId": 1
+      },
+      "ids_mark02": {
+        "Id": 10002,
+        "TableId": 1
+      },
+      "ids_mark06": {
+        "Id": 10006,
+        "TableId": 1
+      },
+      "ids_mark07": {
+        "Id": 10007,
+        "TableId": 1
+      }
+    },
+    "MapMetaData": {
+      "CustomFieldDataTable": {
+        "Name": "CustomFieldDataTable",
+        "Offset": 0
+      }
+    }
+  },
+  "Tables": {
+    "CustomFieldDataTable": {
+      "$type": "Tests.CustomField.CustomFieldDataTable, xpTURN.TableSet.ForTests",
+      "Map": {
+        "10001": {
+          "Id": 10001,
+          "IdAlias": "",
+          "DateTime_1": "2025-11-11T23:59:00",
+          "TimeSpan_1": "12:00:00",
+          "Guid_1": "ed24a078-5de4-4431-a697-0d1c74d0a353",
+          "Uri_1": "https://www.google.com/"
+        },
+        "10002": {
+          "Id": 10002,
+          "IdAlias": "",
+          "DateTime_1": "2025-11-11T23:59:00",
+          "TimeSpan_1": "12:00:00",
+          "Guid_1": "a64cbd5b-3a86-48a0-af63-f4936b43f4b0",
+          "Uri_1": "https://www.google.com/"
+        },
+        "10006": {
+          "Id": 10006,
+          "IdAlias": "",
+          "DateTime_1": "2025-11-11T23:59:00",
+          "TimeSpan_1": "12:00:00",
+          "Guid_1": "c7cbb2aa-3103-47d6-804a-f406f16f05b5",
+          "Uri_1": "https://www.google.com/"
+        },
+        "10007": {
+          "Id": 10007,
+          "IdAlias": "",
+          "DateTime_1": "2025-11-11T23:59:00",
+          "TimeSpan_1": "12:00:00",
+          "Guid_1": "508a5cd0-584a-412a-b1a0-9605cdd4a2c1",
+          "Uri_1": "https://www.google.com/"
+        }
+      },
+      "MetaNestedData": {
+        "MapIdOffset": {},
+        "MapAliasOffset": {}
+      }
+    }
+  }
+}

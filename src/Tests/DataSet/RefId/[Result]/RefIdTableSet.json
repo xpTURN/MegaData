@@ -1,0 +1,1244 @@
+{
+  "$type": "Tests.RefId.RefIdTableSet, xpTURN.TableSet.ForTests",
+  "Header": {
+    "Space": "Tests.RefId",
+    "Name": "RefIdTableSet",
+    "Subset": "Default",
+    "MetaHash": "g7T6MhJYFMMtuZBUVHODow==",
+    "DataHash": "aOYLpMM/4ctisBLO5uoiTw=="
+  },
+  "MetaDataTable": {
+    "MapAliasData": {
+      "box_0001": {
+        "Id": 2000001,
+        "TableId": 1
+      },
+      "box_0002": {
+        "Id": 2000002,
+        "TableId": 1
+      },
+      "box_0003": {
+        "Id": 2000003,
+        "TableId": 1
+      },
+      "box_0004": {
+        "Id": 2000004,
+        "TableId": 1
+      },
+      "box_0005": {
+        "Id": 2000005,
+        "TableId": 1
+      },
+      "box_0006": {
+        "Id": 2000006,
+        "TableId": 1
+      },
+      "box_0007": {
+        "Id": 2000007,
+        "TableId": 1
+      },
+      "box_0008": {
+        "Id": 2000008,
+        "TableId": 1
+      },
+      "box_0009": {
+        "Id": 2000009,
+        "TableId": 1
+      },
+      "box_0010": {
+        "Id": 2000010,
+        "TableId": 1
+      },
+      "box_0011": {
+        "Id": 2000011,
+        "TableId": 1
+      },
+      "box_0012": {
+        "Id": 2000012,
+        "TableId": 1
+      },
+      "box_0013": {
+        "Id": 2000013,
+        "TableId": 1
+      },
+      "box_0014": {
+        "Id": 2000014,
+        "TableId": 1
+      },
+      "dice_box_0001": {
+        "Id": 3000001,
+        "TableId": 2
+      },
+      "dice_box_0002": {
+        "Id": 3000002,
+        "TableId": 2
+      },
+      "dice_box_0003": {
+        "Id": 3000003,
+        "TableId": 2
+      },
+      "dice_box_0004": {
+        "Id": 3000004,
+        "TableId": 2
+      },
+      "posion_0001": {
+        "Id": 100001,
+        "TableId": 3
+      },
+      "posion_0002": {
+        "Id": 100002,
+        "TableId": 3
+      },
+      "posion_0003": {
+        "Id": 100003,
+        "TableId": 3
+      },
+      "posion_0004": {
+        "Id": 100004,
+        "TableId": 3
+      },
+      "equip_0001": {
+        "Id": 100005,
+        "TableId": 3
+      },
+      "equip_0002": {
+        "Id": 100006,
+        "TableId": 3
+      },
+      "equip_0003": {
+        "Id": 100007,
+        "TableId": 3
+      },
+      "equip_0004": {
+        "Id": 100008,
+        "TableId": 3
+      },
+      "equip_0005": {
+        "Id": 100009,
+        "TableId": 3
+      },
+      "vehicle_0001": {
+        "Id": 100010,
+        "TableId": 3
+      },
+      "vehicle_0002": {
+        "Id": 100011,
+        "TableId": 3
+      },
+      "vehicle_0003": {
+        "Id": 100012,
+        "TableId": 3
+      },
+      "vehicle_0004": {
+        "Id": 100013,
+        "TableId": 3
+      },
+      "vehicle_0005": {
+        "Id": 100014,
+        "TableId": 3
+      },
+      "pawn_mark_one": {
+        "Id": 1808777167,
+        "TableId": 4
+      },
+      "pawn_mark_two": {
+        "Id": 6927192,
+        "TableId": 4
+      },
+      "pawn_mark_three": {
+        "Id": 1476745763,
+        "TableId": 4
+      },
+      "pawn_mark_four": {
+        "Id": 1370609903,
+        "TableId": 4
+      },
+      "box_name_0001": {
+        "Id": -306147680,
+        "TableId": 4
+      },
+      "box_name_0002": {
+        "Id": 1959386906,
+        "TableId": 4
+      },
+      "box_name_0003": {
+        "Id": 63893388,
+        "TableId": 4
+      },
+      "box_name_0004": {
+        "Id": -1649771985,
+        "TableId": 4
+      },
+      "box_name_0005": {
+        "Id": -357741895,
+        "TableId": 4
+      },
+      "box_name_0006": {
+        "Id": 1940134659,
+        "TableId": 4
+      },
+      "box_name_0007": {
+        "Id": 77802389,
+        "TableId": 4
+      },
+      "box_name_0008": {
+        "Id": -1810090492,
+        "TableId": 4
+      },
+      "box_name_0009": {
+        "Id": -484768110,
+        "TableId": 4
+      },
+      "box_name_0010": {
+        "Id": -2082697353,
+        "TableId": 4
+      },
+      "box_name_0011": {
+        "Id": -186925087,
+        "TableId": 4
+      },
+      "box_name_0012": {
+        "Id": 1842540123,
+        "TableId": 4
+      },
+      "box_name_0013": {
+        "Id": 450223821,
+        "TableId": 4
+      },
+      "box_name_0014": {
+        "Id": -2068755602,
+        "TableId": 4
+      },
+      "posion_name_0001": {
+        "Id": -262434395,
+        "TableId": 4
+      },
+      "posion_name_0002": {
+        "Id": 1767030815,
+        "TableId": 4
+      },
+      "posion_name_0003": {
+        "Id": 508948617,
+        "TableId": 4
+      },
+      "posion_name_0004": {
+        "Id": -2144246486,
+        "TableId": 4
+      },
+      "equip_name_0001": {
+        "Id": -1355512135,
+        "TableId": 4
+      },
+      "equip_name_0002": {
+        "Id": 910022403,
+        "TableId": 4
+      },
+      "equip_name_0003": {
+        "Id": 1094379413,
+        "TableId": 4
+      },
+      "equip_name_0004": {
+        "Id": -547458506,
+        "TableId": 4
+      },
+      "equip_name_0005": {
+        "Id": -1470545248,
+        "TableId": 4
+      },
+      "vehicle_name_0001": {
+        "Id": -879399999,
+        "TableId": 4
+      },
+      "vehicle_name_0002": {
+        "Id": 1385970299,
+        "TableId": 4
+      },
+      "vehicle_name_0003": {
+        "Id": 630917869,
+        "TableId": 4
+      },
+      "vehicle_name_0004": {
+        "Id": -1140875442,
+        "TableId": 4
+      },
+      "vehicle_name_0005": {
+        "Id": -856117288,
+        "TableId": 4
+      }
+    },
+    "MapMetaData": {
+      "BoxDataTable": {
+        "Name": "BoxDataTable",
+        "Offset": 2268
+      },
+      "DiceDataTable": {
+        "Name": "DiceDataTable",
+        "Offset": 2783
+      },
+      "ItemDataTable": {
+        "Name": "ItemDataTable",
+        "Offset": 2921
+      },
+      "LocaleDataTable": {
+        "Name": "LocaleDataTable",
+        "Offset": 3282
+      },
+      "TextDataTable": {
+        "Name": "TextDataTable",
+        "Offset": 3303
+      },
+      "TranslatedDataTable": {
+        "Name": "TranslatedDataTable",
+        "Offset": 3308
+      }
+    }
+  },
+  "Tables": {
+    "BoxDataTable": {
+      "$type": "Tests.RefId.BoxDataTable, xpTURN.TableSet.ForTests",
+      "Map": {
+        "2000001": {
+          "Id": 2000001,
+          "IdAlias": "",
+          "NameRefId": -306147680,
+          "NameRefIdAlias": "",
+          "List": [
+            {
+              "Slot": 1,
+              "ItemRefId": 100001,
+              "ItemRefIdAlias": ""
+            },
+            {
+              "Slot": 2,
+              "ItemRefId": 100002,
+              "ItemRefIdAlias": ""
+            },
+            {
+              "Slot": 3,
+              "ItemRefId": 100005,
+              "ItemRefIdAlias": ""
+            },
+            {
+              "Slot": 4,
+              "ItemRefId": 100006,
+              "ItemRefIdAlias": ""
+            }
+          ]
+        },
+        "2000002": {
+          "Id": 2000002,
+          "IdAlias": "",
+          "NameRefId": 1959386906,
+          "NameRefIdAlias": "",
+          "List": [
+            {
+              "Slot": 1,
+              "ItemRefId": 100007,
+              "ItemRefIdAlias": ""
+            },
+            {
+              "Slot": 2,
+              "ItemRefId": 100010,
+              "ItemRefIdAlias": ""
+            },
+            {
+              "Slot": 3,
+              "ItemRefId": 100011,
+              "ItemRefIdAlias": ""
+            }
+          ]
+        },
+        "2000003": {
+          "Id": 2000003,
+          "IdAlias": "",
+          "NameRefId": 63893388,
+          "NameRefIdAlias": "",
+          "List": [
+            {
+              "Slot": 1,
+              "ItemRefId": 100007,
+              "ItemRefIdAlias": ""
+            },
+            {
+              "Slot": 2,
+              "ItemRefId": 100012,
+              "ItemRefIdAlias": ""
+            },
+            {
+              "Slot": 3,
+              "ItemRefId": 100013,
+              "ItemRefIdAlias": ""
+            }
+          ]
+        },
+        "2000004": {
+          "Id": 2000004,
+          "IdAlias": "",
+          "NameRefId": -1649771985,
+          "NameRefIdAlias": "",
+          "List": [
+            {
+              "Slot": 1,
+              "ItemRefId": 100003,
+              "ItemRefIdAlias": ""
+            },
+            {
+              "Slot": 2,
+              "ItemRefId": 100004,
+              "ItemRefIdAlias": ""
+            },
+            {
+              "Slot": 3,
+              "ItemRefId": 100007,
+              "ItemRefIdAlias": ""
+            },
+            {
+              "Slot": 4,
+              "ItemRefId": 100008,
+              "ItemRefIdAlias": ""
+            }
+          ]
+        },
+        "2000005": {
+          "Id": 2000005,
+          "IdAlias": "",
+          "NameRefId": -357741895,
+          "NameRefIdAlias": "",
+          "List": [
+            {
+              "Slot": 1,
+              "ItemRefId": 100001,
+              "ItemRefIdAlias": ""
+            },
+            {
+              "Slot": 2,
+              "ItemRefId": 100002,
+              "ItemRefIdAlias": ""
+            },
+            {
+              "Slot": 3,
+              "ItemRefId": 100005,
+              "ItemRefIdAlias": ""
+            },
+            {
+              "Slot": 4,
+              "ItemRefId": 100006,
+              "ItemRefIdAlias": ""
+            }
+          ]
+        },
+        "2000006": {
+          "Id": 2000006,
+          "IdAlias": "",
+          "NameRefId": 1940134659,
+          "NameRefIdAlias": "",
+          "List": [
+            {
+              "Slot": 1,
+              "ItemRefId": 100001,
+              "ItemRefIdAlias": ""
+            }
+          ]
+        },
+        "2000007": {
+          "Id": 2000007,
+          "IdAlias": "",
+          "NameRefId": 77802389,
+          "NameRefIdAlias": "",
+          "List": [
+            {
+              "Slot": 1,
+              "ItemRefId": 100001,
+              "ItemRefIdAlias": ""
+            }
+          ]
+        },
+        "2000008": {
+          "Id": 2000008,
+          "IdAlias": "",
+          "NameRefId": -1810090492,
+          "NameRefIdAlias": "",
+          "List": [
+            {
+              "Slot": 1,
+              "ItemRefId": 100001,
+              "ItemRefIdAlias": ""
+            }
+          ]
+        },
+        "2000009": {
+          "Id": 2000009,
+          "IdAlias": "",
+          "NameRefId": -484768110,
+          "NameRefIdAlias": "",
+          "List": [
+            {
+              "Slot": 1,
+              "ItemRefId": 100001,
+              "ItemRefIdAlias": ""
+            }
+          ]
+        },
+        "2000010": {
+          "Id": 2000010,
+          "IdAlias": "",
+          "NameRefId": -2082697353,
+          "NameRefIdAlias": "",
+          "List": [
+            {
+              "Slot": 1,
+              "ItemRefId": 100001,
+              "ItemRefIdAlias": ""
+            }
+          ]
+        },
+        "2000011": {
+          "Id": 2000011,
+          "IdAlias": "",
+          "NameRefId": -186925087,
+          "NameRefIdAlias": "",
+          "List": [
+            {
+              "Slot": 1,
+              "ItemRefId": 100001,
+              "ItemRefIdAlias": ""
+            }
+          ]
+        },
+        "2000012": {
+          "Id": 2000012,
+          "IdAlias": "",
+          "NameRefId": 1842540123,
+          "NameRefIdAlias": "",
+          "List": [
+            {
+              "Slot": 1,
+              "ItemRefId": 100001,
+              "ItemRefIdAlias": ""
+            }
+          ]
+        },
+        "2000013": {
+          "Id": 2000013,
+          "IdAlias": "",
+          "NameRefId": 450223821,
+          "NameRefIdAlias": "",
+          "List": [
+            {
+              "Slot": 1,
+              "ItemRefId": 100001,
+              "ItemRefIdAlias": ""
+            }
+          ]
+        },
+        "2000014": {
+          "Id": 2000014,
+          "IdAlias": "",
+          "NameRefId": -2068755602,
+          "NameRefIdAlias": "",
+          "List": [
+            {
+              "Slot": 1,
+              "ItemRefId": 100001,
+              "ItemRefIdAlias": ""
+            }
+          ]
+        }
+      },
+      "MetaNestedData": {
+        "MapIdOffset": {},
+        "MapAliasOffset": {}
+      }
+    },
+    "DiceDataTable": {
+      "$type": "Tests.RefId.DiceDataTable, xpTURN.TableSet.ForTests",
+      "Map": {
+        "3000001": {
+          "Id": 3000001,
+          "IdAlias": "",
+          "NameRefId": -306147680,
+          "NameRefIdAlias": "",
+          "ListItemRefId": [
+            100001,
+            100002,
+            100003,
+            100004
+          ],
+          "ListItemRefIdAlias": []
+        },
+        "3000002": {
+          "Id": 3000002,
+          "IdAlias": "",
+          "NameRefId": 1959386906,
+          "NameRefIdAlias": "",
+          "ListItemRefId": [
+            100005,
+            100006,
+            100007,
+            100008
+          ],
+          "ListItemRefIdAlias": []
+        },
+        "3000003": {
+          "Id": 3000003,
+          "IdAlias": "",
+          "NameRefId": 63893388,
+          "NameRefIdAlias": "",
+          "ListItemRefId": [
+            100007,
+            100008
+          ],
+          "ListItemRefIdAlias": []
+        },
+        "3000004": {
+          "Id": 3000004,
+          "IdAlias": "",
+          "NameRefId": -1649771985,
+          "NameRefIdAlias": "",
+          "ListItemRefId": [
+            100005,
+            100006
+          ],
+          "ListItemRefIdAlias": []
+        }
+      },
+      "MetaNestedData": {
+        "MapIdOffset": {},
+        "MapAliasOffset": {}
+      }
+    },
+    "ItemDataTable": {
+      "$type": "Tests.RefId.ItemDataTable, xpTURN.TableSet.ForTests",
+      "Map": {
+        "100001": {
+          "Id": 100001,
+          "IdAlias": "",
+          "NameRefId": -262434395,
+          "NameRefIdAlias": "",
+          "Type": 1,
+          "SlotSize": 1,
+          "Weight": 10
+        },
+        "100002": {
+          "Id": 100002,
+          "IdAlias": "",
+          "NameRefId": 1767030815,
+          "NameRefIdAlias": "",
+          "Type": 1,
+          "SlotSize": 1,
+          "Weight": 10
+        },
+        "100003": {
+          "Id": 100003,
+          "IdAlias": "",
+          "NameRefId": 508948617,
+          "NameRefIdAlias": "",
+          "Type": 1,
+          "SlotSize": 1,
+          "Weight": 10
+        },
+        "100004": {
+          "Id": 100004,
+          "IdAlias": "",
+          "NameRefId": -2144246486,
+          "NameRefIdAlias": "",
+          "Type": 1,
+          "SlotSize": 1,
+          "Weight": 10
+        },
+        "100005": {
+          "Id": 100005,
+          "IdAlias": "",
+          "NameRefId": -1355512135,
+          "NameRefIdAlias": "",
+          "Type": 2,
+          "SlotSize": 8,
+          "Weight": 120
+        },
+        "100006": {
+          "Id": 100006,
+          "IdAlias": "",
+          "NameRefId": 910022403,
+          "NameRefIdAlias": "",
+          "Type": 2,
+          "SlotSize": 8,
+          "Weight": 120
+        },
+        "100007": {
+          "Id": 100007,
+          "IdAlias": "",
+          "NameRefId": 1094379413,
+          "NameRefIdAlias": "",
+          "Type": 2,
+          "SlotSize": 8,
+          "Weight": 120
+        },
+        "100008": {
+          "Id": 100008,
+          "IdAlias": "",
+          "NameRefId": -547458506,
+          "NameRefIdAlias": "",
+          "Type": 2,
+          "SlotSize": 8,
+          "Weight": 120
+        },
+        "100009": {
+          "Id": 100009,
+          "IdAlias": "",
+          "NameRefId": -1470545248,
+          "NameRefIdAlias": "",
+          "Type": 2,
+          "SlotSize": 8,
+          "Weight": 120
+        },
+        "100010": {
+          "Id": 100010,
+          "IdAlias": "",
+          "NameRefId": -879399999,
+          "NameRefIdAlias": "",
+          "Type": 3,
+          "SlotSize": 12,
+          "Weight": 600
+        },
+        "100011": {
+          "Id": 100011,
+          "IdAlias": "",
+          "NameRefId": 1385970299,
+          "NameRefIdAlias": "",
+          "Type": 3,
+          "SlotSize": 12,
+          "Weight": 600
+        },
+        "100012": {
+          "Id": 100012,
+          "IdAlias": "",
+          "NameRefId": 630917869,
+          "NameRefIdAlias": "",
+          "Type": 3,
+          "SlotSize": 12,
+          "Weight": 600
+        },
+        "100013": {
+          "Id": 100013,
+          "IdAlias": "",
+          "NameRefId": -1140875442,
+          "NameRefIdAlias": "",
+          "Type": 3,
+          "SlotSize": 12,
+          "Weight": 600
+        },
+        "100014": {
+          "Id": 100014,
+          "IdAlias": "",
+          "NameRefId": -856117288,
+          "NameRefIdAlias": "",
+          "Type": 3,
+          "SlotSize": 12,
+          "Weight": 600
+        }
+      },
+      "MetaNestedData": {
+        "MapIdOffset": {},
+        "MapAliasOffset": {}
+      }
+    },
+    "LocaleDataTable": {
+      "$type": "Tests.RefId.LocaleDataTable, xpTURN.TableSet.ForTests",
+      "MetaNestedData": {
+        "MapIdOffset": {
+          "1042": 696,
+          "1033": 1829
+        },
+        "MapAliasOffset": {},
+        "ListOnDemandData": [
+          {
+            "$type": "Tests.RefId.TextDataTable, xpTURN.TableSet.ForTests",
+            "Id": 1042,
+            "MetaNestedData": {
+              "MapIdOffset": {
+                "1808777167": 0,
+                "6927192": 21,
+                "1476745763": 35,
+                "1370609903": 50,
+                "-306147680": 71,
+                "1959386906": 99,
+                "63893388": 122,
+                "-1649771985": 144,
+                "-357741895": 172,
+                "1940134659": 200,
+                "77802389": 223,
+                "-1810090492": 245,
+                "-484768110": 273,
+                "-2082697353": 301,
+                "-186925087": 329,
+                "1842540123": 357,
+                "450223821": 380,
+                "-2068755602": 403,
+                "-262434395": 431,
+                "1767030815": 451,
+                "508948617": 466,
+                "-2144246486": 481,
+                "-1355512135": 501,
+                "910022403": 521,
+                "1094379413": 536,
+                "-547458506": 551,
+                "-1470545248": 571,
+                "-879399999": 591,
+                "1385970299": 614,
+                "630917869": 632,
+                "-1140875442": 650,
+                "-856117288": 673
+              },
+              "MapAliasOffset": {},
+              "ListOnDemandData": [
+                {
+                  "$type": "Tests.RefId.TextData, xpTURN.TableSet.ForTests",
+                  "Id": 1808777167,
+                  "IdAlias": "",
+                  "Text": "아비가엘"
+                },
+                {
+                  "$type": "Tests.RefId.TextData, xpTURN.TableSet.ForTests",
+                  "Id": 6927192,
+                  "IdAlias": "",
+                  "Text": "아델"
+                },
+                {
+                  "$type": "Tests.RefId.TextData, xpTURN.TableSet.ForTests",
+                  "Id": 1476745763,
+                  "IdAlias": "",
+                  "Text": "벨라"
+                },
+                {
+                  "$type": "Tests.RefId.TextData, xpTURN.TableSet.ForTests",
+                  "Id": 1370609903,
+                  "IdAlias": "",
+                  "Text": "카산드라"
+                },
+                {
+                  "$type": "Tests.RefId.TextData, xpTURN.TableSet.ForTests",
+                  "Id": -306147680,
+                  "IdAlias": "",
+                  "Text": "보물상자01"
+                },
+                {
+                  "$type": "Tests.RefId.TextData, xpTURN.TableSet.ForTests",
+                  "Id": 1959386906,
+                  "IdAlias": "",
+                  "Text": "보물상자02"
+                },
+                {
+                  "$type": "Tests.RefId.TextData, xpTURN.TableSet.ForTests",
+                  "Id": 63893388,
+                  "IdAlias": "",
+                  "Text": "보물상자03"
+                },
+                {
+                  "$type": "Tests.RefId.TextData, xpTURN.TableSet.ForTests",
+                  "Id": -1649771985,
+                  "IdAlias": "",
+                  "Text": "보물상자04"
+                },
+                {
+                  "$type": "Tests.RefId.TextData, xpTURN.TableSet.ForTests",
+                  "Id": -357741895,
+                  "IdAlias": "",
+                  "Text": "보물상자05"
+                },
+                {
+                  "$type": "Tests.RefId.TextData, xpTURN.TableSet.ForTests",
+                  "Id": 1940134659,
+                  "IdAlias": "",
+                  "Text": "보물상자06"
+                },
+                {
+                  "$type": "Tests.RefId.TextData, xpTURN.TableSet.ForTests",
+                  "Id": 77802389,
+                  "IdAlias": "",
+                  "Text": "보물상자07"
+                },
+                {
+                  "$type": "Tests.RefId.TextData, xpTURN.TableSet.ForTests",
+                  "Id": -1810090492,
+                  "IdAlias": "",
+                  "Text": "보물상자08"
+                },
+                {
+                  "$type": "Tests.RefId.TextData, xpTURN.TableSet.ForTests",
+                  "Id": -484768110,
+                  "IdAlias": "",
+                  "Text": "보물상자09"
+                },
+                {
+                  "$type": "Tests.RefId.TextData, xpTURN.TableSet.ForTests",
+                  "Id": -2082697353,
+                  "IdAlias": "",
+                  "Text": "보물상자10"
+                },
+                {
+                  "$type": "Tests.RefId.TextData, xpTURN.TableSet.ForTests",
+                  "Id": -186925087,
+                  "IdAlias": "",
+                  "Text": "보물상자11"
+                },
+                {
+                  "$type": "Tests.RefId.TextData, xpTURN.TableSet.ForTests",
+                  "Id": 1842540123,
+                  "IdAlias": "",
+                  "Text": "보물상자12"
+                },
+                {
+                  "$type": "Tests.RefId.TextData, xpTURN.TableSet.ForTests",
+                  "Id": 450223821,
+                  "IdAlias": "",
+                  "Text": "보물상자13"
+                },
+                {
+                  "$type": "Tests.RefId.TextData, xpTURN.TableSet.ForTests",
+                  "Id": -2068755602,
+                  "IdAlias": "",
+                  "Text": "보물상자14"
+                },
+                {
+                  "$type": "Tests.RefId.TextData, xpTURN.TableSet.ForTests",
+                  "Id": -262434395,
+                  "IdAlias": "",
+                  "Text": "독약"
+                },
+                {
+                  "$type": "Tests.RefId.TextData, xpTURN.TableSet.ForTests",
+                  "Id": 1767030815,
+                  "IdAlias": "",
+                  "Text": "독약"
+                },
+                {
+                  "$type": "Tests.RefId.TextData, xpTURN.TableSet.ForTests",
+                  "Id": 508948617,
+                  "IdAlias": "",
+                  "Text": "독약"
+                },
+                {
+                  "$type": "Tests.RefId.TextData, xpTURN.TableSet.ForTests",
+                  "Id": -2144246486,
+                  "IdAlias": "",
+                  "Text": "독약"
+                },
+                {
+                  "$type": "Tests.RefId.TextData, xpTURN.TableSet.ForTests",
+                  "Id": -1355512135,
+                  "IdAlias": "",
+                  "Text": "갑옷"
+                },
+                {
+                  "$type": "Tests.RefId.TextData, xpTURN.TableSet.ForTests",
+                  "Id": 910022403,
+                  "IdAlias": "",
+                  "Text": "갑옷"
+                },
+                {
+                  "$type": "Tests.RefId.TextData, xpTURN.TableSet.ForTests",
+                  "Id": 1094379413,
+                  "IdAlias": "",
+                  "Text": "갑옷"
+                },
+                {
+                  "$type": "Tests.RefId.TextData, xpTURN.TableSet.ForTests",
+                  "Id": -547458506,
+                  "IdAlias": "",
+                  "Text": "갑옷"
+                },
+                {
+                  "$type": "Tests.RefId.TextData, xpTURN.TableSet.ForTests",
+                  "Id": -1470545248,
+                  "IdAlias": "",
+                  "Text": "갑옷"
+                },
+                {
+                  "$type": "Tests.RefId.TextData, xpTURN.TableSet.ForTests",
+                  "Id": -879399999,
+                  "IdAlias": "",
+                  "Text": "독수리"
+                },
+                {
+                  "$type": "Tests.RefId.TextData, xpTURN.TableSet.ForTests",
+                  "Id": 1385970299,
+                  "IdAlias": "",
+                  "Text": "독수리"
+                },
+                {
+                  "$type": "Tests.RefId.TextData, xpTURN.TableSet.ForTests",
+                  "Id": 630917869,
+                  "IdAlias": "",
+                  "Text": "독수리"
+                },
+                {
+                  "$type": "Tests.RefId.TextData, xpTURN.TableSet.ForTests",
+                  "Id": -1140875442,
+                  "IdAlias": "",
+                  "Text": "독수리"
+                },
+                {
+                  "$type": "Tests.RefId.TextData, xpTURN.TableSet.ForTests",
+                  "Id": -856117288,
+                  "IdAlias": "",
+                  "Text": "독수리"
+                }
+              ]
+            }
+          },
+          {
+            "$type": "Tests.RefId.TextDataTable, xpTURN.TableSet.ForTests",
+            "Id": 1033,
+            "MetaNestedData": {
+              "MapIdOffset": {
+                "1808777167": 1126,
+                "6927192": 1142,
+                "1476745763": 1155,
+                "1370609903": 1169,
+                "-306147680": 1187,
+                "1959386906": 1218,
+                "63893388": 1244,
+                "-1649771985": 1269,
+                "-357741895": 1300,
+                "1940134659": 1331,
+                "77802389": 1357,
+                "-1810090492": 1382,
+                "-484768110": 1413,
+                "-2082697353": 1444,
+                "-186925087": 1475,
+                "1842540123": 1506,
+                "450223821": 1532,
+                "-2068755602": 1558,
+                "-262434395": 1589,
+                "1767030815": 1609,
+                "508948617": 1624,
+                "-2144246486": 1639,
+                "-1355512135": 1659,
+                "910022403": 1678,
+                "1094379413": 1692,
+                "-547458506": 1706,
+                "-1470545248": 1725,
+                "-879399999": 1744,
+                "1385970299": 1763,
+                "630917869": 1777,
+                "-1140875442": 1791,
+                "-856117288": 1810
+              },
+              "MapAliasOffset": {},
+              "ListOnDemandData": [
+                {
+                  "$type": "Tests.RefId.TextData, xpTURN.TableSet.ForTests",
+                  "Id": 1808777167,
+                  "IdAlias": "",
+                  "Text": "Abigail"
+                },
+                {
+                  "$type": "Tests.RefId.TextData, xpTURN.TableSet.ForTests",
+                  "Id": 6927192,
+                  "IdAlias": "",
+                  "Text": "Adela"
+                },
+                {
+                  "$type": "Tests.RefId.TextData, xpTURN.TableSet.ForTests",
+                  "Id": 1476745763,
+                  "IdAlias": "",
+                  "Text": "Bella"
+                },
+                {
+                  "$type": "Tests.RefId.TextData, xpTURN.TableSet.ForTests",
+                  "Id": 1370609903,
+                  "IdAlias": "",
+                  "Text": "Cassandra"
+                },
+                {
+                  "$type": "Tests.RefId.TextData, xpTURN.TableSet.ForTests",
+                  "Id": -306147680,
+                  "IdAlias": "",
+                  "Text": "Treasure Chest 01"
+                },
+                {
+                  "$type": "Tests.RefId.TextData, xpTURN.TableSet.ForTests",
+                  "Id": 1959386906,
+                  "IdAlias": "",
+                  "Text": "Treasure Chest 02"
+                },
+                {
+                  "$type": "Tests.RefId.TextData, xpTURN.TableSet.ForTests",
+                  "Id": 63893388,
+                  "IdAlias": "",
+                  "Text": "Treasure Chest 03"
+                },
+                {
+                  "$type": "Tests.RefId.TextData, xpTURN.TableSet.ForTests",
+                  "Id": -1649771985,
+                  "IdAlias": "",
+                  "Text": "Treasure Chest 04"
+                },
+                {
+                  "$type": "Tests.RefId.TextData, xpTURN.TableSet.ForTests",
+                  "Id": -357741895,
+                  "IdAlias": "",
+                  "Text": "Treasure Chest 05"
+                },
+                {
+                  "$type": "Tests.RefId.TextData, xpTURN.TableSet.ForTests",
+                  "Id": 1940134659,
+                  "IdAlias": "",
+                  "Text": "Treasure Chest 06"
+                },
+                {
+                  "$type": "Tests.RefId.TextData, xpTURN.TableSet.ForTests",
+                  "Id": 77802389,
+                  "IdAlias": "",
+                  "Text": "Treasure Chest 07"
+                },
+                {
+                  "$type": "Tests.RefId.TextData, xpTURN.TableSet.ForTests",
+                  "Id": -1810090492,
+                  "IdAlias": "",
+                  "Text": "Treasure Chest 08"
+                },
+                {
+                  "$type": "Tests.RefId.TextData, xpTURN.TableSet.ForTests",
+                  "Id": -484768110,
+                  "IdAlias": "",
+                  "Text": "Treasure Chest 09"
+                },
+                {
+                  "$type": "Tests.RefId.TextData, xpTURN.TableSet.ForTests",
+                  "Id": -2082697353,
+                  "IdAlias": "",
+                  "Text": "Treasure Chest 10"
+                },
+                {
+                  "$type": "Tests.RefId.TextData, xpTURN.TableSet.ForTests",
+                  "Id": -186925087,
+                  "IdAlias": "",
+                  "Text": "Treasure Chest 11"
+                },
+                {
+                  "$type": "Tests.RefId.TextData, xpTURN.TableSet.ForTests",
+                  "Id": 1842540123,
+                  "IdAlias": "",
+                  "Text": "Treasure Chest 12"
+                },
+                {
+                  "$type": "Tests.RefId.TextData, xpTURN.TableSet.ForTests",
+                  "Id": 450223821,
+                  "IdAlias": "",
+                  "Text": "Treasure Chest 13"
+                },
+                {
+                  "$type": "Tests.RefId.TextData, xpTURN.TableSet.ForTests",
+                  "Id": -2068755602,
+                  "IdAlias": "",
+                  "Text": "Treasure Chest 14"
+                },
+                {
+                  "$type": "Tests.RefId.TextData, xpTURN.TableSet.ForTests",
+                  "Id": -262434395,
+                  "IdAlias": "",
+                  "Text": "Posion"
+                },
+                {
+                  "$type": "Tests.RefId.TextData, xpTURN.TableSet.ForTests",
+                  "Id": 1767030815,
+                  "IdAlias": "",
+                  "Text": "Posion"
+                },
+                {
+                  "$type": "Tests.RefId.TextData, xpTURN.TableSet.ForTests",
+                  "Id": 508948617,
+                  "IdAlias": "",
+                  "Text": "Posion"
+                },
+                {
+                  "$type": "Tests.RefId.TextData, xpTURN.TableSet.ForTests",
+                  "Id": -2144246486,
+                  "IdAlias": "",
+                  "Text": "Posion"
+                },
+                {
+                  "$type": "Tests.RefId.TextData, xpTURN.TableSet.ForTests",
+                  "Id": -1355512135,
+                  "IdAlias": "",
+                  "Text": "Armor"
+                },
+                {
+                  "$type": "Tests.RefId.TextData, xpTURN.TableSet.ForTests",
+                  "Id": 910022403,
+                  "IdAlias": "",
+                  "Text": "Armor"
+                },
+                {
+                  "$type": "Tests.RefId.TextData, xpTURN.TableSet.ForTests",
+                  "Id": 1094379413,
+                  "IdAlias": "",
+                  "Text": "Armor"
+                },
+                {
+                  "$type": "Tests.RefId.TextData, xpTURN.TableSet.ForTests",
+                  "Id": -547458506,
+                  "IdAlias": "",
+                  "Text": "Armor"
+                },
+                {
+                  "$type": "Tests.RefId.TextData, xpTURN.TableSet.ForTests",
+                  "Id": -1470545248,
+                  "IdAlias": "",
+                  "Text": "Armor"
+                },
+                {
+                  "$type": "Tests.RefId.TextData, xpTURN.TableSet.ForTests",
+                  "Id": -879399999,
+                  "IdAlias": "",
+                  "Text": "Eagle"
+                },
+                {
+                  "$type": "Tests.RefId.TextData, xpTURN.TableSet.ForTests",
+                  "Id": 1385970299,
+                  "IdAlias": "",
+                  "Text": "Eagle"
+                },
+                {
+                  "$type": "Tests.RefId.TextData, xpTURN.TableSet.ForTests",
+                  "Id": 630917869,
+                  "IdAlias": "",
+                  "Text": "Eagle"
+                },
+                {
+                  "$type": "Tests.RefId.TextData, xpTURN.TableSet.ForTests",
+                  "Id": -1140875442,
+                  "IdAlias": "",
+                  "Text": "Eagle"
+                },
+                {
+                  "$type": "Tests.RefId.TextData, xpTURN.TableSet.ForTests",
+                  "Id": -856117288,
+                  "IdAlias": "",
+                  "Text": "Eagle"
+                }
+              ]
+            }
+          }
+        ]
+      }
+    },
+    "TextDataTable": {
+      "$type": "Tests.RefId.TextDataTable, xpTURN.TableSet.ForTests",
+      "Id": 0,
+      "MetaNestedData": {
+        "MapIdOffset": {},
+        "MapAliasOffset": {}
+      }
+    },
+    "TranslatedDataTable": {
+      "$type": "Tests.RefId.TranslatedDataTable, xpTURN.TableSet.ForTests",
+      "Map": {},
+      "MetaNestedData": {
+        "MapIdOffset": {},
+        "MapAliasOffset": {}
+      }
+    }
+  }
+}

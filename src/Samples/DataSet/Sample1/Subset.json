@@ -1,0 +1,12 @@
+{
+  "$type": "xpTURN.MegaData.SubsetDataTable, xpTURN.MegaData",
+  "Map": {
+    "Locale": {
+      "Tables": [
+        "LocaleDataTable",
+        "TextDataTable",
+        "TranslatedDataTable"
+      ]
+    }
+  }
+}

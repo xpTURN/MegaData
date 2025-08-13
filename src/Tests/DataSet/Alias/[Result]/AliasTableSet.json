@@ -1,0 +1,324 @@
+{
+  "$type": "Tests.Alias.AliasTableSet, xpTURN.TableSet.ForTests",
+  "Header": {
+    "Space": "Tests.Alias",
+    "Name": "AliasTableSet",
+    "Subset": "Default",
+    "MetaHash": "cu8yfcUAsXhejwrk1uQykw==",
+    "DataHash": "wxiEt8OzZIwqCj2n8AGkIw=="
+  },
+  "MetaDataTable": {
+    "MapAliasData": {},
+    "MapMetaData": {
+      "DepthDataTable": {
+        "Name": "DepthDataTable",
+        "Offset": 0
+      }
+    }
+  },
+  "Tables": {
+    "DepthDataTable": {
+      "$type": "Tests.Alias.DepthDataTable, xpTURN.TableSet.ForTests",
+      "Map": {
+        "ids_f01": {
+          "Alias": "ids_f01",
+          "SecondMap": {
+            "ids_s01": {
+              "Alias": "ids_s01",
+              "Second1": "sec11",
+              "Second2": "sec12",
+              "ThirdMap": {
+                "ids_t01": {
+                  "Alias": "ids_t01",
+                  "Third1": "th1001",
+                  "Third2": "th2001"
+                },
+                "ids_t02": {
+                  "Alias": "ids_t02",
+                  "Third1": "th1002",
+                  "Third2": "th2002"
+                },
+                "ids_t03": {
+                  "Alias": "ids_t03",
+                  "Third1": "th1003",
+                  "Third2": "th2003"
+                }
+              }
+            },
+            "ids_s02": {
+              "Alias": "ids_s02",
+              "Second1": "sec21",
+              "Second2": "sec22",
+              "ThirdMap": {
+                "ids_t04": {
+                  "Alias": "ids_t04",
+                  "Third1": "th1004",
+                  "Third2": "th2004"
+                },
+                "ids_t05": {
+                  "Alias": "ids_t05",
+                  "Third1": "th1005",
+                  "Third2": "th2005"
+                },
+                "ids_t06": {
+                  "Alias": "ids_t06",
+                  "Third1": "th1006",
+                  "Third2": "th2006"
+                }
+              }
+            }
+          }
+        },
+        "ids_f02": {
+          "Alias": "ids_f02",
+          "SecondMap": {
+            "ids_s03": {
+              "Alias": "ids_s03",
+              "Second1": "sec11",
+              "Second2": "sec33",
+              "ThirdMap": {
+                "ids_t07": {
+                  "Alias": "ids_t07",
+                  "Third1": "th1007",
+                  "Third2": "th2007"
+                },
+                "ids_t08": {
+                  "Alias": "ids_t08",
+                  "Third1": "th1008",
+                  "Third2": "th2008"
+                },
+                "ids_t09": {
+                  "Alias": "ids_t09",
+                  "Third1": "th1009",
+                  "Third2": "th2009"
+                }
+              }
+            },
+            "ids_s04": {
+              "Alias": "ids_s04",
+              "Second1": "sec41",
+              "Second2": "sec44",
+              "ThirdMap": {
+                "ids_t10": {
+                  "Alias": "ids_t10",
+                  "Third1": "th1010",
+                  "Third2": "th2010"
+                },
+                "ids_t11": {
+                  "Alias": "ids_t11",
+                  "Third1": "th1011",
+                  "Third2": "th2011"
+                },
+                "ids_t12": {
+                  "Alias": "ids_t12",
+                  "Third1": "th1012",
+                  "Third2": "th2012"
+                }
+              }
+            }
+          }
+        },
+        "ids_f03": {
+          "Alias": "ids_f03",
+          "SecondMap": {
+            "ids_s05": {
+              "Alias": "ids_s05",
+              "Second1": "sec51",
+              "Second2": "sec55",
+              "ThirdMap": {
+                "ids_t13": {
+                  "Alias": "ids_t13",
+                  "Third1": "th1013",
+                  "Third2": "th2013"
+                },
+                "ids_t14": {
+                  "Alias": "ids_t14",
+                  "Third1": "th1014",
+                  "Third2": "th2014"
+                },
+                "ids_t15": {
+                  "Alias": "ids_t15",
+                  "Third1": "th1015",
+                  "Third2": "th2015"
+                }
+              }
+            },
+            "ids_s06": {
+              "Alias": "ids_s06",
+              "Second1": "sec61",
+              "Second2": "sec66",
+              "ThirdMap": {
+                "ids_t16": {
+                  "Alias": "ids_t16",
+                  "Third1": "th1016",
+                  "Third2": "th2016"
+                },
+                "ids_t17": {
+                  "Alias": "ids_t17",
+                  "Third1": "th1017",
+                  "Third2": "th2017"
+                },
+                "ids_t18": {
+                  "Alias": "ids_t18",
+                  "Third1": "th1018",
+                  "Third2": "th2018"
+                }
+              }
+            }
+          }
+        },
+        "ids_f04": {
+          "Alias": "ids_f04",
+          "SecondMap": {
+            "ids_s07": {
+              "Alias": "ids_s07",
+              "Second1": "sec71",
+              "Second2": "sec77",
+              "ThirdMap": {
+                "ids_t19": {
+                  "Alias": "ids_t19",
+                  "Third1": "th1019",
+                  "Third2": "th2019"
+                },
+                "ids_t20": {
+                  "Alias": "ids_t20",
+                  "Third1": "th1020",
+                  "Third2": "th2020"
+                },
+                "ids_t21": {
+                  "Alias": "ids_t21",
+                  "Third1": "th1021",
+                  "Third2": "th2021"
+                }
+              }
+            },
+            "ids_s08": {
+              "Alias": "ids_s08",
+              "Second1": "sec81",
+              "Second2": "sec88",
+              "ThirdMap": {
+                "ids_t22": {
+                  "Alias": "ids_t22",
+                  "Third1": "th1022",
+                  "Third2": "th2022"
+                },
+                "ids_t23": {
+                  "Alias": "ids_t23",
+                  "Third1": "th1023",
+                  "Third2": "th2023"
+                },
+                "ids_t24": {
+                  "Alias": "ids_t24",
+                  "Third1": "th1024",
+                  "Third2": "th2024"
+                }
+              }
+            }
+          }
+        },
+        "ids_f05": {
+          "Alias": "ids_f05",
+          "SecondMap": {
+            "ids_s09": {
+              "Alias": "ids_s09",
+              "Second1": "sec91",
+              "Second2": "sec99",
+              "ThirdMap": {
+                "ids_t25": {
+                  "Alias": "ids_t25",
+                  "Third1": "th1025",
+                  "Third2": "th2025"
+                },
+                "ids_t26": {
+                  "Alias": "ids_t26",
+                  "Third1": "th1026",
+                  "Third2": "th2026"
+                },
+                "ids_t27": {
+                  "Alias": "ids_t27",
+                  "Third1": "th1027",
+                  "Third2": "th2027"
+                }
+              }
+            },
+            "ids_s10": {
+              "Alias": "ids_s10",
+              "Second1": "sec01",
+              "Second2": "sec111",
+              "ThirdMap": {
+                "ids_t28": {
+                  "Alias": "ids_t28",
+                  "Third1": "th1028",
+                  "Third2": "th2028"
+                },
+                "ids_t29": {
+                  "Alias": "ids_t29",
+                  "Third1": "th1029",
+                  "Third2": "th2029"
+                },
+                "ids_t30": {
+                  "Alias": "ids_t30",
+                  "Third1": "th1030",
+                  "Third2": "th2030"
+                }
+              }
+            }
+          }
+        },
+        "ids_f06": {
+          "Alias": "ids_f06",
+          "SecondMap": {
+            "ids_s11": {
+              "Alias": "ids_s11",
+              "Second1": "sec02",
+              "Second2": "sec222",
+              "ThirdMap": {
+                "ids_t31": {
+                  "Alias": "ids_t31",
+                  "Third1": "th1031",
+                  "Third2": "th2031"
+                },
+                "ids_t32": {
+                  "Alias": "ids_t32",
+                  "Third1": "th1032",
+                  "Third2": "th2032"
+                },
+                "ids_t33": {
+                  "Alias": "ids_t33",
+                  "Third1": "th1033",
+                  "Third2": "th2033"
+                }
+              }
+            },
+            "ids_s12": {
+              "Alias": "ids_s12",
+              "Second1": "sec03",
+              "Second2": "sec333",
+              "ThirdMap": {
+                "ids_t34": {
+                  "Alias": "ids_t34",
+                  "Third1": "th1034",
+                  "Third2": "th2034"
+                },
+                "ids_t35": {
+                  "Alias": "ids_t35",
+                  "Third1": "th1035",
+                  "Third2": "th2035"
+                },
+                "ids_t36": {
+                  "Alias": "ids_t36",
+                  "Third1": "th1036",
+                  "Third2": "th2036"
+                }
+              }
+            }
+          }
+        }
+      },
+      "MetaNestedData": {
+        "MapIdOffset": {},
+        "MapAliasOffset": {}
+      }
+    }
+  }
+}

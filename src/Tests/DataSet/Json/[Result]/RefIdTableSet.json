@@ -1,0 +1,210 @@
+{
+  "$type": "Tests.RefId.RefIdTableSet, xpTURN.TableSet.ForTests",
+  "Header": {
+    "Space": "Tests.RefId",
+    "Name": "RefIdTableSet",
+    "Subset": "Default",
+    "MetaHash": "qiQV36wgvQtgaE/JwB1Vqw==",
+    "DataHash": "AEDTAvDGxKBqmldk5jhWAg=="
+  },
+  "MetaDataTable": {
+    "MapAliasData": {
+      "box_1001": {
+        "Id": 2100001,
+        "TableId": 1
+      },
+      "box_1002": {
+        "Id": 2100002,
+        "TableId": 1
+      },
+      "item_1001": {
+        "Id": 10001,
+        "TableId": 3
+      },
+      "item_1002": {
+        "Id": 10002,
+        "TableId": 3
+      },
+      "box_name_1001": {
+        "Id": 1434249669,
+        "TableId": 4
+      },
+      "box_name_1002": {
+        "Id": -864700289,
+        "TableId": 4
+      },
+      "item_name_1001": {
+        "Id": -2008260858,
+        "TableId": 4
+      },
+      "item_name_1002": {
+        "Id": 289738428,
+        "TableId": 4
+      }
+    },
+    "MapMetaData": {
+      "BoxDataTable": {
+        "Name": "BoxDataTable",
+        "Offset": 136
+      },
+      "DiceDataTable": {
+        "Name": "DiceDataTable",
+        "Offset": 197
+      },
+      "ItemDataTable": {
+        "Name": "ItemDataTable",
+        "Offset": 202
+      },
+      "LocaleDataTable": {
+        "Name": "LocaleDataTable",
+        "Offset": 258
+      },
+      "TextDataTable": {
+        "Name": "TextDataTable",
+        "Offset": 270
+      },
+      "TranslatedDataTable": {
+        "Name": "TranslatedDataTable",
+        "Offset": 275
+      }
+    }
+  },
+  "Tables": {
+    "BoxDataTable": {
+      "$type": "Tests.RefId.BoxDataTable, xpTURN.TableSet.ForTests",
+      "Map": {
+        "2100001": {
+          "Id": 2100001,
+          "IdAlias": "",
+          "NameRefId": 1434249669,
+          "NameRefIdAlias": "",
+          "List": [
+            {
+              "Slot": 1,
+              "ItemRefId": 10001,
+              "ItemRefIdAlias": ""
+            }
+          ]
+        },
+        "2100002": {
+          "Id": 2100002,
+          "IdAlias": "",
+          "NameRefId": -864700289,
+          "NameRefIdAlias": "",
+          "List": [
+            {
+              "Slot": 99,
+              "ItemRefId": 10002,
+              "ItemRefIdAlias": ""
+            }
+          ]
+        }
+      },
+      "MetaNestedData": {
+        "MapIdOffset": {},
+        "MapAliasOffset": {}
+      }
+    },
+    "DiceDataTable": {
+      "$type": "Tests.RefId.DiceDataTable, xpTURN.TableSet.ForTests",
+      "Map": {},
+      "MetaNestedData": {
+        "MapIdOffset": {},
+        "MapAliasOffset": {}
+      }
+    },
+    "ItemDataTable": {
+      "$type": "Tests.RefId.ItemDataTable, xpTURN.TableSet.ForTests",
+      "Map": {
+        "10001": {
+          "Id": 10001,
+          "IdAlias": "",
+          "NameRefId": -2008260858,
+          "NameRefIdAlias": "",
+          "Type": 1,
+          "SlotSize": 10,
+          "Weight": 100
+        },
+        "10002": {
+          "Id": 10002,
+          "IdAlias": "",
+          "NameRefId": 289738428,
+          "NameRefIdAlias": "",
+          "Type": 1,
+          "SlotSize": 20,
+          "Weight": 200
+        }
+      },
+      "MetaNestedData": {
+        "MapIdOffset": {},
+        "MapAliasOffset": {}
+      }
+    },
+    "LocaleDataTable": {
+      "$type": "Tests.RefId.LocaleDataTable, xpTURN.TableSet.ForTests",
+      "MetaNestedData": {
+        "MapIdOffset": {
+          "1033": 80
+        },
+        "MapAliasOffset": {},
+        "ListOnDemandData": [
+          {
+            "$type": "Tests.RefId.TextDataTable, xpTURN.TableSet.ForTests",
+            "Id": 1033,
+            "MetaNestedData": {
+              "MapIdOffset": {
+                "1434249669": 0,
+                "-864700289": 17,
+                "-2008260858": 39,
+                "289738428": 62
+              },
+              "MapAliasOffset": {},
+              "ListOnDemandData": [
+                {
+                  "$type": "Tests.RefId.TextData, xpTURN.TableSet.ForTests",
+                  "Id": 1434249669,
+                  "IdAlias": "",
+                  "Text": "Box 1001"
+                },
+                {
+                  "$type": "Tests.RefId.TextData, xpTURN.TableSet.ForTests",
+                  "Id": -864700289,
+                  "IdAlias": "",
+                  "Text": "Box 1002"
+                },
+                {
+                  "$type": "Tests.RefId.TextData, xpTURN.TableSet.ForTests",
+                  "Id": -2008260858,
+                  "IdAlias": "",
+                  "Text": "Item 1001"
+                },
+                {
+                  "$type": "Tests.RefId.TextData, xpTURN.TableSet.ForTests",
+                  "Id": 289738428,
+                  "IdAlias": "",
+                  "Text": "Item 1002"
+                }
+              ]
+            }
+          }
+        ]
+      }
+    },
+    "TextDataTable": {
+      "$type": "Tests.RefId.TextDataTable, xpTURN.TableSet.ForTests",
+      "Id": 0,
+      "MetaNestedData": {
+        "MapIdOffset": {},
+        "MapAliasOffset": {}
+      }
+    },
+    "TranslatedDataTable": {
+      "$type": "Tests.RefId.TranslatedDataTable, xpTURN.TableSet.ForTests",
+      "Map": {},
+      "MetaNestedData": {
+        "MapIdOffset": {},
+        "MapAliasOffset": {}
+      }
+    }
+  }
+}

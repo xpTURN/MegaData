@@ -1,0 +1,211 @@
+{
+  "$type": "Samples.BoxDataTable, xpTURN.TableSet.Samples",
+  "Map": {
+    "2001001": {
+      "Id": 2001001,
+      "IdAlias": "box_0101",
+      "NameRefIdAlias": "box_name_0001",
+      "List": [
+        {
+          "Slot": 1,
+          "ItemRefIdAlias": "posion_0001"
+        },
+        {
+          "Slot": 2,
+          "ItemRefIdAlias": "posion_0001"
+        },
+        {
+          "Slot": 3,
+          "ItemRefIdAlias": "posion_0001"
+        },
+        {
+          "Slot": 4,
+          "ItemRefIdAlias": "posion_0001"
+        }
+      ]
+    },
+    "2001002": {
+      "Id": 2001002,
+      "IdAlias": "box_0102",
+      "NameRefIdAlias": "box_name_0002",
+      "List": [
+        {
+          "Slot": 1,
+          "ItemRefIdAlias": "posion_0001"
+        },
+        {
+          "Slot": 2,
+          "ItemRefIdAlias": "posion_0001"
+        },
+        {
+          "Slot": 3,
+          "ItemRefIdAlias": "posion_0001"
+        }
+      ]
+    },
+    "2001003": {
+      "Id": 2001003,
+      "IdAlias": "box_0103",
+      "NameRefIdAlias": "box_name_0003",
+      "List": [
+        {
+          "Slot": 1,
+          "ItemRefIdAlias": "posion_0001"
+        },
+        {
+          "Slot": 2,
+          "ItemRefIdAlias": "posion_0001"
+        },
+        {
+          "Slot": 3,
+          "ItemRefIdAlias": "posion_0001"
+        }
+      ]
+    },
+    "2001004": {
+      "Id": 2001004,
+      "IdAlias": "box_0104",
+      "NameRefIdAlias": "box_name_0004",
+      "List": [
+        {
+          "Slot": 1,
+          "ItemRefIdAlias": "posion_0001"
+        },
+        {
+          "Slot": 2,
+          "ItemRefIdAlias": "posion_0001"
+        },
+        {
+          "Slot": 3,
+          "ItemRefIdAlias": "posion_0001"
+        },
+        {
+          "Slot": 4,
+          "ItemRefIdAlias": "posion_0001"
+        }
+      ]
+    },
+    "2001005": {
+      "Id": 2001005,
+      "IdAlias": "box_0105",
+      "NameRefIdAlias": "box_name_0005",
+      "List": [
+        {
+          "Slot": 1,
+          "ItemRefIdAlias": "posion_0001"
+        },
+        {
+          "Slot": 2,
+          "ItemRefIdAlias": "posion_0001"
+        },
+        {
+          "Slot": 3,
+          "ItemRefIdAlias": "posion_0001"
+        },
+        {
+          "Slot": 4,
+          "ItemRefIdAlias": "posion_0001"
+        }
+      ]
+    },
+    "2001006": {
+      "Id": 2001006,
+      "IdAlias": "box_0106",
+      "NameRefIdAlias": "box_name_0006",
+      "List": [
+        {
+          "Slot": 1,
+          "ItemRefIdAlias": "posion_0001"
+        }
+      ]
+    },
+    "2001007": {
+      "Id": 2001007,
+      "IdAlias": "box_0107",
+      "NameRefIdAlias": "box_name_0007",
+      "List": [
+        {
+          "Slot": 1,
+          "ItemRefIdAlias": "posion_0001"
+        }
+      ]
+    },
+    "2001008": {
+      "Id": 2001008,
+      "IdAlias": "box_0108",
+      "NameRefIdAlias": "box_name_0008",
+      "List": [
+        {
+          "Slot": 1,
+          "ItemRefIdAlias": "posion_0001"
+        }
+      ]
+    },
+    "2001009": {
+      "Id": 2001009,
+      "IdAlias": "box_0109",
+      "NameRefIdAlias": "box_name_0009",
+      "List": [
+        {
+          "Slot": 1,
+          "ItemRefIdAlias": "posion_0001"
+        }
+      ]
+    },
+    "2001010": {
+      "Id": 2001010,
+      "IdAlias": "box_0110",
+      "NameRefIdAlias": "box_name_0010",
+      "List": [
+        {
+          "Slot": 1,
+          "ItemRefIdAlias": "posion_0001"
+        }
+      ]
+    },
+    "2001011": {
+      "Id": 2001011,
+      "IdAlias": "box_0111",
+      "NameRefIdAlias": "box_name_0011",
+      "List": [
+        {
+          "Slot": 1,
+          "ItemRefIdAlias": "posion_0001"
+        }
+      ]
+    },
+    "2001012": {
+      "Id": 2001012,
+      "IdAlias": "box_0112",
+      "NameRefIdAlias": "box_name_0012",
+      "List": [
+        {
+          "Slot": 1,
+          "ItemRefIdAlias": "posion_0001"
+        }
+      ]
+    },
+    "2001013": {
+      "Id": 2001013,
+      "IdAlias": "box_0113",
+      "NameRefIdAlias": "box_name_0013",
+      "List": [
+        {
+          "Slot": 1,
+          "ItemRefIdAlias": "posion_0001"
+        }
+      ]
+    },
+    "2001014": {
+      "Id": 2001014,
+      "IdAlias": "box_0114",
+      "NameRefIdAlias": "box_name_0014",
+      "List": [
+        {
+          "Slot": 1,
+          "ItemRefIdAlias": "posion_0002"
+        }
+      ]
+    }
+  }
+}

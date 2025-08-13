@@ -1,0 +1,3333 @@
+{
+  "$type": "Tests.Depth.DepthTableSet, xpTURN.TableSet.ForTests",
+  "Header": {
+    "Space": "Tests.Depth",
+    "Name": "DepthTableSet",
+    "Subset": "Default",
+    "MetaHash": "Z/dTB849I0Ou5NaQC5deKQ==",
+    "DataHash": "jvwRhn5tMemarSGmdZdyzw=="
+  },
+  "MetaDataTable": {
+    "MapAliasData": {
+      "ids_f01": {
+        "Id": 10001,
+        "TableId": 1
+      },
+      "ids_s01": {
+        "Id": 20001,
+        "TableId": 1
+      },
+      "ids_t01": {
+        "Id": 30001,
+        "TableId": 1
+      },
+      "ids_t02": {
+        "Id": 30002,
+        "TableId": 1
+      },
+      "ids_t03": {
+        "Id": 30003,
+        "TableId": 1
+      },
+      "ids_s02": {
+        "Id": 20002,
+        "TableId": 1
+      },
+      "ids_t04": {
+        "Id": 30004,
+        "TableId": 1
+      },
+      "ids_t05": {
+        "Id": 30005,
+        "TableId": 1
+      },
+      "ids_t06": {
+        "Id": 30006,
+        "TableId": 1
+      },
+      "ids_f02": {
+        "Id": 10002,
+        "TableId": 1
+      },
+      "ids_s03": {
+        "Id": 20003,
+        "TableId": 1
+      },
+      "ids_t07": {
+        "Id": 30007,
+        "TableId": 1
+      },
+      "ids_t08": {
+        "Id": 30008,
+        "TableId": 1
+      },
+      "ids_t09": {
+        "Id": 30009,
+        "TableId": 1
+      },
+      "ids_s04": {
+        "Id": 20004,
+        "TableId": 1
+      },
+      "ids_t10": {
+        "Id": 30010,
+        "TableId": 1
+      },
+      "ids_t11": {
+        "Id": 30011,
+        "TableId": 1
+      },
+      "ids_t12": {
+        "Id": 30012,
+        "TableId": 1
+      },
+      "ids_f03": {
+        "Id": 10003,
+        "TableId": 1
+      },
+      "ids_s05": {
+        "Id": 20005,
+        "TableId": 1
+      },
+      "ids_t13": {
+        "Id": 30013,
+        "TableId": 1
+      },
+      "ids_t14": {
+        "Id": 30014,
+        "TableId": 1
+      },
+      "ids_t15": {
+        "Id": 30015,
+        "TableId": 1
+      },
+      "ids_s06": {
+        "Id": 20006,
+        "TableId": 1
+      },
+      "ids_t16": {
+        "Id": 30016,
+        "TableId": 1
+      },
+      "ids_t17": {
+        "Id": 30017,
+        "TableId": 1
+      },
+      "ids_t18": {
+        "Id": 30018,
+        "TableId": 1
+      },
+      "ids_f04": {
+        "Id": 10004,
+        "TableId": 1
+      },
+      "ids_s07": {
+        "Id": 20007,
+        "TableId": 1
+      },
+      "ids_t19": {
+        "Id": 30019,
+        "TableId": 1
+      },
+      "ids_t20": {
+        "Id": 30020,
+        "TableId": 1
+      },
+      "ids_t21": {
+        "Id": 30021,
+        "TableId": 1
+      },
+      "ids_s08": {
+        "Id": 20008,
+        "TableId": 1
+      },
+      "ids_t22": {
+        "Id": 30022,
+        "TableId": 1
+      },
+      "ids_t23": {
+        "Id": 30023,
+        "TableId": 1
+      },
+      "ids_t24": {
+        "Id": 30024,
+        "TableId": 1
+      },
+      "ids_f05": {
+        "Id": 10005,
+        "TableId": 1
+      },
+      "ids_s09": {
+        "Id": 20009,
+        "TableId": 1
+      },
+      "ids_t25": {
+        "Id": 30025,
+        "TableId": 1
+      },
+      "ids_t26": {
+        "Id": 30026,
+        "TableId": 1
+      },
+      "ids_t27": {
+        "Id": 30027,
+        "TableId": 1
+      },
+      "ids_s10": {
+        "Id": 20010,
+        "TableId": 1
+      },
+      "ids_t28": {
+        "Id": 30028,
+        "TableId": 1
+      },
+      "ids_t29": {
+        "Id": 30029,
+        "TableId": 1
+      },
+      "ids_t30": {
+        "Id": 30030,
+        "TableId": 1
+      },
+      "ids_f06": {
+        "Id": 10006,
+        "TableId": 1
+      },
+      "ids_s11": {
+        "Id": 20011,
+        "TableId": 1
+      },
+      "ids_t31": {
+        "Id": 30031,
+        "TableId": 1
+      },
+      "ids_t32": {
+        "Id": 30032,
+        "TableId": 1
+      },
+      "ids_t33": {
+        "Id": 30033,
+        "TableId": 1
+      },
+      "ids_s12": {
+        "Id": 20012,
+        "TableId": 1
+      },
+      "ids_t34": {
+        "Id": 30034,
+        "TableId": 1
+      },
+      "ids_t35": {
+        "Id": 30035,
+        "TableId": 1
+      },
+      "ids_t36": {
+        "Id": 30036,
+        "TableId": 1
+      },
+      "ids_f07": {
+        "Id": 10007,
+        "TableId": 1
+      },
+      "ids_s21": {
+        "Id": 20021,
+        "TableId": 1
+      },
+      "ids_t41": {
+        "Id": 30041,
+        "TableId": 1
+      },
+      "ids_t42": {
+        "Id": 30042,
+        "TableId": 1
+      },
+      "ids_t43": {
+        "Id": 30043,
+        "TableId": 1
+      },
+      "ids_s22": {
+        "Id": 20022,
+        "TableId": 1
+      },
+      "ids_t44": {
+        "Id": 30044,
+        "TableId": 1
+      },
+      "ids_t45": {
+        "Id": 30045,
+        "TableId": 1
+      },
+      "ids_t46": {
+        "Id": 30046,
+        "TableId": 1
+      },
+      "ids_f08": {
+        "Id": 10008,
+        "TableId": 1
+      },
+      "ids_s23": {
+        "Id": 20023,
+        "TableId": 1
+      },
+      "ids_t47": {
+        "Id": 30047,
+        "TableId": 1
+      },
+      "ids_t48": {
+        "Id": 30048,
+        "TableId": 1
+      },
+      "ids_t49": {
+        "Id": 30049,
+        "TableId": 1
+      },
+      "ids_s24": {
+        "Id": 20024,
+        "TableId": 1
+      },
+      "ids_t50": {
+        "Id": 30050,
+        "TableId": 1
+      },
+      "ids_t51": {
+        "Id": 30051,
+        "TableId": 1
+      },
+      "ids_t52": {
+        "Id": 30052,
+        "TableId": 1
+      },
+      "ids_f09": {
+        "Id": 10009,
+        "TableId": 1
+      },
+      "ids_s25": {
+        "Id": 20025,
+        "TableId": 1
+      },
+      "ids_t53": {
+        "Id": 30053,
+        "TableId": 1
+      },
+      "ids_t54": {
+        "Id": 30054,
+        "TableId": 1
+      },
+      "ids_t55": {
+        "Id": 30055,
+        "TableId": 1
+      },
+      "ids_s26": {
+        "Id": 20026,
+        "TableId": 1
+      },
+      "ids_t56": {
+        "Id": 30056,
+        "TableId": 1
+      },
+      "ids_t57": {
+        "Id": 30057,
+        "TableId": 1
+      },
+      "ids_t58": {
+        "Id": 30058,
+        "TableId": 1
+      },
+      "ids_f10": {
+        "Id": 10010,
+        "TableId": 1
+      },
+      "ids_s27": {
+        "Id": 20027,
+        "TableId": 1
+      },
+      "ids_t59": {
+        "Id": 30059,
+        "TableId": 1
+      },
+      "ids_t60": {
+        "Id": 30060,
+        "TableId": 1
+      },
+      "ids_t61": {
+        "Id": 30061,
+        "TableId": 1
+      },
+      "ids_s28": {
+        "Id": 20028,
+        "TableId": 1
+      },
+      "ids_t62": {
+        "Id": 30062,
+        "TableId": 1
+      },
+      "ids_t63": {
+        "Id": 30063,
+        "TableId": 1
+      },
+      "ids_t64": {
+        "Id": 30064,
+        "TableId": 1
+      },
+      "ids_f11": {
+        "Id": 10011,
+        "TableId": 1
+      },
+      "ids_s29": {
+        "Id": 20029,
+        "TableId": 1
+      },
+      "ids_t65": {
+        "Id": 30065,
+        "TableId": 1
+      },
+      "ids_t66": {
+        "Id": 30066,
+        "TableId": 1
+      },
+      "ids_t67": {
+        "Id": 30067,
+        "TableId": 1
+      },
+      "ids_s30": {
+        "Id": 20030,
+        "TableId": 1
+      },
+      "ids_t68": {
+        "Id": 30068,
+        "TableId": 1
+      },
+      "ids_t69": {
+        "Id": 30069,
+        "TableId": 1
+      },
+      "ids_t70": {
+        "Id": 30070,
+        "TableId": 1
+      },
+      "ids_f12": {
+        "Id": 10012,
+        "TableId": 1
+      },
+      "ids_s31": {
+        "Id": 20031,
+        "TableId": 1
+      },
+      "ids_t71": {
+        "Id": 30071,
+        "TableId": 1
+      },
+      "ids_t72": {
+        "Id": 30072,
+        "TableId": 1
+      },
+      "ids_t73": {
+        "Id": 30073,
+        "TableId": 1
+      },
+      "ids_s32": {
+        "Id": 20032,
+        "TableId": 1
+      },
+      "ids_t74": {
+        "Id": 30074,
+        "TableId": 1
+      },
+      "ids_t75": {
+        "Id": 30075,
+        "TableId": 1
+      },
+      "ids_t76": {
+        "Id": 30076,
+        "TableId": 1
+      },
+      "ids_k01": {
+        "Id": 10001,
+        "TableId": 2
+      },
+      "ids_k02": {
+        "Id": 10002,
+        "TableId": 2
+      },
+      "ids_k03": {
+        "Id": 10003,
+        "TableId": 2
+      },
+      "ids_k04": {
+        "Id": 10004,
+        "TableId": 2
+      },
+      "ids_k05": {
+        "Id": 10005,
+        "TableId": 2
+      },
+      "ids_k06": {
+        "Id": 10006,
+        "TableId": 2
+      },
+      "ids_n01": {
+        "Id": 10001,
+        "TableId": 3
+      },
+      "ids_n02": {
+        "Id": 10002,
+        "TableId": 3
+      },
+      "ids_n03": {
+        "Id": 10003,
+        "TableId": 3
+      },
+      "ids_n04": {
+        "Id": 10004,
+        "TableId": 3
+      },
+      "ids_n05": {
+        "Id": 10005,
+        "TableId": 3
+      },
+      "ids_n06": {
+        "Id": 10006,
+        "TableId": 3
+      }
+    },
+    "MapMetaData": {
+      "DepthDataTable": {
+        "Name": "DepthDataTable",
+        "Offset": 0
+      },
+      "LDepthDataTable": {
+        "Name": "LDepthDataTable",
+        "Offset": 6888
+      },
+      "NonDepthDataTable": {
+        "Name": "NonDepthDataTable",
+        "Offset": 9675
+      }
+    }
+  },
+  "Tables": {
+    "DepthDataTable": {
+      "$type": "Tests.Depth.DepthDataTable, xpTURN.TableSet.ForTests",
+      "Map": {
+        "10001": {
+          "Id": 10001,
+          "IdAlias": "",
+          "F1Data": {
+            "Name": "na1",
+            "Number": 12345,
+            "Location": "1F"
+          },
+          "F2Data": {
+            "Class": "R2B2",
+            "Grade": "AAA",
+            "Unit": "A"
+          },
+          "SecondMap": {
+            "20001": {
+              "Id": 20001,
+              "IdAlias": "",
+              "Second1": "sec11",
+              "Second2": "sec12",
+              "S1Data": {
+                "Name": "na1",
+                "Number": 1,
+                "Location": "101F"
+              },
+              "S2Data": {
+                "Class": "R2B2",
+                "Grade": "AAA",
+                "Unit": "A"
+              },
+              "ThirdMap": {
+                "30001": {
+                  "Id": 30001,
+                  "IdAlias": "",
+                  "Third1": "th1001",
+                  "Third2": "th2001",
+                  "T1Data": {
+                    "Name": "na10",
+                    "Number": 10001,
+                    "Location": "201F"
+                  },
+                  "T2Data": {
+                    "Class": "K2B01",
+                    "Grade": "AAA",
+                    "Unit": "AA"
+                  }
+                },
+                "30002": {
+                  "Id": 30002,
+                  "IdAlias": "",
+                  "Third1": "th1002",
+                  "Third2": "th2002",
+                  "T1Data": {
+                    "Name": "na11",
+                    "Number": 10002,
+                    "Location": "202F"
+                  },
+                  "T2Data": {
+                    "Class": "K2Bo2",
+                    "Grade": "BBB",
+                    "Unit": "AB"
+                  }
+                },
+                "30003": {
+                  "Id": 30003,
+                  "IdAlias": "",
+                  "Third1": "th1003",
+                  "Third2": "th2003",
+                  "T1Data": {
+                    "Name": "na12",
+                    "Number": 10003,
+                    "Location": "203F"
+                  },
+                  "T2Data": {
+                    "Class": "K2B02",
+                    "Grade": "AAA",
+                    "Unit": "AA"
+                  }
+                }
+              },
+              "MetaNestedData": {
+                "MapIdOffset": {},
+                "MapAliasOffset": {}
+              }
+            },
+            "20002": {
+              "Id": 20002,
+              "IdAlias": "",
+              "Second1": "sec21",
+              "Second2": "sec22",
+              "S1Data": {
+                "Name": "na2",
+                "Number": 2,
+                "Location": "102F"
+              },
+              "S2Data": {
+                "Class": "R3B2",
+                "Grade": "BBB",
+                "Unit": "B"
+              },
+              "ThirdMap": {
+                "30004": {
+                  "Id": 30004,
+                  "IdAlias": "",
+                  "Third1": "th1004",
+                  "Third2": "th2004",
+                  "T1Data": {
+                    "Name": "na13",
+                    "Number": 10004,
+                    "Location": "204F"
+                  },
+                  "T2Data": {
+                    "Class": "K2Bo3",
+                    "Grade": "BBB",
+                    "Unit": "AB"
+                  }
+                },
+                "30005": {
+                  "Id": 30005,
+                  "IdAlias": "",
+                  "Third1": "th1005",
+                  "Third2": "th2005",
+                  "T1Data": {
+                    "Name": "na14",
+                    "Number": 10005,
+                    "Location": "205F"
+                  },
+                  "T2Data": {
+                    "Class": "K2B03",
+                    "Grade": "AAA",
+                    "Unit": "AA"
+                  }
+                },
+                "30006": {
+                  "Id": 30006,
+                  "IdAlias": "",
+                  "Third1": "th1006",
+                  "Third2": "th2006",
+                  "T1Data": {
+                    "Name": "na15",
+                    "Number": 10006,
+                    "Location": "206F"
+                  },
+                  "T2Data": {
+                    "Class": "K2Bo4",
+                    "Grade": "BBB",
+                    "Unit": "AB"
+                  }
+                }
+              },
+              "MetaNestedData": {
+                "MapIdOffset": {},
+                "MapAliasOffset": {}
+              }
+            }
+          },
+          "MetaNestedData": {
+            "MapIdOffset": {},
+            "MapAliasOffset": {}
+          }
+        },
+        "10002": {
+          "Id": 10002,
+          "IdAlias": "",
+          "F1Data": {
+            "Name": "na2",
+            "Number": 22345,
+            "Location": "2F"
+          },
+          "F2Data": {
+            "Class": "R3B2",
+            "Grade": "BBB",
+            "Unit": "B"
+          },
+          "SecondMap": {
+            "20003": {
+              "Id": 20003,
+              "IdAlias": "",
+              "Second1": "sec11",
+              "Second2": "sec33",
+              "S1Data": {
+                "Name": "na3",
+                "Number": 3,
+                "Location": "103F"
+              },
+              "S2Data": {
+                "Class": "R4B2",
+                "Grade": "CCC",
+                "Unit": "C"
+              },
+              "ThirdMap": {
+                "30007": {
+                  "Id": 30007,
+                  "IdAlias": "",
+                  "Third1": "th1007",
+                  "Third2": "th2007",
+                  "T1Data": {
+                    "Name": "na16",
+                    "Number": 10007,
+                    "Location": "207F"
+                  },
+                  "T2Data": {
+                    "Class": "K2B04",
+                    "Grade": "AAA",
+                    "Unit": "AA"
+                  }
+                },
+                "30008": {
+                  "Id": 30008,
+                  "IdAlias": "",
+                  "Third1": "th1008",
+                  "Third2": "th2008",
+                  "T1Data": {
+                    "Name": "na17",
+                    "Number": 10008,
+                    "Location": "208F"
+                  },
+                  "T2Data": {
+                    "Class": "K2Bo5",
+                    "Grade": "BBB",
+                    "Unit": "AB"
+                  }
+                },
+                "30009": {
+                  "Id": 30009,
+                  "IdAlias": "",
+                  "Third1": "th1009",
+                  "Third2": "th2009",
+                  "T1Data": {
+                    "Name": "na18",
+                    "Number": 10009,
+                    "Location": "209F"
+                  },
+                  "T2Data": {
+                    "Class": "K2B05",
+                    "Grade": "AAA",
+                    "Unit": "AA"
+                  }
+                }
+              },
+              "MetaNestedData": {
+                "MapIdOffset": {},
+                "MapAliasOffset": {}
+              }
+            },
+            "20004": {
+              "Id": 20004,
+              "IdAlias": "",
+              "Second1": "sec41",
+              "Second2": "sec44",
+              "S1Data": {
+                "Name": "na4",
+                "Number": 4,
+                "Location": "104F"
+              },
+              "S2Data": {
+                "Class": "R5B2",
+                "Grade": "DDD",
+                "Unit": "D"
+              },
+              "ThirdMap": {
+                "30010": {
+                  "Id": 30010,
+                  "IdAlias": "",
+                  "Third1": "th1010",
+                  "Third2": "th2010",
+                  "T1Data": {
+                    "Name": "na19",
+                    "Number": 10010,
+                    "Location": "210F"
+                  },
+                  "T2Data": {
+                    "Class": "K2Bo6",
+                    "Grade": "BBB",
+                    "Unit": "AB"
+                  }
+                },
+                "30011": {
+                  "Id": 30011,
+                  "IdAlias": "",
+                  "Third1": "th1011",
+                  "Third2": "th2011",
+                  "T1Data": {
+                    "Name": "na20",
+                    "Number": 10011,
+                    "Location": "211F"
+                  },
+                  "T2Data": {
+                    "Class": "K2B06",
+                    "Grade": "AAA",
+                    "Unit": "AA"
+                  }
+                },
+                "30012": {
+                  "Id": 30012,
+                  "IdAlias": "",
+                  "Third1": "th1012",
+                  "Third2": "th2012",
+                  "T1Data": {
+                    "Name": "na21",
+                    "Number": 10012,
+                    "Location": "212F"
+                  },
+                  "T2Data": {
+                    "Class": "K2Bo7",
+                    "Grade": "BBB",
+                    "Unit": "AB"
+                  }
+                }
+              },
+              "MetaNestedData": {
+                "MapIdOffset": {},
+                "MapAliasOffset": {}
+              }
+            }
+          },
+          "MetaNestedData": {
+            "MapIdOffset": {},
+            "MapAliasOffset": {}
+          }
+        },
+        "10003": {
+          "Id": 10003,
+          "IdAlias": "",
+          "F1Data": {
+            "Name": "na3",
+            "Number": 32345,
+            "Location": "3F"
+          },
+          "F2Data": {
+            "Class": "R4B2",
+            "Grade": "CCC",
+            "Unit": "C"
+          },
+          "SecondMap": {
+            "20005": {
+              "Id": 20005,
+              "IdAlias": "",
+              "Second1": "sec51",
+              "Second2": "sec55",
+              "S1Data": {
+                "Name": "na5",
+                "Number": 5,
+                "Location": "105F"
+              },
+              "S2Data": {
+                "Class": "R6B2",
+                "Grade": "FFF",
+                "Unit": "E"
+              },
+              "ThirdMap": {
+                "30013": {
+                  "Id": 30013,
+                  "IdAlias": "",
+                  "Third1": "th1013",
+                  "Third2": "th2013",
+                  "T1Data": {
+                    "Name": "na22",
+                    "Number": 10013,
+                    "Location": "213F"
+                  },
+                  "T2Data": {
+                    "Class": "K2B07",
+                    "Grade": "AAA",
+                    "Unit": "AA"
+                  }
+                },
+                "30014": {
+                  "Id": 30014,
+                  "IdAlias": "",
+                  "Third1": "th1014",
+                  "Third2": "th2014",
+                  "T1Data": {
+                    "Name": "na23",
+                    "Number": 10014,
+                    "Location": "214F"
+                  },
+                  "T2Data": {
+                    "Class": "K2Bo8",
+                    "Grade": "BBB",
+                    "Unit": "AB"
+                  }
+                },
+                "30015": {
+                  "Id": 30015,
+                  "IdAlias": "",
+                  "Third1": "th1015",
+                  "Third2": "th2015",
+                  "T1Data": {
+                    "Name": "na24",
+                    "Number": 10015,
+                    "Location": "215F"
+                  },
+                  "T2Data": {
+                    "Class": "K2B08",
+                    "Grade": "AAA",
+                    "Unit": "AA"
+                  }
+                }
+              },
+              "MetaNestedData": {
+                "MapIdOffset": {},
+                "MapAliasOffset": {}
+              }
+            },
+            "20006": {
+              "Id": 20006,
+              "IdAlias": "",
+              "Second1": "sec61",
+              "Second2": "sec66",
+              "S1Data": {
+                "Name": "na6",
+                "Number": 6,
+                "Location": "106F"
+              },
+              "S2Data": {
+                "Class": "R7B2",
+                "Grade": "EEE",
+                "Unit": "F"
+              },
+              "ThirdMap": {
+                "30016": {
+                  "Id": 30016,
+                  "IdAlias": "",
+                  "Third1": "th1016",
+                  "Third2": "th2016",
+                  "T1Data": {
+                    "Name": "na25",
+                    "Number": 10016,
+                    "Location": "216F"
+                  },
+                  "T2Data": {
+                    "Class": "K2Bo9",
+                    "Grade": "BBB",
+                    "Unit": "AB"
+                  }
+                },
+                "30017": {
+                  "Id": 30017,
+                  "IdAlias": "",
+                  "Third1": "th1017",
+                  "Third2": "th2017",
+                  "T1Data": {
+                    "Name": "na26",
+                    "Number": 10017,
+                    "Location": "217F"
+                  },
+                  "T2Data": {
+                    "Class": "K2B09",
+                    "Grade": "AAA",
+                    "Unit": "AA"
+                  }
+                },
+                "30018": {
+                  "Id": 30018,
+                  "IdAlias": "",
+                  "Third1": "th1018",
+                  "Third2": "th2018",
+                  "T1Data": {
+                    "Name": "na27",
+                    "Number": 10018,
+                    "Location": "218F"
+                  },
+                  "T2Data": {
+                    "Class": "K2Bo10",
+                    "Grade": "BBB",
+                    "Unit": "AB"
+                  }
+                }
+              },
+              "MetaNestedData": {
+                "MapIdOffset": {},
+                "MapAliasOffset": {}
+              }
+            }
+          },
+          "MetaNestedData": {
+            "MapIdOffset": {},
+            "MapAliasOffset": {}
+          }
+        },
+        "10004": {
+          "Id": 10004,
+          "IdAlias": "",
+          "F1Data": {
+            "Name": "na4",
+            "Number": 42345,
+            "Location": "4F"
+          },
+          "F2Data": {
+            "Class": "R1B2",
+            "Grade": "DDD",
+            "Unit": "D"
+          },
+          "SecondMap": {
+            "20007": {
+              "Id": 20007,
+              "IdAlias": "",
+              "Second1": "sec71",
+              "Second2": "sec77",
+              "S1Data": {
+                "Name": "na7",
+                "Number": 7,
+                "Location": "107F"
+              },
+              "S2Data": {
+                "Class": "R8B2",
+                "Grade": "GGG",
+                "Unit": "G"
+              },
+              "ThirdMap": {
+                "30019": {
+                  "Id": 30019,
+                  "IdAlias": "",
+                  "Third1": "th1019",
+                  "Third2": "th2019",
+                  "T1Data": {
+                    "Name": "na28",
+                    "Number": 10019,
+                    "Location": "219F"
+                  },
+                  "T2Data": {
+                    "Class": "K2B10",
+                    "Grade": "AAA",
+                    "Unit": "AA"
+                  }
+                },
+                "30020": {
+                  "Id": 30020,
+                  "IdAlias": "",
+                  "Third1": "th1020",
+                  "Third2": "th2020",
+                  "T1Data": {
+                    "Name": "na29",
+                    "Number": 10020,
+                    "Location": "220F"
+                  },
+                  "T2Data": {
+                    "Class": "K2Bo11",
+                    "Grade": "BBB",
+                    "Unit": "AB"
+                  }
+                },
+                "30021": {
+                  "Id": 30021,
+                  "IdAlias": "",
+                  "Third1": "th1021",
+                  "Third2": "th2021",
+                  "T1Data": {
+                    "Name": "na30",
+                    "Number": 10021,
+                    "Location": "221F"
+                  },
+                  "T2Data": {
+                    "Class": "K2B11",
+                    "Grade": "AAA",
+                    "Unit": "AA"
+                  }
+                }
+              },
+              "MetaNestedData": {
+                "MapIdOffset": {},
+                "MapAliasOffset": {}
+              }
+            },
+            "20008": {
+              "Id": 20008,
+              "IdAlias": "",
+              "Second1": "sec81",
+              "Second2": "sec88",
+              "S1Data": {
+                "Name": "na8",
+                "Number": 8,
+                "Location": "108F"
+              },
+              "S2Data": {
+                "Class": "R9B2",
+                "Grade": "HHH",
+                "Unit": "H"
+              },
+              "ThirdMap": {
+                "30022": {
+                  "Id": 30022,
+                  "IdAlias": "",
+                  "Third1": "th1022",
+                  "Third2": "th2022",
+                  "T1Data": {
+                    "Name": "na31",
+                    "Number": 10022,
+                    "Location": "222F"
+                  },
+                  "T2Data": {
+                    "Class": "K2Bo12",
+                    "Grade": "BBB",
+                    "Unit": "AB"
+                  }
+                },
+                "30023": {
+                  "Id": 30023,
+                  "IdAlias": "",
+                  "Third1": "th1023",
+                  "Third2": "th2023",
+                  "T1Data": {
+                    "Name": "na32",
+                    "Number": 10023,
+                    "Location": "223F"
+                  },
+                  "T2Data": {
+                    "Class": "K2B12",
+                    "Grade": "AAA",
+                    "Unit": "AA"
+                  }
+                },
+                "30024": {
+                  "Id": 30024,
+                  "IdAlias": "",
+                  "Third1": "th1024",
+                  "Third2": "th2024",
+                  "T1Data": {
+                    "Name": "na33",
+                    "Number": 10024,
+                    "Location": "224F"
+                  },
+                  "T2Data": {
+                    "Class": "K2Bo13",
+                    "Grade": "BBB",
+                    "Unit": "AB"
+                  }
+                }
+              },
+              "MetaNestedData": {
+                "MapIdOffset": {},
+                "MapAliasOffset": {}
+              }
+            }
+          },
+          "MetaNestedData": {
+            "MapIdOffset": {},
+            "MapAliasOffset": {}
+          }
+        },
+        "10005": {
+          "Id": 10005,
+          "IdAlias": "",
+          "F1Data": {
+            "Name": "na5",
+            "Number": 52345,
+            "Location": "5F"
+          },
+          "F2Data": {
+            "Class": "R1B3",
+            "Grade": "EEE",
+            "Unit": "E"
+          },
+          "SecondMap": {
+            "20009": {
+              "Id": 20009,
+              "IdAlias": "",
+              "Second1": "sec91",
+              "Second2": "sec99",
+              "S1Data": {
+                "Name": "na9",
+                "Number": 9,
+                "Location": "109F"
+              },
+              "S2Data": {
+                "Class": "R2B3",
+                "Grade": "JJJ",
+                "Unit": "O"
+              },
+              "ThirdMap": {
+                "30025": {
+                  "Id": 30025,
+                  "IdAlias": "",
+                  "Third1": "th1025",
+                  "Third2": "th2025",
+                  "T1Data": {
+                    "Name": "na34",
+                    "Number": 10025,
+                    "Location": "225F"
+                  },
+                  "T2Data": {
+                    "Class": "K2B13",
+                    "Grade": "AAA",
+                    "Unit": "AA"
+                  }
+                },
+                "30026": {
+                  "Id": 30026,
+                  "IdAlias": "",
+                  "Third1": "th1026",
+                  "Third2": "th2026",
+                  "T1Data": {
+                    "Name": "na35",
+                    "Number": 10026,
+                    "Location": "226F"
+                  },
+                  "T2Data": {
+                    "Class": "K2Bo14",
+                    "Grade": "BBB",
+                    "Unit": "AB"
+                  }
+                },
+                "30027": {
+                  "Id": 30027,
+                  "IdAlias": "",
+                  "Third1": "th1027",
+                  "Third2": "th2027",
+                  "T1Data": {
+                    "Name": "na36",
+                    "Number": 10027,
+                    "Location": "227F"
+                  },
+                  "T2Data": {
+                    "Class": "K2B14",
+                    "Grade": "AAA",
+                    "Unit": "AA"
+                  }
+                }
+              },
+              "MetaNestedData": {
+                "MapIdOffset": {},
+                "MapAliasOffset": {}
+              }
+            },
+            "20010": {
+              "Id": 20010,
+              "IdAlias": "",
+              "Second1": "sec01",
+              "Second2": "sec111",
+              "S1Data": {
+                "Name": "na10",
+                "Number": 10,
+                "Location": "110F"
+              },
+              "S2Data": {
+                "Class": "R2B4",
+                "Grade": "KKK",
+                "Unit": "P"
+              },
+              "ThirdMap": {
+                "30028": {
+                  "Id": 30028,
+                  "IdAlias": "",
+                  "Third1": "th1028",
+                  "Third2": "th2028",
+                  "T1Data": {
+                    "Name": "na37",
+                    "Number": 10028,
+                    "Location": "228F"
+                  },
+                  "T2Data": {
+                    "Class": "K2Bo15",
+                    "Grade": "BBB",
+                    "Unit": "AB"
+                  }
+                },
+                "30029": {
+                  "Id": 30029,
+                  "IdAlias": "",
+                  "Third1": "th1029",
+                  "Third2": "th2029",
+                  "T1Data": {
+                    "Name": "na38",
+                    "Number": 10029,
+                    "Location": "229F"
+                  },
+                  "T2Data": {
+                    "Class": "K2B15",
+                    "Grade": "AAA",
+                    "Unit": "AA"
+                  }
+                },
+                "30030": {
+                  "Id": 30030,
+                  "IdAlias": "",
+                  "Third1": "th1030",
+                  "Third2": "th2030",
+                  "T1Data": {
+                    "Name": "na39",
+                    "Number": 10030,
+                    "Location": "230F"
+                  },
+                  "T2Data": {
+                    "Class": "K2Bo16",
+                    "Grade": "BBB",
+                    "Unit": "AB"
+                  }
+                }
+              },
+              "MetaNestedData": {
+                "MapIdOffset": {},
+                "MapAliasOffset": {}
+              }
+            }
+          },
+          "MetaNestedData": {
+            "MapIdOffset": {},
+            "MapAliasOffset": {}
+          }
+        },
+        "10006": {
+          "Id": 10006,
+          "IdAlias": "",
+          "F1Data": {
+            "Name": "na6",
+            "Number": 62345,
+            "Location": "6F"
+          },
+          "F2Data": {
+            "Class": "R1B4",
+            "Grade": "FFF",
+            "Unit": "F"
+          },
+          "SecondMap": {
+            "20011": {
+              "Id": 20011,
+              "IdAlias": "",
+              "Second1": "sec02",
+              "Second2": "sec222",
+              "S1Data": {
+                "Name": "na11",
+                "Number": 11,
+                "Location": "111F"
+              },
+              "S2Data": {
+                "Class": "R2B5",
+                "Grade": "TTT",
+                "Unit": "Q"
+              },
+              "ThirdMap": {
+                "30031": {
+                  "Id": 30031,
+                  "IdAlias": "",
+                  "Third1": "th1031",
+                  "Third2": "th2031",
+                  "T1Data": {
+                    "Name": "na40",
+                    "Number": 10031,
+                    "Location": "231F"
+                  },
+                  "T2Data": {
+                    "Class": "K2B16",
+                    "Grade": "AAA",
+                    "Unit": "AA"
+                  }
+                },
+                "30032": {
+                  "Id": 30032,
+                  "IdAlias": "",
+                  "Third1": "th1032",
+                  "Third2": "th2032",
+                  "T1Data": {
+                    "Name": "na41",
+                    "Number": 10032,
+                    "Location": "232F"
+                  },
+                  "T2Data": {
+                    "Class": "K2Bo17",
+                    "Grade": "BBB",
+                    "Unit": "AB"
+                  }
+                },
+                "30033": {
+                  "Id": 30033,
+                  "IdAlias": "",
+                  "Third1": "th1033",
+                  "Third2": "th2033",
+                  "T1Data": {
+                    "Name": "na42",
+                    "Number": 10033,
+                    "Location": "233F"
+                  },
+                  "T2Data": {
+                    "Class": "K2B17",
+                    "Grade": "AAA",
+                    "Unit": "AA"
+                  }
+                }
+              },
+              "MetaNestedData": {
+                "MapIdOffset": {},
+                "MapAliasOffset": {}
+              }
+            },
+            "20012": {
+              "Id": 20012,
+              "IdAlias": "",
+              "Second1": "sec03",
+              "Second2": "sec333",
+              "S1Data": {
+                "Name": "na12",
+                "Number": 12,
+                "Location": "112F"
+              },
+              "S2Data": {
+                "Class": "R2B6",
+                "Grade": "YYY",
+                "Unit": "R"
+              },
+              "ThirdMap": {
+                "30034": {
+                  "Id": 30034,
+                  "IdAlias": "",
+                  "Third1": "th1034",
+                  "Third2": "th2034",
+                  "T1Data": {
+                    "Name": "na43",
+                    "Number": 10034,
+                    "Location": "234F"
+                  },
+                  "T2Data": {
+                    "Class": "K2Bo18",
+                    "Grade": "BBB",
+                    "Unit": "AB"
+                  }
+                },
+                "30035": {
+                  "Id": 30035,
+                  "IdAlias": "",
+                  "Third1": "th1035",
+                  "Third2": "th2035",
+                  "T1Data": {
+                    "Name": "na44",
+                    "Number": 10035,
+                    "Location": "235F"
+                  },
+                  "T2Data": {
+                    "Class": "K2B18",
+                    "Grade": "AAA",
+                    "Unit": "AA"
+                  }
+                },
+                "30036": {
+                  "Id": 30036,
+                  "IdAlias": "",
+                  "Third1": "th1036",
+                  "Third2": "th2036",
+                  "T1Data": {
+                    "Name": "na45",
+                    "Number": 10036,
+                    "Location": "236F"
+                  },
+                  "T2Data": {
+                    "Class": "K2Bo19",
+                    "Grade": "BBB",
+                    "Unit": "AB"
+                  }
+                }
+              },
+              "MetaNestedData": {
+                "MapIdOffset": {},
+                "MapAliasOffset": {}
+              }
+            }
+          },
+          "MetaNestedData": {
+            "MapIdOffset": {},
+            "MapAliasOffset": {}
+          }
+        },
+        "10007": {
+          "Id": 10007,
+          "IdAlias": "",
+          "F1Data": {
+            "Name": "na1",
+            "Number": 12345,
+            "Location": "1F"
+          },
+          "F2Data": {
+            "Class": "R2B2",
+            "Grade": "AAA",
+            "Unit": "A"
+          },
+          "SecondMap": {
+            "20021": {
+              "Id": 20021,
+              "IdAlias": "",
+              "Second1": "sec11",
+              "Second2": "sec12",
+              "S1Data": {
+                "Name": "na1",
+                "Number": 1,
+                "Location": "101F"
+              },
+              "S2Data": {
+                "Class": "R2B2",
+                "Grade": "AAA",
+                "Unit": "A"
+              },
+              "ThirdMap": {
+                "30041": {
+                  "Id": 30041,
+                  "IdAlias": "",
+                  "Third1": "th1001",
+                  "Third2": "th2001",
+                  "T1Data": {
+                    "Name": "na10",
+                    "Number": 10001,
+                    "Location": "201F"
+                  },
+                  "T2Data": {
+                    "Class": "K2B01",
+                    "Grade": "AAA",
+                    "Unit": "AA"
+                  }
+                },
+                "30042": {
+                  "Id": 30042,
+                  "IdAlias": "",
+                  "Third1": "th1002",
+                  "Third2": "th2002",
+                  "T1Data": {
+                    "Name": "na11",
+                    "Number": 10002,
+                    "Location": "202F"
+                  },
+                  "T2Data": {
+                    "Class": "K2Bo2",
+                    "Grade": "BBB",
+                    "Unit": "AB"
+                  }
+                },
+                "30043": {
+                  "Id": 30043,
+                  "IdAlias": "",
+                  "Third1": "th1003",
+                  "Third2": "th2003",
+                  "T1Data": {
+                    "Name": "na12",
+                    "Number": 10003,
+                    "Location": "203F"
+                  },
+                  "T2Data": {
+                    "Class": "K2B02",
+                    "Grade": "AAA",
+                    "Unit": "AA"
+                  }
+                }
+              },
+              "MetaNestedData": {
+                "MapIdOffset": {},
+                "MapAliasOffset": {}
+              }
+            },
+            "20022": {
+              "Id": 20022,
+              "IdAlias": "",
+              "Second1": "sec21",
+              "Second2": "sec22",
+              "S1Data": {
+                "Name": "na2",
+                "Number": 2,
+                "Location": "102F"
+              },
+              "S2Data": {
+                "Class": "R3B2",
+                "Grade": "BBB",
+                "Unit": "B"
+              },
+              "ThirdMap": {
+                "30044": {
+                  "Id": 30044,
+                  "IdAlias": "",
+                  "Third1": "th1004",
+                  "Third2": "th2004",
+                  "T1Data": {
+                    "Name": "na13",
+                    "Number": 10004,
+                    "Location": "204F"
+                  },
+                  "T2Data": {
+                    "Class": "K2Bo3",
+                    "Grade": "BBB",
+                    "Unit": "AB"
+                  }
+                },
+                "30045": {
+                  "Id": 30045,
+                  "IdAlias": "",
+                  "Third1": "th1005",
+                  "Third2": "th2005",
+                  "T1Data": {
+                    "Name": "na14",
+                    "Number": 10005,
+                    "Location": "205F"
+                  },
+                  "T2Data": {
+                    "Class": "K2B03",
+                    "Grade": "AAA",
+                    "Unit": "AA"
+                  }
+                },
+                "30046": {
+                  "Id": 30046,
+                  "IdAlias": "",
+                  "Third1": "th1006",
+                  "Third2": "th2006",
+                  "T1Data": {
+                    "Name": "na15",
+                    "Number": 10006,
+                    "Location": "206F"
+                  },
+                  "T2Data": {
+                    "Class": "K2Bo4",
+                    "Grade": "BBB",
+                    "Unit": "AB"
+                  }
+                }
+              },
+              "MetaNestedData": {
+                "MapIdOffset": {},
+                "MapAliasOffset": {}
+              }
+            }
+          },
+          "MetaNestedData": {
+            "MapIdOffset": {},
+            "MapAliasOffset": {}
+          }
+        },
+        "10008": {
+          "Id": 10008,
+          "IdAlias": "",
+          "F1Data": {
+            "Name": "na2",
+            "Number": 22345,
+            "Location": "2F"
+          },
+          "F2Data": {
+            "Class": "R3B2",
+            "Grade": "BBB",
+            "Unit": "B"
+          },
+          "SecondMap": {
+            "20023": {
+              "Id": 20023,
+              "IdAlias": "",
+              "Second1": "sec11",
+              "Second2": "sec33",
+              "S1Data": {
+                "Name": "na3",
+                "Number": 3,
+                "Location": "103F"
+              },
+              "S2Data": {
+                "Class": "R4B2",
+                "Grade": "CCC",
+                "Unit": "C"
+              },
+              "ThirdMap": {
+                "30047": {
+                  "Id": 30047,
+                  "IdAlias": "",
+                  "Third1": "th1007",
+                  "Third2": "th2007",
+                  "T1Data": {
+                    "Name": "na16",
+                    "Number": 10007,
+                    "Location": "207F"
+                  },
+                  "T2Data": {
+                    "Class": "K2B04",
+                    "Grade": "AAA",
+                    "Unit": "AA"
+                  }
+                },
+                "30048": {
+                  "Id": 30048,
+                  "IdAlias": "",
+                  "Third1": "th1008",
+                  "Third2": "th2008",
+                  "T1Data": {
+                    "Name": "na17",
+                    "Number": 10008,
+                    "Location": "208F"
+                  },
+                  "T2Data": {
+                    "Class": "K2Bo5",
+                    "Grade": "BBB",
+                    "Unit": "AB"
+                  }
+                },
+                "30049": {
+                  "Id": 30049,
+                  "IdAlias": "",
+                  "Third1": "th1009",
+                  "Third2": "th2009",
+                  "T1Data": {
+                    "Name": "na18",
+                    "Number": 10009,
+                    "Location": "209F"
+                  },
+                  "T2Data": {
+                    "Class": "K2B05",
+                    "Grade": "AAA",
+                    "Unit": "AA"
+                  }
+                }
+              },
+              "MetaNestedData": {
+                "MapIdOffset": {},
+                "MapAliasOffset": {}
+              }
+            },
+            "20024": {
+              "Id": 20024,
+              "IdAlias": "",
+              "Second1": "sec41",
+              "Second2": "sec44",
+              "S1Data": {
+                "Name": "na4",
+                "Number": 4,
+                "Location": "104F"
+              },
+              "S2Data": {
+                "Class": "R5B2",
+                "Grade": "DDD",
+                "Unit": "D"
+              },
+              "ThirdMap": {
+                "30050": {
+                  "Id": 30050,
+                  "IdAlias": "",
+                  "Third1": "th1010",
+                  "Third2": "th2010",
+                  "T1Data": {
+                    "Name": "na19",
+                    "Number": 10010,
+                    "Location": "210F"
+                  },
+                  "T2Data": {
+                    "Class": "K2Bo6",
+                    "Grade": "BBB",
+                    "Unit": "AB"
+                  }
+                },
+                "30051": {
+                  "Id": 30051,
+                  "IdAlias": "",
+                  "Third1": "th1011",
+                  "Third2": "th2011",
+                  "T1Data": {
+                    "Name": "na20",
+                    "Number": 10011,
+                    "Location": "211F"
+                  },
+                  "T2Data": {
+                    "Class": "K2B06",
+                    "Grade": "AAA",
+                    "Unit": "AA"
+                  }
+                },
+                "30052": {
+                  "Id": 30052,
+                  "IdAlias": "",
+                  "Third1": "th1012",
+                  "Third2": "th2012",
+                  "T1Data": {
+                    "Name": "na21",
+                    "Number": 10012,
+                    "Location": "212F"
+                  },
+                  "T2Data": {
+                    "Class": "K2Bo7",
+                    "Grade": "BBB",
+                    "Unit": "AB"
+                  }
+                }
+              },
+              "MetaNestedData": {
+                "MapIdOffset": {},
+                "MapAliasOffset": {}
+              }
+            }
+          },
+          "MetaNestedData": {
+            "MapIdOffset": {},
+            "MapAliasOffset": {}
+          }
+        },
+        "10009": {
+          "Id": 10009,
+          "IdAlias": "",
+          "F1Data": {
+            "Name": "na3",
+            "Number": 32345,
+            "Location": "3F"
+          },
+          "F2Data": {
+            "Class": "R4B2",
+            "Grade": "CCC",
+            "Unit": "C"
+          },
+          "SecondMap": {
+            "20025": {
+              "Id": 20025,
+              "IdAlias": "",
+              "Second1": "sec51",
+              "Second2": "sec55",
+              "S1Data": {
+                "Name": "na5",
+                "Number": 5,
+                "Location": "105F"
+              },
+              "S2Data": {
+                "Class": "R6B2",
+                "Grade": "FFF",
+                "Unit": "E"
+              },
+              "ThirdMap": {
+                "30053": {
+                  "Id": 30053,
+                  "IdAlias": "",
+                  "Third1": "th1013",
+                  "Third2": "th2013",
+                  "T1Data": {
+                    "Name": "na22",
+                    "Number": 10013,
+                    "Location": "213F"
+                  },
+                  "T2Data": {
+                    "Class": "K2B07",
+                    "Grade": "AAA",
+                    "Unit": "AA"
+                  }
+                },
+                "30054": {
+                  "Id": 30054,
+                  "IdAlias": "",
+                  "Third1": "th1014",
+                  "Third2": "th2014",
+                  "T1Data": {
+                    "Name": "na23",
+                    "Number": 10014,
+                    "Location": "214F"
+                  },
+                  "T2Data": {
+                    "Class": "K2Bo8",
+                    "Grade": "BBB",
+                    "Unit": "AB"
+                  }
+                },
+                "30055": {
+                  "Id": 30055,
+                  "IdAlias": "",
+                  "Third1": "th1015",
+                  "Third2": "th2015",
+                  "T1Data": {
+                    "Name": "na24",
+                    "Number": 10015,
+                    "Location": "215F"
+                  },
+                  "T2Data": {
+                    "Class": "K2B08",
+                    "Grade": "AAA",
+                    "Unit": "AA"
+                  }
+                }
+              },
+              "MetaNestedData": {
+                "MapIdOffset": {},
+                "MapAliasOffset": {}
+              }
+            },
+            "20026": {
+              "Id": 20026,
+              "IdAlias": "",
+              "Second1": "sec61",
+              "Second2": "sec66",
+              "S1Data": {
+                "Name": "na6",
+                "Number": 6,
+                "Location": "106F"
+              },
+              "S2Data": {
+                "Class": "R7B2",
+                "Grade": "EEE",
+                "Unit": "F"
+              },
+              "ThirdMap": {
+                "30056": {
+                  "Id": 30056,
+                  "IdAlias": "",
+                  "Third1": "th1016",
+                  "Third2": "th2016",
+                  "T1Data": {
+                    "Name": "na25",
+                    "Number": 10016,
+                    "Location": "216F"
+                  },
+                  "T2Data": {
+                    "Class": "K2Bo9",
+                    "Grade": "BBB",
+                    "Unit": "AB"
+                  }
+                },
+                "30057": {
+                  "Id": 30057,
+                  "IdAlias": "",
+                  "Third1": "th1017",
+                  "Third2": "th2017",
+                  "T1Data": {
+                    "Name": "na26",
+                    "Number": 10017,
+                    "Location": "217F"
+                  },
+                  "T2Data": {
+                    "Class": "K2B09",
+                    "Grade": "AAA",
+                    "Unit": "AA"
+                  }
+                },
+                "30058": {
+                  "Id": 30058,
+                  "IdAlias": "",
+                  "Third1": "th1018",
+                  "Third2": "th2018",
+                  "T1Data": {
+                    "Name": "na27",
+                    "Number": 10018,
+                    "Location": "218F"
+                  },
+                  "T2Data": {
+                    "Class": "K2Bo10",
+                    "Grade": "BBB",
+                    "Unit": "AB"
+                  }
+                }
+              },
+              "MetaNestedData": {
+                "MapIdOffset": {},
+                "MapAliasOffset": {}
+              }
+            }
+          },
+          "MetaNestedData": {
+            "MapIdOffset": {},
+            "MapAliasOffset": {}
+          }
+        },
+        "10010": {
+          "Id": 10010,
+          "IdAlias": "",
+          "F1Data": {
+            "Name": "na4",
+            "Number": 42345,
+            "Location": "4F"
+          },
+          "F2Data": {
+            "Class": "R1B2",
+            "Grade": "DDD",
+            "Unit": "D"
+          },
+          "SecondMap": {
+            "20027": {
+              "Id": 20027,
+              "IdAlias": "",
+              "Second1": "sec71",
+              "Second2": "sec77",
+              "S1Data": {
+                "Name": "na7",
+                "Number": 7,
+                "Location": "107F"
+              },
+              "S2Data": {
+                "Class": "R8B2",
+                "Grade": "GGG",
+                "Unit": "G"
+              },
+              "ThirdMap": {
+                "30059": {
+                  "Id": 30059,
+                  "IdAlias": "",
+                  "Third1": "th1019",
+                  "Third2": "th2019",
+                  "T1Data": {
+                    "Name": "na28",
+                    "Number": 10019,
+                    "Location": "219F"
+                  },
+                  "T2Data": {
+                    "Class": "K2B10",
+                    "Grade": "AAA",
+                    "Unit": "AA"
+                  }
+                },
+                "30060": {
+                  "Id": 30060,
+                  "IdAlias": "",
+                  "Third1": "th1020",
+                  "Third2": "th2020",
+                  "T1Data": {
+                    "Name": "na29",
+                    "Number": 10020,
+                    "Location": "220F"
+                  },
+                  "T2Data": {
+                    "Class": "K2Bo11",
+                    "Grade": "BBB",
+                    "Unit": "AB"
+                  }
+                },
+                "30061": {
+                  "Id": 30061,
+                  "IdAlias": "",
+                  "Third1": "th1021",
+                  "Third2": "th2021",
+                  "T1Data": {
+                    "Name": "na30",
+                    "Number": 10021,
+                    "Location": "221F"
+                  },
+                  "T2Data": {
+                    "Class": "K2B11",
+                    "Grade": "AAA",
+                    "Unit": "AA"
+                  }
+                }
+              },
+              "MetaNestedData": {
+                "MapIdOffset": {},
+                "MapAliasOffset": {}
+              }
+            },
+            "20028": {
+              "Id": 20028,
+              "IdAlias": "",
+              "Second1": "sec81",
+              "Second2": "sec88",
+              "S1Data": {
+                "Name": "na8",
+                "Number": 8,
+                "Location": "108F"
+              },
+              "S2Data": {
+                "Class": "R9B2",
+                "Grade": "HHH",
+                "Unit": "H"
+              },
+              "ThirdMap": {
+                "30062": {
+                  "Id": 30062,
+                  "IdAlias": "",
+                  "Third1": "th1022",
+                  "Third2": "th2022",
+                  "T1Data": {
+                    "Name": "na31",
+                    "Number": 10022,
+                    "Location": "222F"
+                  },
+                  "T2Data": {
+                    "Class": "K2Bo12",
+                    "Grade": "BBB",
+                    "Unit": "AB"
+                  }
+                },
+                "30063": {
+                  "Id": 30063,
+                  "IdAlias": "",
+                  "Third1": "th1023",
+                  "Third2": "th2023",
+                  "T1Data": {
+                    "Name": "na32",
+                    "Number": 10023,
+                    "Location": "223F"
+                  },
+                  "T2Data": {
+                    "Class": "K2B12",
+                    "Grade": "AAA",
+                    "Unit": "AA"
+                  }
+                },
+                "30064": {
+                  "Id": 30064,
+                  "IdAlias": "",
+                  "Third1": "th1024",
+                  "Third2": "th2024",
+                  "T1Data": {
+                    "Name": "na33",
+                    "Number": 10024,
+                    "Location": "224F"
+                  },
+                  "T2Data": {
+                    "Class": "K2Bo13",
+                    "Grade": "BBB",
+                    "Unit": "AB"
+                  }
+                }
+              },
+              "MetaNestedData": {
+                "MapIdOffset": {},
+                "MapAliasOffset": {}
+              }
+            }
+          },
+          "MetaNestedData": {
+            "MapIdOffset": {},
+            "MapAliasOffset": {}
+          }
+        },
+        "10011": {
+          "Id": 10011,
+          "IdAlias": "",
+          "F1Data": {
+            "Name": "na5",
+            "Number": 52345,
+            "Location": "5F"
+          },
+          "F2Data": {
+            "Class": "R1B3",
+            "Grade": "EEE",
+            "Unit": "E"
+          },
+          "SecondMap": {
+            "20029": {
+              "Id": 20029,
+              "IdAlias": "",
+              "Second1": "sec91",
+              "Second2": "sec99",
+              "S1Data": {
+                "Name": "na9",
+                "Number": 9,
+                "Location": "109F"
+              },
+              "S2Data": {
+                "Class": "R2B3",
+                "Grade": "JJJ",
+                "Unit": "O"
+              },
+              "ThirdMap": {
+                "30065": {
+                  "Id": 30065,
+                  "IdAlias": "",
+                  "Third1": "th1025",
+                  "Third2": "th2025",
+                  "T1Data": {
+                    "Name": "na34",
+                    "Number": 10025,
+                    "Location": "225F"
+                  },
+                  "T2Data": {
+                    "Class": "K2B13",
+                    "Grade": "AAA",
+                    "Unit": "AA"
+                  }
+                },
+                "30066": {
+                  "Id": 30066,
+                  "IdAlias": "",
+                  "Third1": "th1026",
+                  "Third2": "th2026",
+                  "T1Data": {
+                    "Name": "na35",
+                    "Number": 10026,
+                    "Location": "226F"
+                  },
+                  "T2Data": {
+                    "Class": "K2Bo14",
+                    "Grade": "BBB",
+                    "Unit": "AB"
+                  }
+                },
+                "30067": {
+                  "Id": 30067,
+                  "IdAlias": "",
+                  "Third1": "th1027",
+                  "Third2": "th2027",
+                  "T1Data": {
+                    "Name": "na36",
+                    "Number": 10027,
+                    "Location": "227F"
+                  },
+                  "T2Data": {
+                    "Class": "K2B14",
+                    "Grade": "AAA",
+                    "Unit": "AA"
+                  }
+                }
+              },
+              "MetaNestedData": {
+                "MapIdOffset": {},
+                "MapAliasOffset": {}
+              }
+            },
+            "20030": {
+              "Id": 20030,
+              "IdAlias": "",
+              "Second1": "sec01",
+              "Second2": "sec111",
+              "S1Data": {
+                "Name": "na10",
+                "Number": 10,
+                "Location": "110F"
+              },
+              "S2Data": {
+                "Class": "R2B4",
+                "Grade": "KKK",
+                "Unit": "P"
+              },
+              "ThirdMap": {
+                "30068": {
+                  "Id": 30068,
+                  "IdAlias": "",
+                  "Third1": "th1028",
+                  "Third2": "th2028",
+                  "T1Data": {
+                    "Name": "na37",
+                    "Number": 10028,
+                    "Location": "228F"
+                  },
+                  "T2Data": {
+                    "Class": "K2Bo15",
+                    "Grade": "BBB",
+                    "Unit": "AB"
+                  }
+                },
+                "30069": {
+                  "Id": 30069,
+                  "IdAlias": "",
+                  "Third1": "th1029",
+                  "Third2": "th2029",
+                  "T1Data": {
+                    "Name": "na38",
+                    "Number": 10029,
+                    "Location": "229F"
+                  },
+                  "T2Data": {
+                    "Class": "K2B15",
+                    "Grade": "AAA",
+                    "Unit": "AA"
+                  }
+                },
+                "30070": {
+                  "Id": 30070,
+                  "IdAlias": "",
+                  "Third1": "th1030",
+                  "Third2": "th2030",
+                  "T1Data": {
+                    "Name": "na39",
+                    "Number": 10030,
+                    "Location": "230F"
+                  },
+                  "T2Data": {
+                    "Class": "K2Bo16",
+                    "Grade": "BBB",
+                    "Unit": "AB"
+                  }
+                }
+              },
+              "MetaNestedData": {
+                "MapIdOffset": {},
+                "MapAliasOffset": {}
+              }
+            }
+          },
+          "MetaNestedData": {
+            "MapIdOffset": {},
+            "MapAliasOffset": {}
+          }
+        },
+        "10012": {
+          "Id": 10012,
+          "IdAlias": "",
+          "F1Data": {
+            "Name": "na6",
+            "Number": 62345,
+            "Location": "6F"
+          },
+          "F2Data": {
+            "Class": "R1B4",
+            "Grade": "FFF",
+            "Unit": "F"
+          },
+          "SecondMap": {
+            "20031": {
+              "Id": 20031,
+              "IdAlias": "",
+              "Second1": "sec02",
+              "Second2": "sec222",
+              "S1Data": {
+                "Name": "na11",
+                "Number": 11,
+                "Location": "111F"
+              },
+              "S2Data": {
+                "Class": "R2B5",
+                "Grade": "TTT",
+                "Unit": "Q"
+              },
+              "ThirdMap": {
+                "30071": {
+                  "Id": 30071,
+                  "IdAlias": "",
+                  "Third1": "th1031",
+                  "Third2": "th2031",
+                  "T1Data": {
+                    "Name": "na40",
+                    "Number": 10031,
+                    "Location": "231F"
+                  },
+                  "T2Data": {
+                    "Class": "K2B16",
+                    "Grade": "AAA",
+                    "Unit": "AA"
+                  }
+                },
+                "30072": {
+                  "Id": 30072,
+                  "IdAlias": "",
+                  "Third1": "th1032",
+                  "Third2": "th2032",
+                  "T1Data": {
+                    "Name": "na41",
+                    "Number": 10032,
+                    "Location": "232F"
+                  },
+                  "T2Data": {
+                    "Class": "K2Bo17",
+                    "Grade": "BBB",
+                    "Unit": "AB"
+                  }
+                },
+                "30073": {
+                  "Id": 30073,
+                  "IdAlias": "",
+                  "Third1": "th1033",
+                  "Third2": "th2033",
+                  "T1Data": {
+                    "Name": "na42",
+                    "Number": 10033,
+                    "Location": "233F"
+                  },
+                  "T2Data": {
+                    "Class": "K2B17",
+                    "Grade": "AAA",
+                    "Unit": "AA"
+                  }
+                }
+              },
+              "MetaNestedData": {
+                "MapIdOffset": {},
+                "MapAliasOffset": {}
+              }
+            },
+            "20032": {
+              "Id": 20032,
+              "IdAlias": "",
+              "Second1": "sec03",
+              "Second2": "sec333",
+              "S1Data": {
+                "Name": "na12",
+                "Number": 12,
+                "Location": "112F"
+              },
+              "S2Data": {
+                "Class": "R2B6",
+                "Grade": "YYY",
+                "Unit": "R"
+              },
+              "ThirdMap": {
+                "30074": {
+                  "Id": 30074,
+                  "IdAlias": "",
+                  "Third1": "th1034",
+                  "Third2": "th2034",
+                  "T1Data": {
+                    "Name": "na43",
+                    "Number": 10034,
+                    "Location": "234F"
+                  },
+                  "T2Data": {
+                    "Class": "K2Bo18",
+                    "Grade": "BBB",
+                    "Unit": "AB"
+                  }
+                },
+                "30075": {
+                  "Id": 30075,
+                  "IdAlias": "",
+                  "Third1": "th1035",
+                  "Third2": "th2035",
+                  "T1Data": {
+                    "Name": "na44",
+                    "Number": 10035,
+                    "Location": "235F"
+                  },
+                  "T2Data": {
+                    "Class": "K2B18",
+                    "Grade": "AAA",
+                    "Unit": "AA"
+                  }
+                },
+                "30076": {
+                  "Id": 30076,
+                  "IdAlias": "",
+                  "Third1": "th1036",
+                  "Third2": "th2036",
+                  "T1Data": {
+                    "Name": "na45",
+                    "Number": 10036,
+                    "Location": "236F"
+                  },
+                  "T2Data": {
+                    "Class": "K2Bo19",
+                    "Grade": "BBB",
+                    "Unit": "AB"
+                  }
+                }
+              },
+              "MetaNestedData": {
+                "MapIdOffset": {},
+                "MapAliasOffset": {}
+              }
+            }
+          },
+          "MetaNestedData": {
+            "MapIdOffset": {},
+            "MapAliasOffset": {}
+          }
+        }
+      },
+      "MetaNestedData": {
+        "MapIdOffset": {},
+        "MapAliasOffset": {}
+      }
+    },
+    "LDepthDataTable": {
+      "$type": "Tests.Depth.LDepthDataTable, xpTURN.TableSet.ForTests",
+      "Map": {
+        "10001": {
+          "Id": 10001,
+          "IdAlias": "",
+          "F1Data": {
+            "Name": "na1",
+            "Number": 12345,
+            "Location": "1F"
+          },
+          "F2Data": {
+            "Class": "R2B2",
+            "Grade": "AAA",
+            "Unit": "A"
+          },
+          "SecondList": [
+            {
+              "Second1": "sec11",
+              "Second2": "sec12",
+              "S1Data": {
+                "Name": "na1",
+                "Number": 1,
+                "Location": "101F"
+              },
+              "S2Data": {
+                "Class": "R2B2",
+                "Grade": "AAA",
+                "Unit": "A"
+              },
+              "ThirdList": [
+                {
+                  "Third1": "th1001",
+                  "Third2": "th2001",
+                  "T1Data": {
+                    "Name": "na10",
+                    "Number": 10001,
+                    "Location": "201F"
+                  },
+                  "T2Data": {
+                    "Class": "K2B01",
+                    "Grade": "AAA",
+                    "Unit": "AA"
+                  }
+                },
+                {
+                  "Third1": "th1002",
+                  "Third2": "th2002",
+                  "T1Data": {
+                    "Name": "na11",
+                    "Number": 10002,
+                    "Location": "202F"
+                  },
+                  "T2Data": {
+                    "Class": "K2Bo2",
+                    "Grade": "BBB",
+                    "Unit": "AB"
+                  }
+                },
+                {
+                  "Third1": "th1003",
+                  "Third2": "th2003",
+                  "T1Data": {
+                    "Name": "na12",
+                    "Number": 10003,
+                    "Location": "203F"
+                  },
+                  "T2Data": {
+                    "Class": "K2B02",
+                    "Grade": "AAA",
+                    "Unit": "AA"
+                  }
+                }
+              ]
+            },
+            {
+              "Second1": "sec21",
+              "Second2": "sec22",
+              "S1Data": {
+                "Name": "na2",
+                "Number": 2,
+                "Location": "102F"
+              },
+              "S2Data": {
+                "Class": "R3B2",
+                "Grade": "BBB",
+                "Unit": "B"
+              },
+              "ThirdList": [
+                {
+                  "Third1": "th1004",
+                  "Third2": "th2004",
+                  "T1Data": {
+                    "Name": "na13",
+                    "Number": 10004,
+                    "Location": "204F"
+                  },
+                  "T2Data": {
+                    "Class": "K2Bo3",
+                    "Grade": "BBB",
+                    "Unit": "AB"
+                  }
+                },
+                {
+                  "Third1": "th1005",
+                  "Third2": "th2005",
+                  "T1Data": {
+                    "Name": "na14",
+                    "Number": 10005,
+                    "Location": "205F"
+                  },
+                  "T2Data": {
+                    "Class": "K2B03",
+                    "Grade": "AAA",
+                    "Unit": "AA"
+                  }
+                },
+                {
+                  "Third1": "th1006",
+                  "Third2": "th2006",
+                  "T1Data": {
+                    "Name": "na15",
+                    "Number": 10006,
+                    "Location": "206F"
+                  },
+                  "T2Data": {
+                    "Class": "K2Bo4",
+                    "Grade": "BBB",
+                    "Unit": "AB"
+                  }
+                }
+              ]
+            }
+          ]
+        },
+        "10002": {
+          "Id": 10002,
+          "IdAlias": "",
+          "F1Data": {
+            "Name": "na2",
+            "Number": 22345,
+            "Location": "2F"
+          },
+          "F2Data": {
+            "Class": "R3B2",
+            "Grade": "BBB",
+            "Unit": "B"
+          },
+          "SecondList": [
+            {
+              "Second1": "sec11",
+              "Second2": "sec33",
+              "S1Data": {
+                "Name": "na3",
+                "Number": 3,
+                "Location": "103F"
+              },
+              "S2Data": {
+                "Class": "R4B2",
+                "Grade": "CCC",
+                "Unit": "C"
+              },
+              "ThirdList": [
+                {
+                  "Third1": "th1007",
+                  "Third2": "th2007",
+                  "T1Data": {
+                    "Name": "na16",
+                    "Number": 10007,
+                    "Location": "207F"
+                  },
+                  "T2Data": {
+                    "Class": "K2B04",
+                    "Grade": "AAA",
+                    "Unit": "AA"
+                  }
+                },
+                {
+                  "Third1": "th1008",
+                  "Third2": "th2008",
+                  "T1Data": {
+                    "Name": "na17",
+                    "Number": 10008,
+                    "Location": "208F"
+                  },
+                  "T2Data": {
+                    "Class": "K2Bo5",
+                    "Grade": "BBB",
+                    "Unit": "AB"
+                  }
+                },
+                {
+                  "Third1": "th1009",
+                  "Third2": "th2009",
+                  "T1Data": {
+                    "Name": "na18",
+                    "Number": 10009,
+                    "Location": "209F"
+                  },
+                  "T2Data": {
+                    "Class": "K2B05",
+                    "Grade": "AAA",
+                    "Unit": "AA"
+                  }
+                }
+              ]
+            },
+            {
+              "Second1": "sec41",
+              "Second2": "sec44",
+              "S1Data": {
+                "Name": "na4",
+                "Number": 4,
+                "Location": "104F"
+              },
+              "S2Data": {
+                "Class": "R5B2",
+                "Grade": "DDD",
+                "Unit": "D"
+              },
+              "ThirdList": [
+                {
+                  "Third1": "th1010",
+                  "Third2": "th2010",
+                  "T1Data": {
+                    "Name": "na19",
+                    "Number": 10010,
+                    "Location": "210F"
+                  },
+                  "T2Data": {
+                    "Class": "K2Bo6",
+                    "Grade": "BBB",
+                    "Unit": "AB"
+                  }
+                },
+                {
+                  "Third1": "th1011",
+                  "Third2": "th2011",
+                  "T1Data": {
+                    "Name": "na20",
+                    "Number": 10011,
+                    "Location": "211F"
+                  },
+                  "T2Data": {
+                    "Class": "K2B06",
+                    "Grade": "AAA",
+                    "Unit": "AA"
+                  }
+                },
+                {
+                  "Third1": "th1012",
+                  "Third2": "th2012",
+                  "T1Data": {
+                    "Name": "na21",
+                    "Number": 10012,
+                    "Location": "212F"
+                  },
+                  "T2Data": {
+                    "Class": "K2Bo7",
+                    "Grade": "BBB",
+                    "Unit": "AB"
+                  }
+                }
+              ]
+            }
+          ]
+        },
+        "10003": {
+          "Id": 10003,
+          "IdAlias": "",
+          "F1Data": {
+            "Name": "na3",
+            "Number": 32345,
+            "Location": "3F"
+          },
+          "F2Data": {
+            "Class": "R4B2",
+            "Grade": "CCC",
+            "Unit": "C"
+          },
+          "SecondList": [
+            {
+              "Second1": "sec51",
+              "Second2": "sec55",
+              "S1Data": {
+                "Name": "na5",
+                "Number": 5,
+                "Location": "105F"
+              },
+              "S2Data": {
+                "Class": "R6B2",
+                "Grade": "FFF",
+                "Unit": "E"
+              },
+              "ThirdList": [
+                {
+                  "Third1": "th1013",
+                  "Third2": "th2013",
+                  "T1Data": {
+                    "Name": "na22",
+                    "Number": 10013,
+                    "Location": "213F"
+                  },
+                  "T2Data": {
+                    "Class": "K2B07",
+                    "Grade": "AAA",
+                    "Unit": "AA"
+                  }
+                },
+                {
+                  "Third1": "th1014",
+                  "Third2": "th2014",
+                  "T1Data": {
+                    "Name": "na23",
+                    "Number": 10014,
+                    "Location": "214F"
+                  },
+                  "T2Data": {
+                    "Class": "K2Bo8",
+                    "Grade": "BBB",
+                    "Unit": "AB"
+                  }
+                },
+                {
+                  "Third1": "th1015",
+                  "Third2": "th2015",
+                  "T1Data": {
+                    "Name": "na24",
+                    "Number": 10015,
+                    "Location": "215F"
+                  },
+                  "T2Data": {
+                    "Class": "K2B08",
+                    "Grade": "AAA",
+                    "Unit": "AA"
+                  }
+                }
+              ]
+            },
+            {
+              "Second1": "sec61",
+              "Second2": "sec66",
+              "S1Data": {
+                "Name": "na6",
+                "Number": 6,
+                "Location": "106F"
+              },
+              "S2Data": {
+                "Class": "R7B2",
+                "Grade": "EEE",
+                "Unit": "F"
+              },
+              "ThirdList": [
+                {
+                  "Third1": "th1016",
+                  "Third2": "th2016",
+                  "T1Data": {
+                    "Name": "na25",
+                    "Number": 10016,
+                    "Location": "216F"
+                  },
+                  "T2Data": {
+                    "Class": "K2Bo9",
+                    "Grade": "BBB",
+                    "Unit": "AB"
+                  }
+                },
+                {
+                  "Third1": "th1017",
+                  "Third2": "th2017",
+                  "T1Data": {
+                    "Name": "na26",
+                    "Number": 10017,
+                    "Location": "217F"
+                  },
+                  "T2Data": {
+                    "Class": "K2B09",
+                    "Grade": "AAA",
+                    "Unit": "AA"
+                  }
+                },
+                {
+                  "Third1": "th1018",
+                  "Third2": "th2018",
+                  "T1Data": {
+                    "Name": "na27",
+                    "Number": 10018,
+                    "Location": "218F"
+                  },
+                  "T2Data": {
+                    "Class": "K2Bo10",
+                    "Grade": "BBB",
+                    "Unit": "AB"
+                  }
+                }
+              ]
+            }
+          ]
+        },
+        "10004": {
+          "Id": 10004,
+          "IdAlias": "",
+          "F1Data": {
+            "Name": "na4",
+            "Number": 42345,
+            "Location": "4F"
+          },
+          "F2Data": {
+            "Class": "R1B2",
+            "Grade": "DDD",
+            "Unit": "D"
+          },
+          "SecondList": [
+            {
+              "Second1": "sec71",
+              "Second2": "sec77",
+              "S1Data": {
+                "Name": "na7",
+                "Number": 7,
+                "Location": "107F"
+              },
+              "S2Data": {
+                "Class": "R8B2",
+                "Grade": "GGG",
+                "Unit": "G"
+              },
+              "ThirdList": [
+                {
+                  "Third1": "th1019",
+                  "Third2": "th2019",
+                  "T1Data": {
+                    "Name": "na28",
+                    "Number": 10019,
+                    "Location": "219F"
+                  },
+                  "T2Data": {
+                    "Class": "K2B10",
+                    "Grade": "AAA",
+                    "Unit": "AA"
+                  }
+                },
+                {
+                  "Third1": "th1020",
+                  "Third2": "th2020",
+                  "T1Data": {
+                    "Name": "na29",
+                    "Number": 10020,
+                    "Location": "220F"
+                  },
+                  "T2Data": {
+                    "Class": "K2Bo11",
+                    "Grade": "BBB",
+                    "Unit": "AB"
+                  }
+                },
+                {
+                  "Third1": "th1021",
+                  "Third2": "th2021",
+                  "T1Data": {
+                    "Name": "na30",
+                    "Number": 10021,
+                    "Location": "221F"
+                  },
+                  "T2Data": {
+                    "Class": "K2B11",
+                    "Grade": "AAA",
+                    "Unit": "AA"
+                  }
+                }
+              ]
+            },
+            {
+              "Second1": "sec81",
+              "Second2": "sec88",
+              "S1Data": {
+                "Name": "na8",
+                "Number": 8,
+                "Location": "108F"
+              },
+              "S2Data": {
+                "Class": "R9B2",
+                "Grade": "HHH",
+                "Unit": "H"
+              },
+              "ThirdList": [
+                {
+                  "Third1": "th1022",
+                  "Third2": "th2022",
+                  "T1Data": {
+                    "Name": "na31",
+                    "Number": 10022,
+                    "Location": "222F"
+                  },
+                  "T2Data": {
+                    "Class": "K2Bo12",
+                    "Grade": "BBB",
+                    "Unit": "AB"
+                  }
+                },
+                {
+                  "Third1": "th1023",
+                  "Third2": "th2023",
+                  "T1Data": {
+                    "Name": "na32",
+                    "Number": 10023,
+                    "Location": "223F"
+                  },
+                  "T2Data": {
+                    "Class": "K2B12",
+                    "Grade": "AAA",
+                    "Unit": "AA"
+                  }
+                },
+                {
+                  "Third1": "th1024",
+                  "Third2": "th2024",
+                  "T1Data": {
+                    "Name": "na33",
+                    "Number": 10024,
+                    "Location": "224F"
+                  },
+                  "T2Data": {
+                    "Class": "K2Bo13",
+                    "Grade": "BBB",
+                    "Unit": "AB"
+                  }
+                }
+              ]
+            }
+          ]
+        },
+        "10005": {
+          "Id": 10005,
+          "IdAlias": "",
+          "F1Data": {
+            "Name": "na5",
+            "Number": 52345,
+            "Location": "5F"
+          },
+          "F2Data": {
+            "Class": "R1B3",
+            "Grade": "EEE",
+            "Unit": "E"
+          },
+          "SecondList": [
+            {
+              "Second1": "sec91",
+              "Second2": "sec99",
+              "S1Data": {
+                "Name": "na9",
+                "Number": 9,
+                "Location": "109F"
+              },
+              "S2Data": {
+                "Class": "R2B3",
+                "Grade": "JJJ",
+                "Unit": "O"
+              },
+              "ThirdList": [
+                {
+                  "Third1": "th1025",
+                  "Third2": "th2025",
+                  "T1Data": {
+                    "Name": "na34",
+                    "Number": 10025,
+                    "Location": "225F"
+                  },
+                  "T2Data": {
+                    "Class": "K2B13",
+                    "Grade": "AAA",
+                    "Unit": "AA"
+                  }
+                },
+                {
+                  "Third1": "th1026",
+                  "Third2": "th2026",
+                  "T1Data": {
+                    "Name": "na35",
+                    "Number": 10026,
+                    "Location": "226F"
+                  },
+                  "T2Data": {
+                    "Class": "K2Bo14",
+                    "Grade": "BBB",
+                    "Unit": "AB"
+                  }
+                },
+                {
+                  "Third1": "th1027",
+                  "Third2": "th2027",
+                  "T1Data": {
+                    "Name": "na36",
+                    "Number": 10027,
+                    "Location": "227F"
+                  },
+                  "T2Data": {
+                    "Class": "K2B14",
+                    "Grade": "AAA",
+                    "Unit": "AA"
+                  }
+                }
+              ]
+            },
+            {
+              "Second1": "sec01",
+              "Second2": "sec111",
+              "S1Data": {
+                "Name": "na10",
+                "Number": 10,
+                "Location": "110F"
+              },
+              "S2Data": {
+                "Class": "R2B4",
+                "Grade": "KKK",
+                "Unit": "P"
+              },
+              "ThirdList": [
+                {
+                  "Third1": "th1028",
+                  "Third2": "th2028",
+                  "T1Data": {
+                    "Name": "na37",
+                    "Number": 10028,
+                    "Location": "228F"
+                  },
+                  "T2Data": {
+                    "Class": "K2Bo15",
+                    "Grade": "BBB",
+                    "Unit": "AB"
+                  }
+                },
+                {
+                  "Third1": "th1029",
+                  "Third2": "th2029",
+                  "T1Data": {
+                    "Name": "na38",
+                    "Number": 10029,
+                    "Location": "229F"
+                  },
+                  "T2Data": {
+                    "Class": "K2B15",
+                    "Grade": "AAA",
+                    "Unit": "AA"
+                  }
+                },
+                {
+                  "Third1": "th1030",
+                  "Third2": "th2030",
+                  "T1Data": {
+                    "Name": "na39",
+                    "Number": 10030,
+                    "Location": "230F"
+                  },
+                  "T2Data": {
+                    "Class": "K2Bo16",
+                    "Grade": "BBB",
+                    "Unit": "AB"
+                  }
+                }
+              ]
+            }
+          ]
+        },
+        "10006": {
+          "Id": 10006,
+          "IdAlias": "",
+          "F1Data": {
+            "Name": "na6",
+            "Number": 62345,
+            "Location": "6F"
+          },
+          "F2Data": {
+            "Class": "R1B4",
+            "Grade": "FFF",
+            "Unit": "F"
+          },
+          "SecondList": [
+            {
+              "Second1": "sec02",
+              "Second2": "sec222",
+              "S1Data": {
+                "Name": "na11",
+                "Number": 11,
+                "Location": "111F"
+              },
+              "S2Data": {
+                "Class": "R2B5",
+                "Grade": "TTT",
+                "Unit": "Q"
+              },
+              "ThirdList": [
+                {
+                  "Third1": "th1031",
+                  "Third2": "th2031",
+                  "T1Data": {
+                    "Name": "na40",
+                    "Number": 10031,
+                    "Location": "231F"
+                  },
+                  "T2Data": {
+                    "Class": "K2B16",
+                    "Grade": "AAA",
+                    "Unit": "AA"
+                  }
+                },
+                {
+                  "Third1": "th1032",
+                  "Third2": "th2032",
+                  "T1Data": {
+                    "Name": "na41",
+                    "Number": 10032,
+                    "Location": "232F"
+                  },
+                  "T2Data": {
+                    "Class": "K2Bo17",
+                    "Grade": "BBB",
+                    "Unit": "AB"
+                  }
+                },
+                {
+                  "Third1": "th1033",
+                  "Third2": "th2033",
+                  "T1Data": {
+                    "Name": "na42",
+                    "Number": 10033,
+                    "Location": "233F"
+                  },
+                  "T2Data": {
+                    "Class": "K2B17",
+                    "Grade": "AAA",
+                    "Unit": "AA"
+                  }
+                }
+              ]
+            },
+            {
+              "Second1": "sec03",
+              "Second2": "sec333",
+              "S1Data": {
+                "Name": "na12",
+                "Number": 12,
+                "Location": "112F"
+              },
+              "S2Data": {
+                "Class": "R2B6",
+                "Grade": "YYY",
+                "Unit": "R"
+              },
+              "ThirdList": [
+                {
+                  "Third1": "th1034",
+                  "Third2": "th2034",
+                  "T1Data": {
+                    "Name": "na43",
+                    "Number": 10034,
+                    "Location": "234F"
+                  },
+                  "T2Data": {
+                    "Class": "K2Bo18",
+                    "Grade": "BBB",
+                    "Unit": "AB"
+                  }
+                },
+                {
+                  "Third1": "th1035",
+                  "Third2": "th2035",
+                  "T1Data": {
+                    "Name": "na44",
+                    "Number": 10035,
+                    "Location": "235F"
+                  },
+                  "T2Data": {
+                    "Class": "K2B18",
+                    "Grade": "AAA",
+                    "Unit": "AA"
+                  }
+                },
+                {
+                  "Third1": "th1036",
+                  "Third2": "th2036",
+                  "T1Data": {
+                    "Name": "na45",
+                    "Number": 10036,
+                    "Location": "236F"
+                  },
+                  "T2Data": {
+                    "Class": "K2Bo19",
+                    "Grade": "BBB",
+                    "Unit": "AB"
+                  }
+                }
+              ]
+            }
+          ]
+        }
+      },
+      "MetaNestedData": {
+        "MapIdOffset": {},
+        "MapAliasOffset": {}
+      }
+    },
+    "NonDepthDataTable": {
+      "$type": "Tests.Depth.NonDepthDataTable, xpTURN.TableSet.ForTests",
+      "Map": {
+        "10001": {
+          "Id": 10001,
+          "IdAlias": "",
+          "F1Data": {
+            "Name": "na1",
+            "Number": 12345,
+            "Location": "1F"
+          },
+          "F2Data": {
+            "Class": "R2B2",
+            "Grade": "AAA",
+            "Unit": "A"
+          }
+        },
+        "10002": {
+          "Id": 10002,
+          "IdAlias": "",
+          "F1Data": {
+            "Name": "na2",
+            "Number": 22345,
+            "Location": "2F"
+          },
+          "F2Data": {
+            "Class": "R3B2",
+            "Grade": "BBB",
+            "Unit": "B"
+          }
+        },
+        "10003": {
+          "Id": 10003,
+          "IdAlias": "",
+          "F1Data": {
+            "Name": "na3",
+            "Number": 32345,
+            "Location": "3F"
+          },
+          "F2Data": {
+            "Class": "R4B2",
+            "Grade": "CCC",
+            "Unit": "C"
+          }
+        },
+        "10004": {
+          "Id": 10004,
+          "IdAlias": "",
+          "F1Data": {
+            "Name": "na4",
+            "Number": 42345,
+            "Location": "4F"
+          },
+          "F2Data": {
+            "Class": "R1B2",
+            "Grade": "DDD",
+            "Unit": "D"
+          }
+        },
+        "10005": {
+          "Id": 10005,
+          "IdAlias": "",
+          "F1Data": {
+            "Name": "na5",
+            "Number": 52345,
+            "Location": "5F"
+          },
+          "F2Data": {
+            "Class": "R1B3",
+            "Grade": "EEE",
+            "Unit": "E"
+          }
+        },
+        "10006": {
+          "Id": 10006,
+          "IdAlias": "",
+          "F1Data": {
+            "Name": "na6",
+            "Number": 62345,
+            "Location": "6F"
+          },
+          "F2Data": {
+            "Class": "R1B4",
+            "Grade": "FFF",
+            "Unit": "F"
+          }
+        }
+      },
+      "MetaNestedData": {
+        "MapIdOffset": {},
+        "MapAliasOffset": {}
+      }
+    }
+  }
+}

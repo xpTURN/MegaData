@@ -1,0 +1,42 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <AssemblyName>protobuf-net.Reflection</AssemblyName>
+    <Title>protobuf-net.Reflection</Title>
+    <Description>ProtoBuf DSL (proto2 / proto3) and descriptor tools for protobuf-net</Description>
+	  <Copyright>See https://github.com/protobuf-net/protobuf-net/blob/main/Licence.txt</Copyright>
+    <TargetFrameworks>net8.0</TargetFrameworks>
+    <GeneratePackageOnBuild>False</GeneratePackageOnBuild>
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+    <Configurations>Debug;Release;VS</Configurations>
+    <BaseOutputPath>..\..\..\Binaries\</BaseOutputPath>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(TargetFramework)|$(Platform)'=='Debug|net8.0|AnyCPU'">
+    <DefineConstants>$(DefineConstants);XPTURN</DefineConstants>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(TargetFramework)|$(Platform)'=='Release|net8.0|AnyCPU'">
+    <DefineConstants>$(DefineConstants);XPTURN</DefineConstants>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(TargetFramework)|$(Platform)'=='VS|net8.0|AnyCPU'">
+    <DefineConstants>$(DefineConstants);XPTURN</DefineConstants>
+  </PropertyGroup>
+  <ItemGroup>
+    <None Remove="google\**\*.proto" />
+    <None Remove="protobuf-net\**\*.proto" />
+    <EmbeddedResource Include="google\**\*.proto" />
+    <EmbeddedResource Include="protobuf-net\**\*.proto" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="google\type\" />
+  </ItemGroup>
+  <ItemGroup>
+    <PackageReference Include="protobuf-net.Core" Version="3.2.52" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Include="../protobuf-net.Licence.txt">
+      <Pack>true</Pack>
+      <PackagePath></PackagePath>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+  </ItemGroup>
+</Project>

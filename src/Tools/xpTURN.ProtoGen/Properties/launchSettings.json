@@ -1,0 +1,9 @@
+{
+  "profiles": {
+    "xpProtoGen": {
+      "commandName": "Project",
+      "commandLineArgs": "--input=\"../../../Samples/DataSet/Sample1/[Define]\" --output=\"../../../Samples/xpTURN.TableSet.Samples/Sample1\" --output-type=\"cs;proto\" --namespace=\"Samples\" --tableset=\"Sample1TableSet\" --for-datatable",
+      "workingDirectory": ""
+    }
+  }
+}

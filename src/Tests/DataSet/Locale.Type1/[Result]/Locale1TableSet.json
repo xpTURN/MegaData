@@ -1,0 +1,442 @@
+{
+  "$type": "Tests.Locale.Type1.Locale1TableSet, xpTURN.TableSet.ForTests",
+  "Header": {
+    "Space": "Tests.Locale.Type1",
+    "Name": "Locale1TableSet",
+    "Subset": "Default",
+    "MetaHash": "StNFKiWDt0q2pkuk6KJniQ==",
+    "DataHash": "Os+V8Wah+w5BiXkObohMAw=="
+  },
+  "MetaDataTable": {
+    "MapAliasData": {
+      "pawn_mark_one": {
+        "Id": 1808777167,
+        "TableId": 1
+      },
+      "pawn_mark_two": {
+        "Id": 6927192,
+        "TableId": 1
+      },
+      "pawn_mark_three": {
+        "Id": 1476745763,
+        "TableId": 1
+      },
+      "pawn_mark_four": {
+        "Id": 1370609903,
+        "TableId": 1
+      },
+      "box_name_0001": {
+        "Id": -306147680,
+        "TableId": 1
+      },
+      "box_name_0002": {
+        "Id": 1959386906,
+        "TableId": 1
+      },
+      "box_name_0003": {
+        "Id": 63893388,
+        "TableId": 1
+      },
+      "box_name_0004": {
+        "Id": -1649771985,
+        "TableId": 1
+      },
+      "box_name_0005": {
+        "Id": -357741895,
+        "TableId": 1
+      },
+      "box_name_0006": {
+        "Id": 1940134659,
+        "TableId": 1
+      },
+      "box_name_0007": {
+        "Id": 77802389,
+        "TableId": 1
+      },
+      "box_name_0008": {
+        "Id": -1810090492,
+        "TableId": 1
+      },
+      "box_name_0009": {
+        "Id": -484768110,
+        "TableId": 1
+      },
+      "box_name_0010": {
+        "Id": -2082697353,
+        "TableId": 1
+      },
+      "box_name_0011": {
+        "Id": -186925087,
+        "TableId": 1
+      },
+      "box_name_0012": {
+        "Id": 1842540123,
+        "TableId": 1
+      },
+      "box_name_0013": {
+        "Id": 450223821,
+        "TableId": 1
+      },
+      "box_name_0014": {
+        "Id": -2068755602,
+        "TableId": 1
+      },
+      "posion_name_0001": {
+        "Id": -262434395,
+        "TableId": 1
+      },
+      "posion_name_0002": {
+        "Id": 1767030815,
+        "TableId": 1
+      },
+      "posion_name_0003": {
+        "Id": 508948617,
+        "TableId": 1
+      },
+      "posion_name_0004": {
+        "Id": -2144246486,
+        "TableId": 1
+      },
+      "equip_name_0001": {
+        "Id": -1355512135,
+        "TableId": 1
+      },
+      "equip_name_0002": {
+        "Id": 910022403,
+        "TableId": 1
+      },
+      "equip_name_0003": {
+        "Id": 1094379413,
+        "TableId": 1
+      },
+      "equip_name_0004": {
+        "Id": -547458506,
+        "TableId": 1
+      },
+      "equip_name_0005": {
+        "Id": -1470545248,
+        "TableId": 1
+      },
+      "vehicle_name_0001": {
+        "Id": -879399999,
+        "TableId": 1
+      },
+      "vehicle_name_0002": {
+        "Id": 1385970299,
+        "TableId": 1
+      },
+      "vehicle_name_0003": {
+        "Id": 630917869,
+        "TableId": 1
+      },
+      "vehicle_name_0004": {
+        "Id": -1140875442,
+        "TableId": 1
+      },
+      "vehicle_name_0005": {
+        "Id": -856117288,
+        "TableId": 1
+      }
+    },
+    "MapMetaData": {
+      "LocaleDataTable": {
+        "Name": "LocaleDataTable",
+        "Offset": 1921
+      },
+      "TranslatedDataTable": {
+        "Name": "TranslatedDataTable",
+        "Offset": 1939
+      }
+    }
+  },
+  "Tables": {
+    "LocaleDataTable": {
+      "$type": "Tests.Locale.Type1.LocaleDataTable, xpTURN.TableSet.ForTests",
+      "MetaNestedData": {
+        "MapIdOffset": {
+          "1042": 0,
+          "1033": 957
+        },
+        "MapAliasOffset": {},
+        "ListOnDemandData": [
+          {
+            "$type": "Tests.Locale.Type1.LocaleData, xpTURN.TableSet.ForTests",
+            "Id": 1042,
+            "Map": {
+              "1808777167": {
+                "Id": 1808777167,
+                "Text": "아비가엘"
+              },
+              "6927192": {
+                "Id": 6927192,
+                "Text": "아델"
+              },
+              "1476745763": {
+                "Id": 1476745763,
+                "Text": "벨라"
+              },
+              "1370609903": {
+                "Id": 1370609903,
+                "Text": "카산드라"
+              },
+              "-306147680": {
+                "Id": -306147680,
+                "Text": "보물상자01"
+              },
+              "1959386906": {
+                "Id": 1959386906,
+                "Text": "보물상자02"
+              },
+              "63893388": {
+                "Id": 63893388,
+                "Text": "보물상자03"
+              },
+              "-1649771985": {
+                "Id": -1649771985,
+                "Text": "보물상자04"
+              },
+              "-357741895": {
+                "Id": -357741895,
+                "Text": "보물상자05"
+              },
+              "1940134659": {
+                "Id": 1940134659,
+                "Text": "보물상자06"
+              },
+              "77802389": {
+                "Id": 77802389,
+                "Text": "보물상자07"
+              },
+              "-1810090492": {
+                "Id": -1810090492,
+                "Text": "보물상자08"
+              },
+              "-484768110": {
+                "Id": -484768110,
+                "Text": "보물상자09"
+              },
+              "-2082697353": {
+                "Id": -2082697353,
+                "Text": "보물상자10"
+              },
+              "-186925087": {
+                "Id": -186925087,
+                "Text": "보물상자11"
+              },
+              "1842540123": {
+                "Id": 1842540123,
+                "Text": "보물상자12"
+              },
+              "450223821": {
+                "Id": 450223821,
+                "Text": "보물상자13"
+              },
+              "-2068755602": {
+                "Id": -2068755602,
+                "Text": "보물상자14"
+              },
+              "-262434395": {
+                "Id": -262434395,
+                "Text": "독약"
+              },
+              "1767030815": {
+                "Id": 1767030815,
+                "Text": "독약"
+              },
+              "508948617": {
+                "Id": 508948617,
+                "Text": "독약"
+              },
+              "-2144246486": {
+                "Id": -2144246486,
+                "Text": "독약"
+              },
+              "-1355512135": {
+                "Id": -1355512135,
+                "Text": "갑옷"
+              },
+              "910022403": {
+                "Id": 910022403,
+                "Text": "갑옷"
+              },
+              "1094379413": {
+                "Id": 1094379413,
+                "Text": "갑옷"
+              },
+              "-547458506": {
+                "Id": -547458506,
+                "Text": "갑옷"
+              },
+              "-1470545248": {
+                "Id": -1470545248,
+                "Text": "갑옷"
+              },
+              "-879399999": {
+                "Id": -879399999,
+                "Text": "독수리"
+              },
+              "1385970299": {
+                "Id": 1385970299,
+                "Text": "독수리"
+              },
+              "630917869": {
+                "Id": 630917869,
+                "Text": "독수리"
+              },
+              "-1140875442": {
+                "Id": -1140875442,
+                "Text": "독수리"
+              },
+              "-856117288": {
+                "Id": -856117288,
+                "Text": "독수리"
+              }
+            }
+          },
+          {
+            "$type": "Tests.Locale.Type1.LocaleData, xpTURN.TableSet.ForTests",
+            "Id": 1033,
+            "Map": {
+              "1808777167": {
+                "Id": 1808777167,
+                "Text": "Abigail"
+              },
+              "6927192": {
+                "Id": 6927192,
+                "Text": "Adela"
+              },
+              "1476745763": {
+                "Id": 1476745763,
+                "Text": "Bella"
+              },
+              "1370609903": {
+                "Id": 1370609903,
+                "Text": "Cassandra"
+              },
+              "-306147680": {
+                "Id": -306147680,
+                "Text": "Treasure Chest 01"
+              },
+              "1959386906": {
+                "Id": 1959386906,
+                "Text": "Treasure Chest 02"
+              },
+              "63893388": {
+                "Id": 63893388,
+                "Text": "Treasure Chest 03"
+              },
+              "-1649771985": {
+                "Id": -1649771985,
+                "Text": "Treasure Chest 04"
+              },
+              "-357741895": {
+                "Id": -357741895,
+                "Text": "Treasure Chest 05"
+              },
+              "1940134659": {
+                "Id": 1940134659,
+                "Text": "Treasure Chest 06"
+              },
+              "77802389": {
+                "Id": 77802389,
+                "Text": "Treasure Chest 07"
+              },
+              "-1810090492": {
+                "Id": -1810090492,
+                "Text": "Treasure Chest 08"
+              },
+              "-484768110": {
+                "Id": -484768110,
+                "Text": "Treasure Chest 09"
+              },
+              "-2082697353": {
+                "Id": -2082697353,
+                "Text": "Treasure Chest 10"
+              },
+              "-186925087": {
+                "Id": -186925087,
+                "Text": "Treasure Chest 11"
+              },
+              "1842540123": {
+                "Id": 1842540123,
+                "Text": "Treasure Chest 12"
+              },
+              "450223821": {
+                "Id": 450223821,
+                "Text": "Treasure Chest 13"
+              },
+              "-2068755602": {
+                "Id": -2068755602,
+                "Text": "Treasure Chest 14"
+              },
+              "-262434395": {
+                "Id": -262434395,
+                "Text": "Posion"
+              },
+              "1767030815": {
+                "Id": 1767030815,
+                "Text": "Posion"
+              },
+              "508948617": {
+                "Id": 508948617,
+                "Text": "Posion"
+              },
+              "-2144246486": {
+                "Id": -2144246486,
+                "Text": "Posion"
+              },
+              "-1355512135": {
+                "Id": -1355512135,
+                "Text": "Armor"
+              },
+              "910022403": {
+                "Id": 910022403,
+                "Text": "Armor"
+              },
+              "1094379413": {
+                "Id": 1094379413,
+                "Text": "Armor"
+              },
+              "-547458506": {
+                "Id": -547458506,
+                "Text": "Armor"
+              },
+              "-1470545248": {
+                "Id": -1470545248,
+                "Text": "Armor"
+              },
+              "-879399999": {
+                "Id": -879399999,
+                "Text": "Eagle"
+              },
+              "1385970299": {
+                "Id": 1385970299,
+                "Text": "Eagle"
+              },
+              "630917869": {
+                "Id": 630917869,
+                "Text": "Eagle"
+              },
+              "-1140875442": {
+                "Id": -1140875442,
+                "Text": "Eagle"
+              },
+              "-856117288": {
+                "Id": -856117288,
+                "Text": "Eagle"
+              }
+            }
+          }
+        ]
+      }
+    },
+    "TranslatedDataTable": {
+      "$type": "Tests.Locale.Type1.TranslatedDataTable, xpTURN.TableSet.ForTests",
+      "Map": {},
+      "MetaNestedData": {
+        "MapIdOffset": {},
+        "MapAliasOffset": {}
+      }
+    }
+  }
+}

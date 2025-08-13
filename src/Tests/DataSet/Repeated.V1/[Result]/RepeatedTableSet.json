@@ -1,0 +1,654 @@
+{
+  "$type": "Tests.Repeated.V1.RepeatedTableSet, xpTURN.TableSet.ForTests",
+  "Header": {
+    "Space": "Tests.Repeated.V1",
+    "Name": "RepeatedTableSet",
+    "Subset": "Default",
+    "MetaHash": "xrQ7RGneRkZf9pWdFj2A4w==",
+    "DataHash": "cr0qhEEDs1FmtPVuH+bEUw=="
+  },
+  "MetaDataTable": {
+    "MapAliasData": {
+      "ids_mark01": {
+        "Id": 10001,
+        "TableId": 1
+      },
+      "ids_mark02": {
+        "Id": 10002,
+        "TableId": 1
+      },
+      "ids_mark03": {
+        "Id": 10003,
+        "TableId": 1
+      },
+      "ids_mark04": {
+        "Id": 10004,
+        "TableId": 1
+      },
+      "ids_mark05": {
+        "Id": 10005,
+        "TableId": 1
+      },
+      "ids_mark06": {
+        "Id": 10006,
+        "TableId": 1
+      },
+      "ids_mark07": {
+        "Id": 10007,
+        "TableId": 1
+      }
+    },
+    "MapMetaData": {
+      "RepeatedDataTable": {
+        "Name": "RepeatedDataTable",
+        "Offset": 0
+      }
+    }
+  },
+  "Tables": {
+    "RepeatedDataTable": {
+      "$type": "Tests.Repeated.V1.RepeatedDataTable, xpTURN.TableSet.ForTests",
+      "Map": {
+        "10001": {
+          "Id": 10001,
+          "IdAlias": "",
+          "Enum_1": [
+            1,
+            1
+          ],
+          "Bool_1": [
+            true,
+            true
+          ],
+          "Int32_1": [
+            1,
+            11
+          ],
+          "SInt32_1": [
+            -1,
+            -11
+          ],
+          "SFixed32_1": [
+            -10000001,
+            -20000001
+          ],
+          "UInt32_1": [
+            10,
+            20
+          ],
+          "Fixed32_1": [
+            20000001,
+            30000001
+          ],
+          "Int64_1": [
+            1,
+            11
+          ],
+          "SInt64_1": [
+            -1,
+            -11
+          ],
+          "SFixed64_1": [
+            -10000001,
+            -20000001
+          ],
+          "UInt64_1": [
+            10,
+            20
+          ],
+          "Fixed64_1": [
+            20000001,
+            30000001
+          ],
+          "Float_1": [
+            1.1,
+            2.1
+          ],
+          "Double_1": [
+            1.123456789,
+            2.123456789
+          ],
+          "String_1": [
+            "abrakata",
+            "haha"
+          ],
+          "Bytes_1": [
+            "bGlnaHQgd29yay4=",
+            "iVBORw0KGgoAAAANSUhEUgAAAAUAAAAFCAYAAACNbyblAAAAHElEQVQI12P4//8/w38GIAXDIBKE0DHxgljNBAAO9TXL0Y4OHwAAAABJRU5ErkJggg=="
+          ],
+          "Msg_1": [],
+          "DateTime_1": [
+            "2025-11-11T23:59:00",
+            "2026-11-11T23:59:00"
+          ],
+          "TimeSpan_1": [
+            "12:00:00",
+            "23:00:00"
+          ],
+          "Guid_1": [
+            "ed24a078-5de4-4431-a697-0d1c74d0a353",
+            "5dd98e53-45c1-433e-b15f-00b21af2dd19"
+          ],
+          "Uri_1": [
+            "https://www.google.com/",
+            "https://mail.google.com/"
+          ]
+        },
+        "10002": {
+          "Id": 10002,
+          "IdAlias": "",
+          "Enum_1": [
+            2,
+            2
+          ],
+          "Bool_1": [
+            true,
+            true
+          ],
+          "Int32_1": [
+            2,
+            21
+          ],
+          "SInt32_1": [
+            1,
+            11
+          ],
+          "SFixed32_1": [
+            10000002,
+            20000002
+          ],
+          "UInt32_1": [
+            11,
+            21
+          ],
+          "Fixed32_1": [
+            20000002,
+            30000002
+          ],
+          "Int64_1": [
+            2,
+            21
+          ],
+          "SInt64_1": [
+            1,
+            11
+          ],
+          "SFixed64_1": [
+            10000002,
+            20000002
+          ],
+          "UInt64_1": [
+            11,
+            21
+          ],
+          "Fixed64_1": [
+            20000002,
+            30000002
+          ],
+          "Float_1": [
+            1.2,
+            2.2
+          ],
+          "Double_1": [
+            1.12345678,
+            2.123456789
+          ],
+          "String_1": [
+            "abrakata",
+            "haha"
+          ],
+          "Bytes_1": [
+            "bGlnaHQgd29yay4=",
+            "iVBORw0KGgoAAAANSUhEUgAAAAUAAAAFCAYAAACNbyblAAAAHElEQVQI12P4//8/w38GIAXDIBKE0DHxgljNBAAO9TXL0Y4OHwAAAABJRU5ErkJggg=="
+          ],
+          "Msg_1": [],
+          "DateTime_1": [
+            "2025-11-11T23:59:00",
+            "2026-11-11T23:59:00"
+          ],
+          "TimeSpan_1": [
+            "12:00:00",
+            "23:00:00"
+          ],
+          "Guid_1": [
+            "a64cbd5b-3a86-48a0-af63-f4936b43f4b0",
+            "5dd98e53-45c1-433e-b15f-00b21af2dd19"
+          ],
+          "Uri_1": [
+            "https://www.google.com/",
+            "https://mail.google.com/"
+          ]
+        },
+        "10003": {
+          "Id": 10003,
+          "IdAlias": "",
+          "Enum_1": [
+            3,
+            3
+          ],
+          "Bool_1": [
+            true,
+            true
+          ],
+          "Int32_1": [
+            3,
+            31
+          ],
+          "SInt32_1": [
+            3,
+            33
+          ],
+          "SFixed32_1": [
+            30000005,
+            60000005
+          ],
+          "UInt32_1": [
+            12,
+            22
+          ],
+          "Fixed32_1": [
+            20000003,
+            30000003
+          ],
+          "Int64_1": [
+            3,
+            31
+          ],
+          "SInt64_1": [
+            3,
+            33
+          ],
+          "SFixed64_1": [
+            30000005,
+            60000005
+          ],
+          "UInt64_1": [
+            12,
+            22
+          ],
+          "Fixed64_1": [
+            20000003,
+            30000003
+          ],
+          "Float_1": [
+            1.3,
+            2.3
+          ],
+          "Double_1": [
+            1.123456771,
+            2.123456789
+          ],
+          "String_1": [
+            "abrakata",
+            "haha"
+          ],
+          "Bytes_1": [
+            "bGlnaHQgd29yay4=",
+            "iVBORw0KGgoAAAANSUhEUgAAAAUAAAAFCAYAAACNbyblAAAAHElEQVQI12P4//8/w38GIAXDIBKE0DHxgljNBAAO9TXL0Y4OHwAAAABJRU5ErkJggg=="
+          ],
+          "Msg_1": [],
+          "DateTime_1": [
+            "2025-11-11T23:59:00",
+            "2026-11-11T23:59:00"
+          ],
+          "TimeSpan_1": [
+            "12:00:00",
+            "23:00:00"
+          ],
+          "Guid_1": [
+            "3392edc4-0b3b-46dd-973d-cbabc3b2cc18",
+            "5dd98e53-45c1-433e-b15f-00b21af2dd19"
+          ],
+          "Uri_1": [
+            "https://www.google.com/",
+            "https://mail.google.com/"
+          ]
+        },
+        "10004": {
+          "Id": 10004,
+          "IdAlias": "",
+          "Enum_1": [
+            4,
+            4
+          ],
+          "Bool_1": [
+            true,
+            true
+          ],
+          "Int32_1": [
+            4,
+            41
+          ],
+          "SInt32_1": [
+            5,
+            55
+          ],
+          "SFixed32_1": [
+            50000008,
+            100000008
+          ],
+          "UInt32_1": [
+            13,
+            23
+          ],
+          "Fixed32_1": [
+            20000004,
+            30000004
+          ],
+          "Int64_1": [
+            4,
+            41
+          ],
+          "SInt64_1": [
+            5,
+            55
+          ],
+          "SFixed64_1": [
+            50000008,
+            100000008
+          ],
+          "UInt64_1": [
+            13,
+            23
+          ],
+          "Fixed64_1": [
+            20000004,
+            30000004
+          ],
+          "Float_1": [
+            1.4,
+            2.4
+          ],
+          "Double_1": [
+            1.123456762,
+            2.123456789
+          ],
+          "String_1": [
+            "abrakata",
+            "haha"
+          ],
+          "Bytes_1": [
+            "bGlnaHQgd29yay4=",
+            "iVBORw0KGgoAAAANSUhEUgAAAAUAAAAFCAYAAACNbyblAAAAHElEQVQI12P4//8/w38GIAXDIBKE0DHxgljNBAAO9TXL0Y4OHwAAAABJRU5ErkJggg=="
+          ],
+          "Msg_1": [],
+          "DateTime_1": [
+            "2025-11-11T23:59:00",
+            "2026-11-11T23:59:00"
+          ],
+          "TimeSpan_1": [
+            "12:00:00",
+            "23:00:00"
+          ],
+          "Guid_1": [
+            "bf1cd517-d6f0-4c8b-8ea9-4c68c69b6a81",
+            "5dd98e53-45c1-433e-b15f-00b21af2dd19"
+          ],
+          "Uri_1": [
+            "https://www.google.com/",
+            "https://mail.google.com/"
+          ]
+        },
+        "10005": {
+          "Id": 10005,
+          "IdAlias": "",
+          "Enum_1": [
+            5,
+            5
+          ],
+          "Bool_1": [
+            true,
+            true
+          ],
+          "Int32_1": [
+            5,
+            51
+          ],
+          "SInt32_1": [
+            7,
+            77
+          ],
+          "SFixed32_1": [
+            70000011,
+            140000011
+          ],
+          "UInt32_1": [
+            14,
+            24
+          ],
+          "Fixed32_1": [
+            20000005,
+            30000005
+          ],
+          "Int64_1": [
+            5,
+            51
+          ],
+          "SInt64_1": [
+            7,
+            77
+          ],
+          "SFixed64_1": [
+            70000011,
+            140000011
+          ],
+          "UInt64_1": [
+            14,
+            24
+          ],
+          "Fixed64_1": [
+            20000005,
+            30000005
+          ],
+          "Float_1": [
+            1.5,
+            2.5
+          ],
+          "Double_1": [
+            1.123456753,
+            2.123456789
+          ],
+          "String_1": [
+            "abrakata",
+            "haha"
+          ],
+          "Bytes_1": [
+            "bGlnaHQgd29yay4=",
+            "iVBORw0KGgoAAAANSUhEUgAAAAUAAAAFCAYAAACNbyblAAAAHElEQVQI12P4//8/w38GIAXDIBKE0DHxgljNBAAO9TXL0Y4OHwAAAABJRU5ErkJggg=="
+          ],
+          "Msg_1": [],
+          "DateTime_1": [
+            "2025-11-11T23:59:00",
+            "2026-11-11T23:59:00"
+          ],
+          "TimeSpan_1": [
+            "12:00:00",
+            "23:00:00"
+          ],
+          "Guid_1": [
+            "2376fd15-9224-4a20-be6e-195d299332d3",
+            "5dd98e53-45c1-433e-b15f-00b21af2dd19"
+          ],
+          "Uri_1": [
+            "https://www.google.com/",
+            "https://mail.google.com/"
+          ]
+        },
+        "10006": {
+          "Id": 10006,
+          "IdAlias": "",
+          "Enum_1": [
+            6,
+            6
+          ],
+          "Bool_1": [
+            true,
+            true
+          ],
+          "Int32_1": [
+            6,
+            61
+          ],
+          "SInt32_1": [
+            9,
+            99
+          ],
+          "SFixed32_1": [
+            90000014,
+            180000014
+          ],
+          "UInt32_1": [
+            15,
+            25
+          ],
+          "Fixed32_1": [
+            20000006,
+            30000006
+          ],
+          "Int64_1": [
+            6,
+            61
+          ],
+          "SInt64_1": [
+            9,
+            99
+          ],
+          "SFixed64_1": [
+            90000014,
+            180000014
+          ],
+          "UInt64_1": [
+            15,
+            25
+          ],
+          "Fixed64_1": [
+            20000006,
+            30000006
+          ],
+          "Float_1": [
+            1.6,
+            2.6
+          ],
+          "Double_1": [
+            1.123456744,
+            2.123456789
+          ],
+          "String_1": [
+            "abrakata",
+            "haha"
+          ],
+          "Bytes_1": [
+            "bGlnaHQgd29yay4=",
+            "iVBORw0KGgoAAAANSUhEUgAAAAUAAAAFCAYAAACNbyblAAAAHElEQVQI12P4//8/w38GIAXDIBKE0DHxgljNBAAO9TXL0Y4OHwAAAABJRU5ErkJggg=="
+          ],
+          "Msg_1": [],
+          "DateTime_1": [
+            "2025-11-11T23:59:00",
+            "2026-11-11T23:59:00"
+          ],
+          "TimeSpan_1": [
+            "12:00:00",
+            "23:00:00"
+          ],
+          "Guid_1": [
+            "c7cbb2aa-3103-47d6-804a-f406f16f05b5",
+            "5dd98e53-45c1-433e-b15f-00b21af2dd19"
+          ],
+          "Uri_1": [
+            "https://www.google.com/",
+            "https://mail.google.com/"
+          ]
+        },
+        "10007": {
+          "Id": 10007,
+          "IdAlias": "",
+          "Enum_1": [
+            7,
+            7
+          ],
+          "Bool_1": [
+            true,
+            true
+          ],
+          "Int32_1": [
+            7,
+            71
+          ],
+          "SInt32_1": [
+            11,
+            121
+          ],
+          "SFixed32_1": [
+            110000017,
+            220000017
+          ],
+          "UInt32_1": [
+            16,
+            26
+          ],
+          "Fixed32_1": [
+            20000007,
+            30000007
+          ],
+          "Int64_1": [
+            7,
+            71
+          ],
+          "SInt64_1": [
+            11,
+            121
+          ],
+          "SFixed64_1": [
+            110000017,
+            220000017
+          ],
+          "UInt64_1": [
+            16,
+            26
+          ],
+          "Fixed64_1": [
+            20000007,
+            30000007
+          ],
+          "Float_1": [
+            1.7,
+            2.7
+          ],
+          "Double_1": [
+            1.123456735,
+            2.123456789
+          ],
+          "String_1": [
+            "abrakata",
+            "haha"
+          ],
+          "Bytes_1": [
+            "bGlnaHQgd29yay4=",
+            "iVBORw0KGgoAAAANSUhEUgAAAAUAAAAFCAYAAACNbyblAAAAHElEQVQI12P4//8/w38GIAXDIBKE0DHxgljNBAAO9TXL0Y4OHwAAAABJRU5ErkJggg=="
+          ],
+          "Msg_1": [],
+          "DateTime_1": [
+            "2025-11-11T23:59:00",
+            "2026-11-11T23:59:00"
+          ],
+          "TimeSpan_1": [
+            "12:00:00",
+            "23:00:00"
+          ],
+          "Guid_1": [
+            "508a5cd0-584a-412a-b1a0-9605cdd4a2c1",
+            "5dd98e53-45c1-433e-b15f-00b21af2dd19"
+          ],
+          "Uri_1": [
+            "https://www.google.com/",
+            "https://mail.google.com/"
+          ]
+        }
+      },
+      "MetaNestedData": {
+        "MapIdOffset": {},
+        "MapAliasOffset": {}
+      }
+    }
+  }
+}
