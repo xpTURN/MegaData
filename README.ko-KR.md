@@ -11,7 +11,7 @@ xpTURN.MegaData 라이브러리는 .NET 기반 프로젝트에서 다양한 데�
 - (C# Language Version 9.0)
 
 ## 기본 사용법
-프로젝트 통합 방법은 [USAGE](./doc/USAGE.md) 문서를 참고하시면 됩니다.
+프로젝트 통합 방법은 [USAGE](./doc/USAGE.ko-KR.md) 문서를 참고하시면 됩니다.
 
 ### 데이터 구조 정의
 "Protocol Buffers"의 메시지 정의는 .proto 스크립트 방식으로 제공되지만, xpTURN.MegaData에서는 시트 파일의 Define 시트에 작성하는 방식을 기본으로 합니다. 이를 통해 데이터 구조를 문서화하면서 동시에 데이터 정의 스크립트 역할을 겸합니다. 간단한 예시는 아래와 같습니다.
@@ -40,7 +40,7 @@ xpTURN.MegaData 라이브러리는 .NET 기반 프로젝트에서 다양한 데�
 | 20 |  2      |  Manager         |             |                              |               |                                   |
 | 21 |  3      |  Executive       |             |                              |               |                                   |
 
-* 상세한 스펙은 다음 문서에서 확인 : [데이터 정의](./doc/DEFINE.md)
+* 상세한 스펙은 다음 문서에서 확인 : [데이터 정의](./doc/DEFINE.ko-KR.md)
 
 ### 코드 생성
 
@@ -64,7 +64,7 @@ dotnet ./xpTURN.ProtoGen.dll --input="../../../Samples/DataSet/Sample1/[Define]"
 |  6 |         |  PersonData      |  1000004    |  spot_one_004    |  Michael Hayes   |  Manager    |  xxx333@zmall.com  |  (415) 555-0137  |
 |  7 |         |  PersonData      |  1000005    |  spot_one_005    |  Sophia Bennett  |  Executive  |  xxx333@zmall.com  |  (415) 555-0138  |
 
-* 상세한 스펙은 다음 문서에서 확인 : [데이터 입력](./doc/DATA.md)
+* 상세한 스펙은 다음 문서에서 확인 : [데이터 입력](./doc/DATA.ko-KR.md)
 
 ### 데이터 가공
 시트 파일에 입력된 데이터 구조나 값을 그대로 사용하는 것이 아니라, 가공이 필요한 경우에는 TableSetPostProcess를 상속받아 포스트 프로세서를 직접 구현할 수 있습니다.

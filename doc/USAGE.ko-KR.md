@@ -8,7 +8,7 @@
 자신의 프로젝트에서 사용할 TableSet 프로젝트를 생성합니다. [xpTURN.TableSet.Samples](../src/Samples/xpTURN.TableSet.Samples)를 참고하여 직접 생성하거나, 혹은 샘플 프로젝트를 복사한 뒤 이름을 변경하여 사용할 수 있습니다.
 
 ### TableSet 구성
-[데이터 정의](./DATA.md)를 참조하여 자신의 프로젝트에서 사용할 데이터 구조를 정의합니다. 
+[데이터 정의](./DATA.ko-KR.md)를 참조하여 자신의 프로젝트에서 사용할 데이터 구조를 정의합니다. 
 
 ### TableSet 소스 생성
 정의한 내용을 바탕으로 코드를 생성합니다. 생성된 TableSet 프로젝트의 .dll 파일은 xpTURN.ProtoGen.dll과 동일한 폴더에 위치해야 합니다.
@@ -31,7 +31,7 @@ MyProduct.TableSet.dll
 참고, System.Runtime.CompilerServices.Unsafe.dll은 .NET Standard 2.1 바이너리를 사용할 때 필요하며, .NET 8.0 이상에서는 필요하지 않습니다.
 
 ### 데이터 입력
-정의한 Table 구조에 맞춰 데이터를 구성합니다. [데이터 구성 방법](DATA.md)
+정의한 Table 구조에 맞춰 데이터를 구성합니다. [데이터 구성 방법](DATA.ko-KR.md)
 
 ### 데이터 바이너리화
 런타임에서 사용하기 위해 컨버터 툴을 이용해 데이터를 변환합니다.
