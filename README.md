@@ -144,4 +144,4 @@ Note: The .proto parser uses protobuf-net.Reflection, with some modifications fo
 
 ## Support
 
-If you have any questions, please [open a GitHub issue](https://github.com/xpTURN/xpTURN/issues) or contact us via [email](mailto:xpTURN@gmail.com).
+If you have any questions, please [open a GitHub issue](https://github.com/xpTURN/MegaData/issues) or contact us via [email](mailto:xpTURN@gmail.com).
