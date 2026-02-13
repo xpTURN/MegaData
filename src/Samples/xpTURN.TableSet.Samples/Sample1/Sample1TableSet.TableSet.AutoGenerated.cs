@@ -71,7 +71,7 @@ namespace Samples
             { nameof(TextDataTable), 8 },
             { nameof(TranslatedDataTable), 9 },
         };
-        override protected bool IsOndemandTable(int tableId) => tableId switch
+        override protected bool IsOnDemandTable(int tableId) => tableId switch
         {
             5 => true, // LocaleDataTable
             8 => true, // TextDataTable

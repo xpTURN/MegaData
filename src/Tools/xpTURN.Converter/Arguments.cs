@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using CommandLine;
 
 namespace xpTURN.Converter
@@ -24,6 +24,8 @@ namespace xpTURN.Converter
         {
             Input = string.Empty;
             Output = string.Empty;
+            Namespace = string.Empty;
+            TableSetName = string.Empty;
             TargetDate = DateTime.MinValue;
         }
     }

@@ -40,7 +40,7 @@ namespace Tests.Locale.Type1
             { nameof(LocaleDataTable), 1 },
             { nameof(TranslatedDataTable), 2 },
         };
-        override protected bool IsOndemandTable(int tableId) => tableId switch
+        override protected bool IsOnDemandTable(int tableId) => tableId switch
         {
             1 => true, // LocaleDataTable
             _ => false,

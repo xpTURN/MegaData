@@ -1,11 +1,11 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.Reflection;
 
 using xpTURN.Common;
 using xpTURN.MegaData;
 
-namespace xpTURN.Converter.AssginValue
+namespace xpTURN.Converter.AssignValue
 {
     public class MapFieldAssignField : IAssignField
     {

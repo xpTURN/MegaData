@@ -387,7 +387,7 @@ namespace xpTURN.ProtoGen
                 case FieldDescriptorProto.Type.TypeString:
                     if (string.IsNullOrEmpty(defaultString))
                     {
-                        return $"\"\""; ;
+                        return $"\"\"";
                     }
                     else
                     {

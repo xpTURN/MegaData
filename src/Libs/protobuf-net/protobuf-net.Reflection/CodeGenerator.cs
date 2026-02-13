@@ -1,4 +1,4 @@
-﻿using Google.Protobuf.Reflection;
+using Google.Protobuf.Reflection;
 using ProtoBuf.Reflection.Internal;
 using System;
 using System.Collections.Generic;
@@ -315,7 +315,7 @@ namespace ProtoBuf.Reflection
             WriteMessageHeader(ctx, message, ref state);
             var oneOfs = OneOfStub.Build(message);
 
-            if (WriteContructorHeader(ctx, message, ref state))
+            if (WriteConstructorHeader(ctx, message, ref state))
             {
                 foreach (var inner in message.Fields)
                 {
@@ -371,7 +371,7 @@ namespace ProtoBuf.Reflection
         /// Emit code beginning a constructor, if one is required
         /// </summary>
         /// <returns>true if a constructor is required</returns>
-        protected virtual bool WriteContructorHeader(GeneratorContext ctx, DescriptorProto message, ref object state) => false;
+        protected virtual bool WriteConstructorHeader(GeneratorContext ctx, DescriptorProto message, ref object state) => false;
 
         /// <summary>
         /// Emit code representing a message field

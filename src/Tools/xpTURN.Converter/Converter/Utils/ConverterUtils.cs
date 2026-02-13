@@ -1,5 +1,6 @@
-﻿
+
 using System;
+using System.Collections.Generic;
 using System.Linq;
 using System.Reflection;
 using System.Text.RegularExpressions;
@@ -18,6 +19,25 @@ namespace xpTURN.Converter.Utils
         public static readonly DataCell sDATA_EXCLUDE_CELL = new DataCell(1, 3);
 
         public static readonly string TABLE_SHEET = "Table";
+
+        /// <summary>
+        /// Supported Excel file extensions (workbooks + templates).
+        /// Workbooks: .xls, .xlsx, .xlsb, .xlsm.
+        /// Templates: .xlt, .xltx, .xltm.
+        /// </summary>
+        public static readonly HashSet<string> ExcelExtensions = new(StringComparer.OrdinalIgnoreCase)
+        {
+            // Workbooks
+            ".xls",   // Excel 97-2003
+            ".xlsx",  // Excel Workbook (default)
+            ".xlsb",  // Excel Binary Workbook
+            ".xlsm",  // Excel Macro-Enabled Workbook
+            // Templates (same structure as workbooks, may contain table data)
+            ".xlt",   // Excel 97-2003 Template
+            ".xltx",  // Excel Template
+            ".xltm",  // Excel Macro-Enabled Template
+        };
+
         public static readonly string sAlias = "Alias";
         public static readonly string sIdAlias = "IdAlias";
         public static readonly string sRefIdAlias = "RefIdAlias";
@@ -184,10 +204,10 @@ namespace xpTURN.Converter.Utils
             target.DebugInfo = debugInfo;
 
             var type = target.GetType();
-            var fields = type.GetFields(BindingFlags.Public | BindingFlags.NonPublic | BindingFlags.Instance);
+            var fields = type.GetFields(BindingFlags.Public | BindingFlags.NonPublic | BindingFlags.Instance).ToList();
 
             // NestedData : Dictionary<key?, Message>
-            var mapFields = fields.ToList().FindAll(field => field.IsDictionary() &&
+            var mapFields = fields.FindAll(field => field.IsDictionary() &&
                                                     typeof(Data).IsAssignableFrom(field.FieldType.GetCollectionElementType()));
             foreach (var field in mapFields)
             {
@@ -200,7 +220,7 @@ namespace xpTURN.Converter.Utils
             }
 
             // NestedData : Message field
-            var dataFields = fields.ToList().FindAll(field => typeof(Data).IsAssignableFrom(field.FieldType));
+            var dataFields = fields.FindAll(field => typeof(Data).IsAssignableFrom(field.FieldType));
             foreach (var field in dataFields)
             {
                 var nestedData = field.GetValue(target) as Data;
@@ -210,7 +230,7 @@ namespace xpTURN.Converter.Utils
             }
 
             // NestedData : List<Message> field
-            var listFields = fields.ToList().FindAll(field => field.IsListArg<Data>());
+            var listFields = fields.FindAll(field => field.IsListArg<Data>());
             foreach (var field in listFields)
             {
                 var list = InvokeUtils.GetFieldListEnumerable<Data>(field, target);
@@ -246,7 +266,7 @@ namespace xpTURN.Converter.Utils
                 {
                     // If the data already exists in the new table, skip it
                     Logger.Log.Tool.Error(duplicatedData.DebugInfo, $"Data with Alias {dataAlias} already exists in the '{tableName}'.");
-                    break;
+                    continue;
                 }
             }
 

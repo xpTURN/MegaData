@@ -178,7 +178,7 @@ namespace Tests.Depth
         public MetaNestedData MetaNestedData = new MetaNestedData();
         #endregion
 
-        #region Paser.Field
+        #region Parser.Field
         protected static readonly xpMapCodec<int, FirstData> _map_codec
             = new (xpFieldHelper.SFixed32Codec, xpFieldCodecForMessage<FirstData>.MessageCodec, 10, 13, 18);
         #endregion
@@ -312,7 +312,7 @@ namespace Tests.Depth
         public Dictionary<int, SecondData> SecondMap = new ();
         #endregion
 
-        #region Paser.Field
+        #region Parser.Field
         protected static readonly xpMapCodec<int, SecondData> _secondMap_codec
             = new (xpFieldHelper.SFixed32Codec, xpFieldCodecForMessage<SecondData>.MessageCodec, 42, 13, 18);
         #endregion
@@ -503,7 +503,7 @@ namespace Tests.Depth
         public MetaNestedData MetaNestedData = new MetaNestedData();
         #endregion
 
-        #region Paser.Field
+        #region Parser.Field
         protected static readonly xpMapCodec<int, LFirstData> _map_codec
             = new (xpFieldHelper.SFixed32Codec, xpFieldCodecForMessage<LFirstData>.MessageCodec, 10, 13, 18);
         #endregion
@@ -1339,7 +1339,7 @@ namespace Tests.Depth
         public MetaNestedData MetaNestedData = new MetaNestedData();
         #endregion
 
-        #region Paser.Field
+        #region Parser.Field
         protected static readonly xpMapCodec<int, NonFirstData> _map_codec
             = new (xpFieldHelper.SFixed32Codec, xpFieldCodecForMessage<NonFirstData>.MessageCodec, 10, 13, 18);
         #endregion
@@ -1653,7 +1653,7 @@ namespace Tests.Depth
         public Dictionary<int, ThirdData> ThirdMap = new ();
         #endregion
 
-        #region Paser.Field
+        #region Parser.Field
         protected static readonly xpMapCodec<int, ThirdData> _thirdMap_codec
             = new (xpFieldHelper.SFixed32Codec, xpFieldCodecForMessage<ThirdData>.MessageCodec, 58, 13, 18);
         #endregion

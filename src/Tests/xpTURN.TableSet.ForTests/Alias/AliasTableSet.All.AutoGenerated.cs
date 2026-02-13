@@ -28,7 +28,7 @@ namespace Tests.Alias
         public MetaNestedData MetaNestedData = new MetaNestedData();
         #endregion
 
-        #region Paser.Field
+        #region Parser.Field
         protected static readonly xpMapCodec<string, FirstData> _map_codec
             = new (xpFieldHelper.StringCodec, xpFieldCodecForMessage<FirstData>.MessageCodec, 10, 10, 18);
         #endregion
@@ -159,7 +159,7 @@ namespace Tests.Alias
         public Dictionary<string, SecondData> SecondMap = new ();
         #endregion
 
-        #region Paser.Field
+        #region Parser.Field
         protected static readonly xpMapCodec<string, SecondData> _secondMap_codec
             = new (xpFieldHelper.StringCodec, xpFieldCodecForMessage<SecondData>.MessageCodec, 42, 10, 18);
         #endregion
@@ -287,7 +287,7 @@ namespace Tests.Alias
         public Dictionary<string, ThirdData> ThirdMap = new ();
         #endregion
 
-        #region Paser.Field
+        #region Parser.Field
         protected static readonly xpMapCodec<string, ThirdData> _thirdMap_codec
             = new (xpFieldHelper.StringCodec, xpFieldCodecForMessage<ThirdData>.MessageCodec, 50, 10, 18);
         #endregion

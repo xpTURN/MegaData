@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.IO;
 using System.Collections.Generic;
 using System.Text;
@@ -22,17 +22,14 @@ namespace xpTURN.Tool.Common
 
         public DataCell Cell(int column, int row)
         {
-            this.column = column;
-            this.row = row;
-
-            return this;
+            return new DataCell(column, row);
         }
     }
     
     public class ExcelReader
     {
         protected System.Data.DataTable SheetData { get; set; }
-        public string fileName = string.Empty;
+        public string FileName { get; set; } = string.Empty;
 
         public int LastX { get; set; }
         public int LastY { get; set; }
@@ -69,20 +66,20 @@ namespace xpTURN.Tool.Common
         {
             Close();
 
-            fileName = string.Empty;
+            FileName = string.Empty;
         }
 
         public bool OpenTableSheet(string _fileName, string _sheetName)
         {
             InitOpen();
-            fileName = _fileName;
+            FileName = _fileName;
             Logger.Log.Tool.File(_fileName);
 
             Encoding.RegisterProvider(CodePagesEncodingProvider.Instance);
 
             try
             {
-                using (var stream = new FileStream(fileName, FileMode.Open, FileAccess.Read, FileShare.ReadWrite))
+                using (var stream = new FileStream(FileName, FileMode.Open, FileAccess.Read, FileShare.ReadWrite))
                 {
                     using (var reader = ExcelReaderFactory.CreateOpenXmlReader(stream))
                     {
@@ -104,7 +101,7 @@ namespace xpTURN.Tool.Common
                                 var table = result.Tables[i];
                                 if (table.TableName == _sheetName)
                                 {
-                                    SheetData = table;
+                                    SheetData = table.Copy();
                                     break;
                                 }
                             }
@@ -114,17 +111,17 @@ namespace xpTURN.Tool.Common
             }
             catch (Exception error)
             {
-                Logger.Log.Tool.Error(DebugInfo.Empty, $"Exception, {fileName}\n{error.Message}");
+                Logger.Log.Tool.Error(DebugInfo.Empty, $"Exception, {FileName}\n{error.Message}");
                 return false;
             }
 
             if (SheetData == null)
             {
-                Logger.Log.Tool.Error(DebugInfo.Empty, $"SheetData is null, {fileName}");
+                Logger.Log.Tool.Error(DebugInfo.Empty, $"SheetData is null, {FileName}");
                 return false;
             }
 
-            //
+            // Update sheet dimensions.
             LastX = SheetData.Columns.Count;
             LastY = SheetData.Rows.Count;
 
@@ -144,15 +141,11 @@ namespace xpTURN.Tool.Common
 
         public string GetCellString(DataCell cell)
         {
-            Logger.Log.Tool.Line(cell.row.ToString());
-
             return GetCellString(cell.column, cell.row);
         }
 
         public string GetCellString(int x, int y)
         {
-            Logger.Log.Tool.Line(y.ToString());
-
             object oCell = GetCell(x, y);
             if (oCell == null)
                 return "";
@@ -168,38 +161,29 @@ namespace xpTURN.Tool.Common
 
         public string GetTrimCellString(DataCell cell)
         {
-            Logger.Log.Tool.Line(cell.row.ToString());
-
             return GetTrimCellString(cell.column, cell.row);
         }
 
         public string GetTrimCellString(int x, int y)
         {
-            Logger.Log.Tool.Line(y.ToString());
-
-            string oCell = GetCellString(x, y);
-            if (oCell == null)
-                return "";
-
-            return oCell.ToString().Trim();
+            return (GetCellString(x, y) ?? "").Trim();
         }
 
         public object GetCell(DataCell cell)
         {
-            Logger.Log.Tool.Line(cell.row.ToString());
-
             return GetCell(cell.column, cell.row);
         }
 
         public object GetCell(int x, int y)
         {
-            Logger.Log.Tool.Line(y.ToString());
-
             if (SheetData == null)
             {
-                Logger.Log.Tool.Error(DebugInfo.Empty, $"SheetData is null, {fileName}");
+                Logger.Log.Tool.Error(DebugInfo.Empty, $"SheetData is null, {FileName}");
                 return null;
             }
+
+            if (x < 1 || y < 1 || x > LastX || y > LastY)
+                return null;
 
             return SheetData.Rows[y - 1][x - 1];
         }

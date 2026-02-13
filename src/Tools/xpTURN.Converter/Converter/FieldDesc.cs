@@ -6,7 +6,7 @@ using System.Reflection;
 using xpTURN.Common;
 using xpTURN.MegaData;
 
-using xpTURN.Converter.AssginValue;
+using xpTURN.Converter.AssignValue;
 using xpTURN.Converter.Mapper;
 
 namespace xpTURN.Converter

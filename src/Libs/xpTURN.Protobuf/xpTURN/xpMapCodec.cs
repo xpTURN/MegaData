@@ -69,10 +69,10 @@ namespace xpTURN.Protobuf
         }
 
         /// <summary>
-        /// Returns a hash code for this instance.
+        /// Determines whether two map instances are equal.
         /// </summary>
         /// <returns>
-        /// A hash code for this instance, suitable for use in hashing algorithms and data structures like a hash table.
+        /// true if the two maps contain the same keys and values; otherwise, false.
         /// </returns>
         public bool AreEqual(Dictionary<TKey, TValue> left, Dictionary<TKey, TValue> right)
         {
@@ -261,8 +261,8 @@ namespace xpTURN.Protobuf
                 }
             }
 
-            // Corner case: a map entry with a key but no value, where the value type is a message.
-            // Read it as if we'd seen input with no data (i.e. create a "default" message).
+            // Corner case (message types only): a map entry with a key but no value field.
+            // When TValue is a message type, value stays default (null); treat as empty message.
             if (value == null)
             {
                 if (ctx.state.CodedInputStream != null)

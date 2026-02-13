@@ -1,8 +1,8 @@
 ## xpTURN.MegaData Library
 
-xpTURN.MegaData is a library for .NET-based projects that allows you to easily define and manage various data structures, and conveniently utilize large amounts of data. Data structure definition and management are primarily performed via Excel.
+xpTURN.MegaData is a .NET library for defining and managing data structures and working with large datasets. You define structures and manage data mainly in Excel.
 
-For data serialization, it uses Google's "Protocol Buffers". However, instead of using the standard 'Protocol Buffers' library, xpTURN provides a customized version. For details, refer to the bottom of this document.
+Serialization is based on Google's Protocol Buffers. xpTURN uses a customized implementation rather than the standard library; see the **Reference** section below for details.
 
 For .proto file parsing and code generation, the protobuf-net library is used, with some modifications to protobuf-net.Reflection.
 
@@ -14,11 +14,11 @@ For .proto file parsing and code generation, the protobuf-net library is used, w
 
 ## Basic Usage
 
-For integration instructions, refer to the [USAGE](./doc/USAGE.md) document.
+For setup and integration, see [USAGE](./doc/USAGE.md).
 
 ### Defining Data Structures
 
-While "Protocol Buffers" message definitions are typically provided in .proto scripts, xpTURN.MegaData uses the Define sheet in Excel as the default method. This allows you to document data structures and simultaneously serve as a data definition script. A simple example is shown below.
+Unlike typical Protocol Buffers (which use `.proto` files), xpTURN.MegaData uses an Excel **Define** sheet. The sheet acts as both documentation and the definition source. Example:
 
 |    |  A      |  B               |  C          |  D                           |  E            |  F                                |
 | -- | ------- | ---------------- | ----------- | ---------------------------- | ------------- | --------------------------------- |
@@ -48,13 +48,13 @@ While "Protocol Buffers" message definitions are typically provided in .proto sc
 
 ### Code Generation
 
-You can generate code from the data structures defined in the sheet file using the dedicated generator. The generated source code should be included in your library project and provided to the xpTURN.Converter tool. (Example: [Sample1 Project](./src/Samples/xpTURN.TableSet.Samples))
+Generate C# and .proto from your Define sheet with xpTURN.ProtoGen. Add the generated code to your project and build it so that the resulting assembly is available to xpTURN.Converter. Example: [Sample1](./src/Samples/xpTURN.TableSet.Samples).
 
 ```sh
 dotnet ./xpTURN.ProtoGen.dll --input="../../../Samples/DataSet/Sample1/[Define]" --output="../../../Samples/xpTURN.TableSet.Samples/Sample1" --output-type="cs;proto" --namespace="Samples" --tableset="Sample1TableSet" --for-datatable
 ```
 
-Output example: [Sample](./src/Samples/xpTURN.TableSet.Samples/Sample1)
+Generated output: [Sample](./src/Samples/xpTURN.TableSet.Samples/Sample1)
 
 ### Data Input
 
@@ -76,7 +76,7 @@ If you need to process data structures or values entered in the sheet file, you 
 
 ### Data Serialization
 
-Data conversion example:
+Convert Excel/JSON data to binary for runtime. Example:
 ```sh
 dotnet ./xpTURN.Converter.dll --input="../../../Samples/DataSet/Sample1" --output="../../../Samples/DataSet/Sample1/[Result]" --namespace="Samples" --tableset="Sample1TableSet"
 ```
@@ -98,13 +98,13 @@ foreach(var pair in boxDataTable.Map)
 }
 ```
 
-Note: For tables using OnDemand or WeakRef options, access to the Table.Map variable is restricted, and you can only access records via functions like GetXXXData.
+**Note:** For tables with OnDemand or WeakRef, do not use `Table.Map` directly; use accessors such as `GetXXXData` instead.
 
 ## Reference
 
 ### Notes
 
-xpTURN.MegaData serialization uses "Protocol Buffers", so you should be aware of related caveats. In particular, modifying data definitions may cause compatibility issues between versions.
+Because serialization follows Protocol Buffers, changing message/field definitions can break compatibility between versions.
 
 * Reference: (See Google's [Updating A Message Type](https://protobuf.dev/programming-guides/proto3/#updating) documentation)
 
@@ -121,9 +121,10 @@ The generated code is similar to the output of Google's 'protoc', but with minim
 #### Differences from protoc-generated code
 
 * No code generation for Descriptor, Json, UnknownFields; WellKnownTypes not supported
+* gRPC support removed
 * Uses fields instead of properties; minimizes Attribute, Const variables, and Parser code
 * Uses xpFieldCodec, xpRepeatedCodec, xpMapCodec
-* Uses List<> instead of RepeatedField<>, Dictionary<> instead of MapField<>
+* Uses List<>, Dictionary<> instead of RepeatedField<>, MapField<>
 * Generates dedicated code for xpTURN.MegaData
 * Supports xpTURN custom types: DateTime, TimeSpan, Uri, Guid (internally handled as UInt64, Int64, String, String)
 
@@ -139,9 +140,9 @@ Note: The .proto parser uses protobuf-net.Reflection, with some modifications fo
 
 ### Optimization
 
-* Runtime code is designed to minimize Reflection usage and GC allocations.
-* Save and TablePostProcess areas are considered design-time and are not optimized.
+* Runtime code minimizes Reflection and GC pressure.
+* Save and TablePostProcess run at design time and are not performance-tuned.
 
 ## Support
 
-If you have any questions, please [open a GitHub issue](https://github.com/xpTURN/MegaData/issues) or contact us via [email](mailto:xpTURN@gmail.com).
+If you have any questions, please [open a GitHub issue](https://github.com/xpTURN/xpTURN/issues) or contact us via [email](mailto:xpTURN@gmail.com).

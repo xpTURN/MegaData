@@ -73,8 +73,8 @@ namespace xpTURN.MegaData
 
                 _mapAliasData[alias] = new AliasData { Id = id, TableId = tableId };
 
-                //
-                aliasField.SetValue(data, string.Empty); // Clear alias field to avoid writing it back to the file
+                // Clear alias field to avoid writing it back to the file.
+                aliasField.SetValue(data, string.Empty);
             }
         }
 

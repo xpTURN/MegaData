@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.IO;
 using System.Collections.Generic;
 
@@ -89,7 +89,7 @@ namespace xpTURN.TableGen
 
         public GeneratorContext Outdent()
         {
-            IndentLevel--;
+            IndentLevel = Math.Max(0, IndentLevel - 1);
             return this;
         }
 

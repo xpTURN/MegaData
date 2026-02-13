@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.IO;
 
@@ -51,13 +51,18 @@ namespace xpTURN.Converter
                 ignoreFolders.Add(@"\[Result\]"); // Exclude Result files
 
                 List<string> searchPatterns = new List<string>();
-                searchPatterns.Add("*.xls*"); // Default Search Pattern for Excel files
+                searchPatterns.Add("*.xls*"); // Excel workbooks: .xls, .xlsx, .xlsb, .xlsm
+                searchPatterns.Add("*.xlt*"); // Excel templates: .xlt, .xltx, .xltm
                 searchPatterns.Add("*.json"); // Default Search Pattern for JSON files
 
-                inputFiles = GetTartgetFile(new List<string> { ARGs.Input }, searchPatterns, SearchOption.AllDirectories, ignoreFiles, ignoreFolders);
+                inputFiles = GetTargetFile(new List<string> { ARGs.Input }, searchPatterns, SearchOption.AllDirectories, ignoreFiles, ignoreFolders);
 
                 var subsetDataTable = SubsetDataTable.Load(Path.Combine(ARGs.Input, "Subset.json"));
-            
+                if (subsetDataTable == null)
+                {
+                    Logger.Log.Info("Subset.json was not loaded; proceeding without subset configuration.");
+                }
+
                 Converter.Default.DoConvert(inputFiles, ARGs, subsetDataTable);
             }
             catch (Exception e)

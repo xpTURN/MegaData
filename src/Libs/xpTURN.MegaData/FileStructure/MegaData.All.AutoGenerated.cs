@@ -499,7 +499,7 @@ namespace xpTURN.MegaData
         public Dictionary<string, MetaData> MapMetaData = new ();
         #endregion
 
-        #region Paser.Field
+        #region Parser.Field
         protected static readonly xpMapCodec<string, AliasData> _mapAliasData_codec
             = new (xpFieldHelper.StringCodec, xpFieldCodecForMessage<AliasData>.MessageCodec, 10, 10, 18);
         protected static readonly xpMapCodec<string, MetaData> _mapMetaData_codec
@@ -619,7 +619,7 @@ namespace xpTURN.MegaData
         public Dictionary<string, long> MapAliasOffset = new ();
         #endregion
 
-        #region Paser.Field
+        #region Parser.Field
         protected static readonly xpMapCodec<int, long> _mapIdOffset_codec
             = new (xpFieldHelper.Int32Codec, xpFieldHelper.Int64Codec, 10, 8, 16);
         protected static readonly xpMapCodec<string, long> _mapAliasOffset_codec
@@ -829,7 +829,7 @@ namespace xpTURN.MegaData
         public Dictionary<string, SubsetData> Map = new ();
         #endregion
 
-        #region Paser.Field
+        #region Parser.Field
         protected static readonly xpMapCodec<string, SubsetData> _map_codec
             = new (xpFieldHelper.StringCodec, xpFieldCodecForMessage<SubsetData>.MessageCodec, 10, 10, 18);
         #endregion

@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.IO;
 using System.Reflection;
 
@@ -15,12 +15,14 @@ namespace xpTURN.Tool.Common
 
         public static string GetExecutablePath()
         {
-            return Assembly.GetExecutingAssembly().Location;
+            var location = Assembly.GetExecutingAssembly().Location;
+            return !string.IsNullOrEmpty(location) ? location : AppContext.BaseDirectory ?? ".";
         }
 
         public static string GetExecutableDirectory()
         {
-            return Path.GetDirectoryName(GetExecutablePath());
+            var path = GetExecutablePath();
+            return !string.IsNullOrEmpty(path) ? Path.GetDirectoryName(path) ?? path : (AppContext.BaseDirectory ?? ".");
         }
 
         public void Open(string fileName)
@@ -31,9 +33,9 @@ namespace xpTURN.Tool.Common
                 Directory.CreateDirectory(dirName);
             }
 
-            // Open the file for writing
-            FileStream fs = File.Open(fileName, FileMode.Append, FileAccess.Write, FileShare.Read);
-            _streamWriter = new StreamWriter(fs);
+            // Open the file for writing (StreamWriter owns and disposes the stream when leaveOpen: false)
+            var fs = File.Open(fileName, FileMode.Append, FileAccess.Write, FileShare.Read);
+            _streamWriter = new StreamWriter(fs, leaveOpen: false);
         }
 
         public void Close()
@@ -41,7 +43,7 @@ namespace xpTURN.Tool.Common
             if (_streamWriter != null)
             {
                 _streamWriter.Flush();
-                _streamWriter.Close();
+                _streamWriter.Dispose();
                 _streamWriter = null;
             }
         }
@@ -53,37 +55,42 @@ namespace xpTURN.Tool.Common
 
         public void Debug(string message)
         {
+            if (_streamWriter == null) return;
             _streamWriter.WriteLine($"DEBUG: {DateTime.Now:HH:mm:ss} - {message}");
             _streamWriter.Flush();
-            Console.WriteLine($"DEBUG: - {message}");
+            Console.WriteLine($"DEBUG: {DateTime.Now:HH:mm:ss} - {message}");
         }
 
         public void Info(string message)
         {
+            if (_streamWriter == null) return;
             _streamWriter.WriteLine($"INFO: {DateTime.Now:HH:mm:ss} - {message}");
             _streamWriter.Flush();
-            Console.WriteLine($"INFO: - {message}");
+            Console.WriteLine($"INFO: {DateTime.Now:HH:mm:ss} - {message}");
         }
 
         public void Warn(string message)
         {
+            if (_streamWriter == null) return;
             _streamWriter.WriteLine($"WARN: {DateTime.Now:HH:mm:ss} - {message}");
             _streamWriter.Flush();
-            Console.WriteLine($"WARN: - {message}");
+            Console.WriteLine($"WARN: {DateTime.Now:HH:mm:ss} - {message}");
         }
 
         public void Error(string message)
         {
+            if (_streamWriter == null) return;
             _streamWriter.WriteLine($"ERROR: {DateTime.Now:HH:mm:ss} - {message}");
             _streamWriter.Flush();
-            Console.WriteLine($"ERROR: - {message}");
+            Console.WriteLine($"ERROR: {DateTime.Now:HH:mm:ss} - {message}");
         }
 
         public void Fatal(string message)
         {
+            if (_streamWriter == null) return;
             _streamWriter.WriteLine($"FATAL: {DateTime.Now:HH:mm:ss} - {message}");
             _streamWriter.Flush();
-            Console.WriteLine($"FATAL: - {message}");
+            Console.WriteLine($"FATAL: {DateTime.Now:HH:mm:ss} - {message}");
         }
     }
 }

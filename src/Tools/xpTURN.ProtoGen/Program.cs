@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.IO;
 using System.Diagnostics;
@@ -48,7 +48,7 @@ namespace xpTURN
                 };
                 List<string> searchPatterns = new List<string> { searchPattern };
 
-                inputFiles = GetTartgetFile(new List<string> { ARGs.Input }, searchPatterns, SearchOption.AllDirectories, ignoreFiles, ignoreFolders);
+                inputFiles = GetTargetFile(new List<string> { ARGs.Input }, searchPatterns, SearchOption.AllDirectories, ignoreFiles, ignoreFolders);
 
                 if (string.IsNullOrEmpty(ARGs.ImportPath))
                 {
@@ -73,7 +73,7 @@ namespace xpTURN
                 };
 
                 //
-                Logger.Log.Info("CENVERT START");
+                Logger.Log.Info("CONVERT START");
                 Logger.Log.Info("------------------------------------------------------");
 
                 if (ARGs.InputType == "xls")

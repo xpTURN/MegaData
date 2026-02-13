@@ -27,7 +27,7 @@ namespace xpTURN.Converter
         public Type DataType { get; private set; }
         public Data Data { get; set; }
 
-        public List<FieldDesc> listFieldDesc = new();
+        public List<FieldDesc> ListFieldDesc { get; } = new();
 
         public DataDesc(Type dataType, IDesc ownerDesc)
         {
@@ -43,19 +43,19 @@ namespace xpTURN.Converter
                 var fieldDesc = new FieldDesc(fieldInfo, this);
                 if (fieldDesc != null)
                 {
-                    listFieldDesc.Add(fieldDesc);
+                    ListFieldDesc.Add(fieldDesc);
                 }
             }
         }
 
         public void GetFieldDesc(List<FieldDesc> listFullFieldDesc)
         {
-            foreach (var fieldDesc in listFieldDesc)
+            foreach (var fieldDesc in ListFieldDesc)
             {
                 listFullFieldDesc.Add(fieldDesc);
             }
 
-            foreach (var fieldDesc in listFieldDesc)
+            foreach (var fieldDesc in ListFieldDesc)
             {
                 if (fieldDesc.NestedDataDesc != null)
                 {
@@ -86,7 +86,7 @@ namespace xpTURN.Converter
             }
 
             Data = data;
-            foreach (var field in listFieldDesc)
+            foreach (var field in ListFieldDesc)
             {
                 field.Data = data;
             }
@@ -99,7 +99,7 @@ namespace xpTURN.Converter
                 return null;
             }
 
-            var field = listFieldDesc.FirstOrDefault(f => f.Name == fieldName);
+            var field = ListFieldDesc.FirstOrDefault(f => f.Name == fieldName);
             if (field == null)
             {
                 return null;

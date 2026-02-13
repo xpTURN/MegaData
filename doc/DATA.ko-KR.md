@@ -1,6 +1,8 @@
 ## 데이터 입력
 
-### 스프레드 시트로 데이터 구성
+Excel 시트와 JSON 파일에 데이터를 넣는 방법을 설명합니다.
+
+### 시트에 데이터 입력하기
 
 |    |  A      |  B               |  C          |  D               |  E               |  F          |  G                 |  H               |
 | -- | ------- | ---------------- | ----------- | ---------------- | ---------------- | ----------- | ------------------ | ---------------- |
@@ -14,49 +16,32 @@
 
 * [DataSet Sample](../src/Samples/DataSet/Sample1/)
 
-시트 프로그램에서 새 파일을 만든 후, Table 시트를 생성하고 데이터를 입력하면 됩니다.
+워크북에 **Table** 시트를 만들고 아래처럼 데이터를 입력합니다.
 
-* 첫 번째 열은 시트에서 주석 입력 용도로 예약되어 있습니다. (필드 설명 혹은 사람이 읽기 쉬운 필드명)
+* **A열**은 주석용으로 예약되어 있습니다. 데이터로 사용하지 않습니다.
 
-* 첫 번째 행에는 데이터 제외 옵션을 입력할 수 있는 특수 필드가 있습니다.
+* **데이터 제외 옵션**은 전용 열(예: A열)에 넣을 수 있습니다. 한 열만 적용되며, 해당 행 전체(메인 Data만, NestedData 레벨에는 불가)에 적용됩니다.
 
-    - Add_yyyyMMdd 형식으로 입력 :
-        + TargetDate 기준으로 데이터 활성화 (TagetDate와 같거나 과거인 경우 데이터 활성화)
+    - **Add_yyyyMMdd**: 컨버터의 TargetDate가 이 날짜와 같거나 그 이후일 때만 해당 행을 포함합니다.
+    - **Del_yyyyMMdd**: 컨버터의 TargetDate가 이 날짜와 같거나 그 이후일 때 해당 행을 제외합니다.
+    - **del**(또는 **hide**): 해당 행은 항상 제외합니다.
+    - 비어 있음: 해당 행은 항상 포함합니다.
+    - TargetDate는 xpTURN.Converter의 커맨드라인 인자로 전달합니다.
 
-    - Del_yyyyMMdd 형식으로 입력 :    
-        + TargetDate 기준으로 데이터 비활성화 (TagetDate와 같거나 과거인 경우 데이터 비활성화)
+* **B2 셀**: Table 타입명(예: `PersonDataTable`)을 입력합니다.
 
-    - del 입력 :
-        + 해당 레코드 항상 비활성화
+* **3행**: B열에는 Data 타입명(예: `PersonData`)을, C열부터는 필드명(Id, IdAlias, Name 등)을 입력합니다. 순서는 NestedData 규칙을 제외하면 상관없습니다.
+    - `#`로 시작하는 이름은 무시됩니다(주석·보조 열).
 
-    - 해당 필드 값이 비어 있는 경우 해당 레코드는 항상 활성화
+* **4행 이하**: B열에는 각 행의 Data 타입명을 반복하고, C열부터는 각 필드 값을 입력합니다.
 
-    - TargetDate는 xpTURN.Converter 커멘드라인 인자로 지정 가능
+* **키 필드**
+    - **Id** 또는 **IdAlias**(또는 둘 다)를 지정합니다. 접근 키로 사용됩니다.
+    - IdAlias만 넣으면 Id는 자동 생성됩니다(예: Crc32). 가급적 제한적으로 사용하고, 변환 후 IdAlias 값은 유지되지 않습니다.
+    - **RefId**와 **RefIdAlias**가 있고 RefIdAlias만 채우면 RefId는 별칭으로 해석된 뒤, 변환 후 RefIdAlias는 지워집니다.
+    - **Id**는 같은 Table 내에서, **IdAlias**는 전체 TableSet에서 유일해야 합니다.
 
-    - 메인 Data에만 설정 가능 (NestedData 레벨에 설정 불가)
-
-* B2 셀에 Table 타입명을 입력하여야 합니다.
-
-* B3:B% 셀에는 Table 타입의 필드명을 입력합니다. (순서는 중요하지 않음, 단 NestedData 입력 규약은 별도)
-
-    - #로 시작하는 필드의 경우 해당 내용이 무시됩니다. 데이터 레코드 구성 시 코멘트를 입력하거나 중간 데이터로 활용 가능합니다.
-
-* B3:%3 셀에는 Table 타입이 소유하는 Data 레코드 타입을 입력합니다.
-
-* C3 셀 부터는 해당 필드 변수에 맞는 값을 입력하면 됩니다.
-
-* 필드 값 관련 특수 사양
-    - Id 또는 Alias 필드는 반드시 제공해야 하며, 데이터 레코드의 접근 키로 사용됩니다.
-    - 시트에서 Id 필드를 생략하고 IdAlias 필드만 있을 경우, Id 값은 Crc32 알고리즘을 통해 자동으로 발급됩니다. (불가피한 경우에만 제한적으로 사용하세요)
-        + IdAlias 값은 수집 후 초기화되어 값이 지워집니다.
-    - RefId, RefIdAlias 필드가 정의되어 있고 RefId를 시트에서 생략하고 RefIdAlias만 필드가 있는 경우 (RefId 값은 자동으로 찾아서 입력됩니다)
-        + RefIdAlias 값은 RefId 값을 찾는 용도로 사용 후 초기화되어 값이 지워집니다.
-    - Id 필드 값은 같은 Table에서 유니크하여야 합니다.
-    - IdAlias 필드 값은 전역 TableSet에서 유니크하여야 합니다.
-
-* List 기본 타입 유형 입력 방식 (List\<Int32\>> 혹은 List\<String\> 등) : 
-    - List 필드명을 여러번 입력하면 다수의 값을 Add 할 수 있습니다.
-    - 필드 값이 비어 있는 경우에는 추가되지 않습니다.
+* **List 필드**(예: `List<Int32>`, `List<String>`): 같은 열 머리글을 여러 번 두고, 비어 있지 않은 셀마다 값이 리스트에 하나씩 추가됩니다.
 
 |    |  A      |  B            |  C          |  D               |  E               |  F               |  G                 |  H               |
 | -- | ------- | ------------- | ----------- | ---------------- | ---------------- | ---------------- | ------------------ | ---------------- |
@@ -67,8 +52,7 @@
 |  5 |         |  BoxData      |  1000003    |  box_003         |  9000021         |  9000022         |                    |                  |
 
 
-* Map 기본 타입 입력 방식 (Map\<String, String\> 또는 Map\<Int32,String\> 등) :
-    - 필드명에 MapFieldName<key> 와 같이 입력하고 필드 값이 입력되어 있으면 Add(key,value)로 데이터가 추가됩니다.
+* **Map 필드**(예: `Map<String,String>`, `Map<Int32,String>`): 열 머리글을 `MapFieldName<key>` 형태로 쓰고, 셀 값이 해당 키의 값으로 저장됩니다.
 
 |    |  A      |  B                   |  C                 |  D               |  E               |  F               |  G                 |  H               |
 | -- | ------- | -------------------- | ------------------ | ---------------- | ---------------- | ---------------- | ------------------ | ---------------- |
@@ -78,9 +62,9 @@
 |  4 |         |  TranslatedData      |  ids_pawn_name_02  |  Abcde           |  가나다            |  カタカナ          |  简体字             |  簡體字            |
 |  5 |         |  TranslatedData      |  ids_pawn_name_03  |  Abcde           |  가나다            |  カタカナ          |  简体字             |  簡體字            |
 
-#### NestedData 유형 입력
+#### NestedData 입력
 
-##### 데이터 시트 구성 예시
+##### 예시
 |    |  A      |  B                  |  C          |  D               |  E               |  F               |  G                 |  H               |
 | -- | ------- | ------------------- | ----------- | ---------------- | ---------------- | ---------------- | ------------------ | ---------------- |
 |  1 |         |                     |             |                  |                  |                  |                    |                  |
@@ -92,41 +76,30 @@
 |  7 |         |                     |             |                  |  SlotData        |  8000012         |  Two               |  9000012         |
 |  8 |         |                     |             |                  |  SlotData        |  8000013         |  Three             |  9000013         |
 
-* [NesteData Samples](../src/Tests/DataSet/Depth/)
+* [NestedData 샘플](../src/Tests/DataSet/Depth/)
 
-* NestedData 필드 유형은 단일, 열거형 모두 가능합니다.
-    - [단일, 열거형 NestedData 예시](../src/Tests/DataSet/Depth/DepthDataTable.xlsx)
-* Map\<Key,NestedData\> 유형을 사용하는 경우 Key 타입은 Id 필드의 경우 Int32류, Int64류, Enum이 사용 가능하고 Alias 필드의 경우 String 유형이 사용 가능합니다.
-* {FieldName} 같이 입력 시 NestedData 시작을 알립니다. 그 뒤 필드명은 NestedData 타입에 정의된 필드명을 입력하여야 합니다.
-* {FieldName} 하단에는 해당 필드의 컬렉선 구성 요소 타입명을 입력하여야 합니다.
-    - 주의, 메인 Data의 기본 타입 필드명은 {FieldName}의 좌측에 모두 있어야 합니다.
-* 동일 뎁스에는 열거형 NestedData 유형은 한 종류만 입력 가능하게 제한됩니다. (List\<NestedData\>, Map\<key,NestedData\> 유형)
-* NestedData는 여러 단계로 구성할 수 있지만, 시트 문서의 가독성, 관리, 공간 효율 등을 고려하여 1~2단계로 제한하는 것을 권장합니다.
-    - 대신, RefId 참조 구성 활용을 추천합니다.
-    - 다단계로 구성할 경우, 필드명은 {Depth1Map/Depth2Map/Depth3Map}과 같은 전체 이름이나 {//Depth3Map}과 같은 축약형으로 입력할 수 있습니다.
+* NestedData는 단일 메시지이거나 컬렉션(List/Map)일 수 있습니다.
+    - [단일·컬렉션 NestedData 예시](../src/Tests/DataSet/Depth/DepthDataTable.xlsx)
+* `Map<Key,NestedData>`에서 Key는 Id 계열이면 Int32/Int64/Enum, Alias 계열이면 String을 사용할 수 있습니다.
+* **{FieldName}**으로 NestedData 블록을 시작합니다. 이후 열은 해당 NestedData 타입에 정의된 필드명을 사용하고, {FieldName} 아래 행에는 요소 타입명을 반복해서 넣습니다.
+    - 메인 Data의 단순(비중첩) 필드는 모두 {FieldName} 왼쪽에 있어야 합니다.
+* 같은 depth에는 컬렉션 NestedData(List 또는 Map) 필드는 하나만 둘 수 있습니다.
+* 중첩은 1~2단계로 두는 것을 권장합니다. 더 깊게 쓰려면 RefId를 고려하세요. 전체 경로는 `{Depth1Map/Depth2Map/Depth3Map}`처럼, 축약은 `{//Depth3Map}`처럼 쓸 수 있습니다.
+* 데이터 제외 옵션으로 행이 제외되면, 해당 행의 NestedData 전체도 제외됩니다.
 
-* 데이터 제외 옵션을 A3 셀에 입력하는 경우 해당 레코드가 소유하는 NestedData까지 모두 제외됩니다. (3 ~ 5 열에 입력된 데이터 전부)
+### JSON 파일 사용
 
-### Json 파일로 구성
-
-인하우스 편집 툴로 데이터를 구성하는 경우 Json 포멧으로 데이터를 저장하여 TableSet에 통합 할 수 있도록 지원합니다. 시트 문서의 정형성을 지킬 필요가 없기 때문에 Data 구성의 자유도가 높습니다. 
-* 단일 depth에 열거형 NestedData 1종만 사용 가능한 규칙 적용되지 않음.
-* 단, Id 혹은 Alias 제공 필요.
+Excel 대신 JSON(예: 인하우스 툴 출력)으로 데이터를 넣을 수 있습니다. 시트의 열 구조를 따를 필요가 없어 구성이 자유롭습니다.
+* "depth당 컬렉션 NestedData 하나" 제한은 적용되지 않습니다.
+* 각 레코드에는 Id 또는 IdAlias 중 하나는 반드시 있어야 합니다.
 
 * [Json Samples](../src/Samples/DataSet/Sample1/BoxDataTable.json)
 * [Json Serialize](../examples/SampleProj/Assets/Scripts/SaveData.cs)
 
-## 참고
+## 기타
 
-* 같은 Table 유형의 Data 레코드를 여러 파일에 분산 저장 할 수도 있습니다.
-    - 다만, 레코드 값이 중복되어서는 안 됩니다. (특히 Id 와 Alias 값들)
-    - Json 파일로 저장하는 경우 Table 파일 하나에 단일 Data 만 저장 하는 경우 등.
+* **여러 파일**: 같은 Table의 데이터를 여러 파일로 나눌 수 있습니다. Id와 IdAlias는 전체에서 유일해야 합니다. JSON은 파일당 레코드 하나만 두어도 됩니다.
 
-* 다음 폴더는 Converter 툴에서 무시됩니다.
-    - '[Define]' : 테이블 정의 시트 파일 저장소
-    - '[Result]' : 가공된 데이터 파일 저장소
+* **Converter가 무시하는 폴더**: `[Define]`(정의 시트), `[Result]`(컨버터 출력).
 
-* 다음 파일들은 Converter, ProtoGen 툴에서 무시됩니다.
-    - 파일명이 '$' 로 시작 : Excel 어플리케이션의 임시 파일
-    - 파일명이 '\#' 로 시작 : 무시 설정된 파일 (주석화된 파일)
-    - 'Subset.json' : Subset 정의 용도로 예약된 파일명
+* **Converter·ProtoGen이 무시하는 파일**: 이름이 `$`로 시작하는 파일(Excel 임시), `#`로 시작하는 파일(주석 처리), 예약 이름 `Subset.json`(서브셋 설정용).

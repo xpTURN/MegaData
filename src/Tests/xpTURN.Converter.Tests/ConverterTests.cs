@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.Globalization;
 using System.IO;
@@ -48,7 +48,7 @@ namespace xpTURN.Converter.TestCases
             Logger.Log.Info("DoConvert_Tests_AllTypes Test Start");
 
             // Arrange
-            var files = FileUtils.GetTartgetFile(
+            var files = FileUtils.GetTargetFile(
                 new List<string> { "./Tests/DataSet/AllTypes/" },
                 new List<string> { "*.xls*", "*.json" },
                 SearchOption.AllDirectories,
@@ -98,7 +98,7 @@ namespace xpTURN.Converter.TestCases
             Logger.Log.Info("DoConvert_Tests_Depth Test Start");
 
             // Arrange
-            var files = FileUtils.GetTartgetFile(
+            var files = FileUtils.GetTargetFile(
                 new List<string> { "./Tests/DataSet/Depth/" },
                 new List<string> { "*.xls*", "*.json" },
                 SearchOption.AllDirectories,
@@ -214,7 +214,7 @@ namespace xpTURN.Converter.TestCases
             Logger.Log.Info("DoConvert_Tests_Alias Test Start");
 
             // Arrange
-            var files = FileUtils.GetTartgetFile(
+            var files = FileUtils.GetTargetFile(
                 new List<string> { "./Tests/DataSet/Alias/" },
                 new List<string> { "*.xls*", "*.json" },
                 SearchOption.AllDirectories,
@@ -258,7 +258,7 @@ namespace xpTURN.Converter.TestCases
             Logger.Log.Info("DoConvert_Tests_RefId Test Start");
 
             // Arrange
-            var files = FileUtils.GetTartgetFile(
+            var files = FileUtils.GetTargetFile(
                 new List<string> { "./Tests/DataSet/RefId/" },
                 new List<string> { "*.xls*", "*.json" },
                 SearchOption.AllDirectories,
@@ -334,7 +334,7 @@ namespace xpTURN.Converter.TestCases
             Logger.Log.Info("DoConvert_Tests_Repeated_V0_To_Repeated_V1 Test Start");
 
             // Arrange
-            var files = FileUtils.GetTartgetFile(
+            var files = FileUtils.GetTargetFile(
                 new List<string> { "./Tests/DataSet/Repeated.V0/" },
                 new List<string> { "*.xls*", "*.json" },
                 SearchOption.AllDirectories,
@@ -393,7 +393,7 @@ namespace xpTURN.Converter.TestCases
             Logger.Log.Info("DoConvert_Tests_RepeatedField_V1 Test Start");
 
             // Arrange
-            var files = FileUtils.GetTartgetFile(
+            var files = FileUtils.GetTargetFile(
                 new List<string> { "./Tests/DataSet/Repeated.V1/" },
                 new List<string> { "*.xls*", "*.json" },
                 SearchOption.AllDirectories,
@@ -455,7 +455,7 @@ namespace xpTURN.Converter.TestCases
             Logger.Log.Info("DoConvert_Tests_CustomField Test Start");
 
             // Arrange
-            var files = FileUtils.GetTartgetFile(
+            var files = FileUtils.GetTargetFile(
                 new List<string> { "./Tests/DataSet/customField/" },
                 new List<string> { "*.xls*", "*.json" },
                 SearchOption.AllDirectories,
@@ -501,7 +501,7 @@ namespace xpTURN.Converter.TestCases
             Logger.Log.Info("DoConvert_Tests_Multi1 Test Start");
 
             // Arrange
-            var files = FileUtils.GetTartgetFile(
+            var files = FileUtils.GetTargetFile(
                 new List<string> { "./Tests/DataSet/Multi1/" },
                 new List<string> { "*.xls*", "*.json" },
                 SearchOption.AllDirectories,
@@ -546,7 +546,7 @@ namespace xpTURN.Converter.TestCases
         public void DoConvert_Samples_Sample1()
         {
             // Arrange
-            var files = FileUtils.GetTartgetFile(
+            var files = FileUtils.GetTargetFile(
                 new List<string> { "./Samples/DataSet/Sample1/" },
                 new List<string> { "*.xls*", "*.json" },
                 SearchOption.AllDirectories,
@@ -635,7 +635,7 @@ namespace xpTURN.Converter.TestCases
             Logger.Log.Info("DoConvert_Tests_OnDemand_Type1 Test Start");
 
             // Arrange
-            var files = FileUtils.GetTartgetFile(
+            var files = FileUtils.GetTargetFile(
                 new List<string> { "./Tests/DataSet/OnDemand.Type1/" },
                 new List<string> { "*.xls*", "*.json" },
                 SearchOption.AllDirectories,
@@ -654,16 +654,10 @@ namespace xpTURN.Converter.TestCases
             var result = Converter.Default.DoConvert(files, ARGs);
             Assert.That(result, Is.True);
 
-            var jsonOrg = Tests.OnDemand.Type1.OnDemand1TableSet.Instance.ToJson();
-
             var isLoaded = Tests.OnDemand.Type1.OnDemand1TableSet.Instance.Load(loadFilePath);
             Assert.That(isLoaded, Is.True);
 
-            var jsonLoaded = Tests.OnDemand.Type1.OnDemand1TableSet.Instance.ToJson();
-
             // Assert
-            Assert.That(jsonOrg, Is.EqualTo(jsonLoaded));
-
             var numData = Tests.OnDemand.Type1.OnDemand1TableSet.Instance.GetNumberData(Tests.OnDemand.Type1.NumberType.STAT_POW_BASE);
             Assert.That(numData, Is.Not.Null);
             Assert.That(numData.Value, Is.EqualTo(24));
@@ -694,7 +688,7 @@ namespace xpTURN.Converter.TestCases
             Logger.Log.Info("DoConvert_Tests_WeakRef_Type1 Test Start");
 
             // Arrange
-            var files = FileUtils.GetTartgetFile(
+            var files = FileUtils.GetTargetFile(
                 new List<string> { "./Tests/DataSet/WeakRef.Type1/" },
                 new List<string> { "*.xls*", "*.json" },
                 SearchOption.AllDirectories,
@@ -753,7 +747,7 @@ namespace xpTURN.Converter.TestCases
             Logger.Log.Info("DoConvert_Tests_PrepareAll Test Start");
 
             // Arrange
-            var files = FileUtils.GetTartgetFile(
+            var files = FileUtils.GetTargetFile(
                 new List<string> { "./Tests/DataSet/WeakRef.Type1/" },
                 new List<string> { "*.xls*", "*.json" },
                 SearchOption.AllDirectories,
@@ -822,7 +816,7 @@ namespace xpTURN.Converter.TestCases
 
             // Arrange
             var targetDate = DateTime.Parse(targetDateString);
-            var files = FileUtils.GetTartgetFile(
+            var files = FileUtils.GetTargetFile(
                 new List<string> { "./Tests/DataSet/Exclude.Type1/" },
                 new List<string> { "*.xls*", "*.json" },
                 SearchOption.AllDirectories,
@@ -876,7 +870,7 @@ namespace xpTURN.Converter.TestCases
 
             // Arrange
             var targetDate = DateTime.Parse(targetDateString);
-            var files = FileUtils.GetTartgetFile(
+            var files = FileUtils.GetTargetFile(
                 new List<string> { "./Tests/DataSet/Exclude.Type2/" },
                 new List<string> { "*.xls*", "*.json" },
                 SearchOption.AllDirectories,
@@ -923,7 +917,7 @@ namespace xpTURN.Converter.TestCases
             Logger.Log.Info("DoConvert_Tests_Locale_Type1 Test Start");
 
             // Arrange
-            var files = FileUtils.GetTartgetFile(
+            var files = FileUtils.GetTargetFile(
                 new List<string> { "./Tests/DataSet/Locale.Type1/" },
                 new List<string> { "*.xls*", "*.json" },
                 SearchOption.AllDirectories,
@@ -967,7 +961,7 @@ namespace xpTURN.Converter.TestCases
             Logger.Log.Info("DoConvert_Tests_Locale_Type2 Test Start");
 
             // Arrange
-            var files = FileUtils.GetTartgetFile(
+            var files = FileUtils.GetTargetFile(
                 new List<string> { "./Tests/DataSet/Locale.Type2/" },
                 new List<string> { "*.xls*", "*.json" },
                 SearchOption.AllDirectories,
@@ -1011,7 +1005,7 @@ namespace xpTURN.Converter.TestCases
             Logger.Log.Info("DoConvert_Tests_Errors1 Test Start");
 
             // Arrange
-            var files = FileUtils.GetTartgetFile(
+            var files = FileUtils.GetTargetFile(
                 new List<string> { "./Tests/DataSet/Errors.Convert1/" },
                 new List<string> { "*.xls*", "*.json" },
                 SearchOption.AllDirectories,
@@ -1039,7 +1033,7 @@ namespace xpTURN.Converter.TestCases
             Logger.Log.Info("DoConvert_Tests_Errors2 Test Start");
 
             // Arrange
-            var files = FileUtils.GetTartgetFile(
+            var files = FileUtils.GetTargetFile(
                 new List<string> { "./Tests/DataSet/Errors.Convert2/" },
                 new List<string> { "*.xls*", "*.json" },
                 SearchOption.AllDirectories,

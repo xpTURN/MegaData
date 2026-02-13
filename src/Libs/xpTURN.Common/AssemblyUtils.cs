@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.IO;
 using System.Collections.Concurrent;
 using System.Collections.Generic;
@@ -10,7 +10,7 @@ namespace xpTURN.Common
     public static class AssemblyUtils
     {
         private static List<Assembly> _loadedAssemblies = new List<Assembly>();
-        private static readonly ConcurrentDictionary<string, Type> TypeCache = new();
+        private static readonly ConcurrentDictionary<string, Type> _typeCache = new();
 
         public static void LoadAllDependencies()
         {
@@ -26,15 +26,15 @@ namespace xpTURN.Common
             {
                 try
                 {
-                    var assamblyName = AssemblyName.GetAssemblyName(assemblyFile);
-                    if (loadedAssemblyNames.Contains(assamblyName.FullName))
+                    var assemblyName = AssemblyName.GetAssemblyName(assemblyFile);
+                    if (loadedAssemblyNames.Contains(assemblyName.FullName))
                     {
                         continue;
                     }
 
                     // Load assembly
                     Assembly.LoadFrom(assemblyFile);
-                    Logger.Log.Info($"Loading assembly: {assamblyName.Name}");
+                    Logger.Log.Info($"Loading assembly: {assemblyName.Name}");
                 }
                 catch (Exception ex)
                 {
@@ -42,14 +42,15 @@ namespace xpTURN.Common
                 }
             }
 
-            //
+            // Reload assemblies and clear type cache.
             _loadedAssemblies.Clear();
             _loadedAssemblies.AddRange(AppDomain.CurrentDomain.GetAssemblies());
+            _typeCache.Clear();
         }
 
         public static Type GetTypeByName(string fullName)
         {
-            if (TypeCache.TryGetValue(fullName, out var cachedType))
+            if (_typeCache.TryGetValue(fullName, out var cachedType))
             {
                 return cachedType;
             }
@@ -57,27 +58,31 @@ namespace xpTURN.Common
             var type = Type.GetType(fullName);
             if (type != null)
             {
-                TypeCache[fullName] = type;
+                _typeCache[fullName] = type;
                 return type;
             }
 
-            for (int i = 0; i < _loadedAssemblies.Count; i++)
+            Assembly matchedAssembly = null;
+            foreach (var assembly in _loadedAssemblies)
             {
-                var assembly = _loadedAssemblies[i];
                 type = assembly.GetType(fullName);
                 if (type != null)
                 {
-                    TypeCache[fullName] = type;
-
-                    // Move the matched assembly to the front of the list
-                    if (i != 0)
-                    {
-                        _loadedAssemblies.RemoveAt(i);
-                        _loadedAssemblies.Insert(0, assembly);
-                    }
-
-                    return type;
+                    matchedAssembly = assembly;
+                    break;
                 }
+            }
+
+            if (type != null)
+            {
+                _typeCache[fullName] = type;
+                // Move the matched assembly to the front for next lookup
+                if (matchedAssembly != null && _loadedAssemblies.Count > 0 && _loadedAssemblies[0] != matchedAssembly)
+                {
+                    _loadedAssemblies.Remove(matchedAssembly);
+                    _loadedAssemblies.Insert(0, matchedAssembly);
+                }
+                return type;
             }
 
             return null;
@@ -96,11 +101,11 @@ namespace xpTURN.Common
                 return result;
             }
 
-            try
+            for (int i = 0; i < _loadedAssemblies.Count; i++)
             {
-                for (int i = 0; i < _loadedAssemblies.Count; i++)
+                var assembly = _loadedAssemblies[i];
+                try
                 {
-                    var assembly = _loadedAssemblies[i];
                     foreach (var type in assembly.GetTypes())
                     {
                         if (type == baseType)
@@ -111,14 +116,14 @@ namespace xpTURN.Common
                         }
                     }
                 }
-            }
-            catch (ReflectionTypeLoadException ex)
-            {
-                foreach (var t in ex.Types)
+                catch (ReflectionTypeLoadException ex)
                 {
-                    if (t == null || t == baseType) continue;
-                    if (baseType.IsAssignableFrom(t))
-                        result.Add(t);
+                    foreach (var t in ex.Types)
+                    {
+                        if (t == null || t == baseType) continue;
+                        if (baseType.IsAssignableFrom(t))
+                            result.Add(t);
+                    }
                 }
             }
 

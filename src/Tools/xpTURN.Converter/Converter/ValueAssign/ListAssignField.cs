@@ -1,9 +1,9 @@
-﻿using System;
+using System;
 using System.Reflection;
 
 using xpTURN.Common;
 
-namespace xpTURN.Converter.AssginValue
+namespace xpTURN.Converter.AssignValue
 {
     public class ListAssignField : IAssignField
     {

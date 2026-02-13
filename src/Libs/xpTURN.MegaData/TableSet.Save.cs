@@ -1,4 +1,5 @@
-﻿using System;
+using System;
+using System.Buffers.Binary;
 using System.IO;
 using System.Text;
 using System.Collections.Generic;
@@ -16,7 +17,7 @@ namespace xpTURN.MegaData
         #region Save Public Methods
         public MetaDataTable GetMetaDataTable() => MetaDataTable;
         
-        protected SortedList<string, Table> GetSubSetTables(string subset, SubsetDataTable subsetDataTable)
+        protected SortedList<string, Table> GetSubsetTables(string subset, SubsetDataTable subsetDataTable)
         {
             SortedList<string, Table> subsetTables = new SortedList<string, Table>(Tables);
             if (subsetDataTable != null)
@@ -63,7 +64,7 @@ namespace xpTURN.MegaData
 
         public bool Save(string fileName, string subset = "", SubsetDataTable subsetDataTable = null, bool force = true)
         {
-            //
+            // Ensure output directory exists.
             var path = Path.GetDirectoryName(fileName);
             if (!Directory.Exists(path))
             {
@@ -104,21 +105,21 @@ namespace xpTURN.MegaData
                 }
             }
 
-            //
-            SortedList<string, Table> subsetTables = GetSubSetTables(subset, subsetDataTable);
+            // Get subset tables to save.
+            SortedList<string, Table> subsetTables = GetSubsetTables(subset, subsetDataTable);
             if (subsetTables == null)
             {
                 return false; // No changes, no need to save
             }
 
-            // 
+            // Build table and metadata streams.
             int offset = 0;
             MemoryStream tableStream = new MemoryStream();
             {
-                //
+                // Write on-demand data first.
                 WriteOnDemand(tableStream, subsetTables, ref offset);
 
-                //
+                // Write table data.
                 WriteTables(tableStream, subsetTables, ref offset);
             }
 
@@ -127,7 +128,7 @@ namespace xpTURN.MegaData
                 // Write metadata table
                 MetaDataTable.WriteDelimitedTo(metaDataStream);
 
-                //
+                // Update meta size for header.
                 MetaSize = MetaDataTable.CalculateSize();
             }
 
@@ -137,8 +138,8 @@ namespace xpTURN.MegaData
                 Space = GetType().Namespace,
                 Name = GetType().Name,
                 Subset = string.IsNullOrEmpty(subset) ? "Default" : subset,
-                MetaHash = ByteString.FromBase64(MD5Utils.ComputeMD5Hash(metaDataStream)),
-                DataHash = ByteString.FromBase64(MD5Utils.ComputeMD5Hash(tableStream)),
+                MetaHash = ByteString.FromBase64(HashUtils.ComputeSHA256Hash(metaDataStream)),
+                DataHash = ByteString.FromBase64(HashUtils.ComputeSHA256Hash(tableStream)),
             };
 
             HeaderSize = Header.CalculateSize();
@@ -157,37 +158,44 @@ namespace xpTURN.MegaData
                 Logger.Log.Info($"Saving TableSet '{GetType().Name}' to file: {fileName}");
                 Logger.Log.Info($"Space: {GetType().Namespace}");
                 Logger.Log.Info($"TableSet Name: {GetType().Name}");
-                Logger.Log.Info($"Hash: {Header.DataHash.ToBase64()}");
+                Logger.Log.Info($"SHA256: {Header.DataHash.ToBase64()}");
             }
 
             // Save to file
-            FileStream fileStream = new FileStream(fileName, FileMode.Create, FileAccess.Write);
-            try
+            using (var fileStream = new FileStream(fileName, FileMode.Create, FileAccess.Write))
             {
-                // Write header
-                Header.WriteDelimitedTo(fileStream);
+                try
+                {
+                    // Write magic number and version.
+                    byte[] magicBytes = new byte[4];
+                    BinaryPrimitives.WriteUInt32LittleEndian(magicBytes, MAGIC_NUMBER);
+                    fileStream.Write(magicBytes, 0, 4);
 
-                // Write metadata
-                fileStream.Write(metaDataStream.ToArray(), 0, (int)metaDataStream.Length);
+                    byte[] versionBytes = new byte[4];
+                    BinaryPrimitives.WriteUInt32LittleEndian(versionBytes, CURRENT_VERSION);
+                    fileStream.Write(versionBytes, 0, 4);
 
-                // Write data tables
-                fileStream.Write(tableStream.ToArray(), 0, (int)tableStream.Length);
+                    // Write header
+                    Header.WriteDelimitedTo(fileStream);
 
-                Logger.Log.Info($"");
-                Logger.Log.Info($"Saved to: {fileName}");
-                Logger.Log.Info($"MD5: {Header.DataHash.ToBase64()}");
+                    // Write metadata
+                    metaDataStream.WriteTo(fileStream);
+
+                    // Write data tables
+                    tableStream.WriteTo(fileStream);
+
+                    Logger.Log.Info($"");
+                    Logger.Log.Info($"Saved to: {fileName}");
+                    Logger.Log.Info($"SHA256: {Header.DataHash.ToBase64()}");
+                }
+                catch (Exception ex)
+                {
+                    Logger.Log.Tool.Error(DebugInfo.Empty, $"Error saving data: {ex.Message}");
+                    return false;
+                }
             }
-            catch (Exception ex)
-            {
-                Logger.Log.Tool.Error(DebugInfo.Empty, $"Error saving data: {ex.Message}");
-                return false;
-            }
-            finally
-            {
-                fileStream.Close();
-            }
 
-            //
+            // Optionally save JSON representation.
             if (JsonWrapper.ToJsonMethod != null)
             {
                 var result = SaveToJson(fileName, subsetTables);
@@ -215,14 +223,14 @@ namespace xpTURN.MegaData
             var size = msg.CalculateSize();
             offset += ComputeLengthSize(size) + size; // Length + MessageSize
 
-            //
+            // Track for on-demand reload.
             metaNestedData.AddOnDemandData(nestedItem);
         }
 
         private void WriteOnDemandTable(MemoryStream tableStream, ref int offset, Table table)
         {
             MetaNestedData metaData = null;
-            if (table.IsOndemand)
+            if (table.IsOnDemand)
             {
                 metaData = InvokeUtils.GetFieldValue(table, "MetaNestedData") as MetaNestedData;
                 if (metaData == null)
@@ -243,7 +251,7 @@ namespace xpTURN.MegaData
                     WriteOnDemandTable(tableStream, ref offset, nestedTable);
                 }
 
-                if (table.IsOndemand)
+                if (table.IsOnDemand)
                 {
                     // Metadata
                     metaData.MapIdOffset.Add(nestedItem.GetId(), offset);
@@ -264,7 +272,7 @@ namespace xpTURN.MegaData
                     WriteOnDemandTable(tableStream, ref offset, nestedTable);
                 }
 
-                if (table.IsOndemand)
+                if (table.IsOnDemand)
                 {
                     // Metadata
                     metaData.MapAliasOffset.Add(nestedItem.GetAlias(), offset);
@@ -274,7 +282,7 @@ namespace xpTURN.MegaData
                 }
             }
 
-            if (table.IsOndemand)
+            if (table.IsOnDemand)
             {
                 // Clear nested data after saving
                 table.GetMap().Clear();
@@ -284,7 +292,7 @@ namespace xpTURN.MegaData
 
         private void WriteOnDemand(MemoryStream tableStream, SortedList<string,Table> tables, ref int offset)
         {
-            //
+            // Write each table's on-demand data.
             foreach (var table in tables.Values)
             {
                 WriteOnDemandTable(tableStream, ref offset, table);
@@ -313,37 +321,35 @@ namespace xpTURN.MegaData
 
         private bool SaveToJson(string fileName, SortedList<string,Table> subsetTables)
         {
-            //
+            // Output path for JSON file.
             string jsonFileName = Path.Combine(Path.GetDirectoryName(fileName), Path.GetFileNameWithoutExtension(fileName) + ".json");
-            FileStream jsonStream = new FileStream(jsonFileName, FileMode.Create, FileAccess.Write);
-            try
+            using (var jsonStream = new FileStream(jsonFileName, FileMode.Create, FileAccess.Write))
             {
-                var tableSet = (TableSet)Activator.CreateInstance(GetType(), true);
-                tableSet.Header = this.Header;
-                tableSet.MetaDataTable = this.MetaDataTable;
-                tableSet.Tables = subsetTables;
-
-                string json = tableSet.ToJson();
-                var bytes = Encoding.UTF8.GetBytes(json);
-                jsonStream.Write(bytes, 0, bytes.Length);
-
-                Logger.Log.Info($"");
-                Logger.Log.Info($"TableSet saved to: {jsonFileName}");
-            }
-            catch (Exception ex)
-            {
-                Logger.Log.Info($"");
-                Logger.Log.Tool.Error(DebugInfo.Empty, $"Error saving data: {ex.Message}");
-                return false;
-            }
-            finally
-            {
-                jsonStream.Close();
-
-                // Since this is data for JSON output only, remove it as it is only used in the Save method
-                foreach (var pair in subsetTables)
+                try
                 {
-                    pair.Value.GetMetaNestedData()?.ClearOnDemandData();
+                    var tableSet = (TableSet)Activator.CreateInstance(GetType(), true);
+                    if (tableSet == null)
+                    {
+                        Logger.Log.Tool.Error(DebugInfo.Empty, "Failed to create TableSet instance for JSON export.");
+                        return false;
+                    }
+
+                    tableSet.Header = this.Header;
+                    tableSet.MetaDataTable = this.MetaDataTable;
+                    tableSet.Tables = subsetTables;
+
+                    string json = tableSet.ToJson();
+                    var bytes = Encoding.UTF8.GetBytes(json);
+                    jsonStream.Write(bytes, 0, bytes.Length);
+
+                    Logger.Log.Info($"");
+                    Logger.Log.Info($"TableSet saved to: {jsonFileName}");
+                }
+                catch (Exception ex)
+                {
+                    Logger.Log.Info($"");
+                    Logger.Log.Tool.Error(DebugInfo.Empty, $"Error saving data: {ex.Message}");
+                    return false;
                 }
             }
 

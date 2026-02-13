@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Reflection;
@@ -9,11 +9,17 @@ namespace System
     {
         public static bool ImplementsInterface(this Type type, Type interfaceType)
         {
+            if (type == null)
+                throw new ArgumentNullException(nameof(type));
+            if (interfaceType == null)
+                throw new ArgumentNullException(nameof(interfaceType));
             return type.GetTypeInfo().ImplementedInterfaces.Any(t => t == interfaceType);
         }
 
         public static object DefaultValue(this Type type)
         {
+            if (type == null)
+                throw new ArgumentNullException(nameof(type));
             if (type.GetTypeInfo().IsValueType)
             {
                 return Activator.CreateInstance(type);

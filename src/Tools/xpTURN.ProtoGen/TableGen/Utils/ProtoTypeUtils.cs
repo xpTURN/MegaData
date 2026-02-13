@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 
 using xpTURN.Protobuf;
 using static xpTURN.TableGen.Utils.TableGenUtils;
@@ -476,7 +476,7 @@ namespace xpTURN.TableGen.Utils
                 case xpFieldTypes.Type_String:
                     if (string.IsNullOrEmpty(defaultString))
                     {
-                        defaultString = $"\"\""; ;
+                        defaultString = $"\"\"";
                         return true;
                     }
                     else

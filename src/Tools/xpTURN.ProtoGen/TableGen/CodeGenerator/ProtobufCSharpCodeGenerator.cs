@@ -1052,7 +1052,7 @@ namespace xpTURN.TableGen
             var mapFields = tableDef.GetListField().FindAll(field => field.Collections == FieldCollections.Map);
             if (mapFields.Count > 0)
             {
-                ctx.WriteLine($"#region Paser.Field");
+                ctx.WriteLine($"#region Parser.Field");
                 foreach (var field in mapFields)
                 {
                     WriteParserField(ctx, field);
@@ -1114,7 +1114,7 @@ namespace xpTURN.TableGen
                 writer.Write(generated);
             }
         
-            return MD5Utils.ComputeMD5Hash(generated);
+            return HashUtils.ComputeSHA256Hash(generated);
         }
     }
 }

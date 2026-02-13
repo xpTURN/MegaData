@@ -583,7 +583,7 @@ namespace Tests.Repeated.V0
         public MetaNestedData MetaNestedData = new MetaNestedData();
         #endregion
 
-        #region Paser.Field
+        #region Parser.Field
         protected static readonly xpMapCodec<int, RepeatedData> _map_codec
             = new (xpFieldHelper.SFixed32Codec, xpFieldCodecForMessage<RepeatedData>.MessageCodec, 10, 13, 18);
         #endregion

@@ -28,7 +28,7 @@ namespace Tests.Locale.Type1
         public Dictionary<int, TextData> Map = new ();
         #endregion
 
-        #region Paser.Field
+        #region Parser.Field
         protected static readonly xpMapCodec<int, TextData> _map_codec
             = new (xpFieldHelper.SFixed32Codec, xpFieldCodecForMessage<TextData>.MessageCodec, 18, 13, 18);
         #endregion
@@ -153,7 +153,7 @@ namespace Tests.Locale.Type1
         public MetaNestedData MetaNestedData = new MetaNestedData();
         #endregion
 
-        #region Paser.Field
+        #region Parser.Field
         protected static readonly xpMapCodec<int, LocaleData> _map_codec
             = new (xpFieldHelper.Int32Codec, xpFieldCodecForMessage<LocaleData>.MessageCodec, 10, 8, 18);
         #endregion
@@ -410,7 +410,7 @@ namespace Tests.Locale.Type1
         public Dictionary<string, string> Map = new ();
         #endregion
 
-        #region Paser.Field
+        #region Parser.Field
         protected static readonly xpMapCodec<string, string> _map_codec
             = new (xpFieldHelper.StringCodec, xpFieldHelper.StringCodec, 26, 10, 18);
         #endregion
@@ -555,7 +555,7 @@ namespace Tests.Locale.Type1
         public MetaNestedData MetaNestedData = new MetaNestedData();
         #endregion
 
-        #region Paser.Field
+        #region Parser.Field
         protected static readonly xpMapCodec<int, TranslatedData> _map_codec
             = new (xpFieldHelper.SFixed32Codec, xpFieldCodecForMessage<TranslatedData>.MessageCodec, 10, 13, 18);
         #endregion

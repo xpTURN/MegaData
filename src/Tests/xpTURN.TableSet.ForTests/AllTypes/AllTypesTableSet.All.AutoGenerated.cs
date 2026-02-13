@@ -73,7 +73,7 @@ namespace Tests.AllTypes
         public Dictionary<SAMPLE_NUMBER, string> MapEnum_3 = new ();
         #endregion
 
-        #region Paser.Field
+        #region Parser.Field
         protected static readonly xpMapCodec<int, string> _mapString_3_codec
             = new (xpFieldHelper.SFixed32Codec, xpFieldHelper.StringCodec, 346, 13, 18);
         protected static readonly xpMapCodec<string, string> _mapAlias_3_codec
@@ -850,7 +850,7 @@ namespace Tests.AllTypes
         public MetaNestedData MetaNestedData = new MetaNestedData();
         #endregion
 
-        #region Paser.Field
+        #region Parser.Field
         protected static readonly xpMapCodec<int, AllTypesData> _map_codec
             = new (xpFieldHelper.SFixed32Codec, xpFieldCodecForMessage<AllTypesData>.MessageCodec, 10, 13, 18);
         #endregion
@@ -982,7 +982,7 @@ namespace Tests.AllTypes
         public Dictionary<int, SampleInfo> MapInfo_3 = new ();
         #endregion
 
-        #region Paser.Field
+        #region Parser.Field
         protected static readonly xpMapCodec<int, SampleInfo> _mapInfo_3_codec
             = new (xpFieldHelper.SFixed32Codec, xpFieldCodecForMessage<SampleInfo>.MessageCodec, 378, 13, 18);
         #endregion
@@ -1127,7 +1127,7 @@ namespace Tests.AllTypes
         public MetaNestedData MetaNestedData = new MetaNestedData();
         #endregion
 
-        #region Paser.Field
+        #region Parser.Field
         protected static readonly xpMapCodec<int, EmptyData> _map_codec
             = new (xpFieldHelper.SFixed32Codec, xpFieldCodecForMessage<EmptyData>.MessageCodec, 10, 13, 18);
         #endregion

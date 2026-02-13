@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.IO;
 using System.Text;
 using System.Collections.Generic;
@@ -30,12 +30,12 @@ namespace xpTURN.Tool.Common
             }
         }
 
-        static JsonSerializerSettings serializerSettings = new JsonSerializerSettings
+        static readonly JsonSerializerSettings serializerSettings = new JsonSerializerSettings
         {
             TypeNameHandling = TypeNameHandling.Auto,
             NullValueHandling = NullValueHandling.Ignore,
             Formatting = Formatting.Indented,
-            Converters = new List<JsonConverter> { new ByteStringJsonConverter() }
+            Converters = new JsonConverter[] { new ByteStringJsonConverter() }
         };
 
         public static string ToJson(object data)
@@ -93,7 +93,7 @@ namespace xpTURN.Tool.Common
 
             try
             {
-                return JsonConvert.DeserializeObject(json, type);
+                return JsonConvert.DeserializeObject(json, type, serializerSettings);
             }
             catch (Exception ex)
             {
@@ -112,8 +112,9 @@ namespace xpTURN.Tool.Common
                 var jObj = JObject.Parse(json);
                 return jObj["$type"]?.ToString();
             }
-            catch
+            catch (Exception ex)
             {
+                Logger.Log.Error($"GetTypeFromJson failed: {ex.Message}");
                 return null;
             }
         }
@@ -127,7 +128,7 @@ namespace xpTURN.Tool.Common
 
             try
             {
-                JsonConvert.PopulateObject(json, target);
+                JsonConvert.PopulateObject(json, target, serializerSettings);
                 return true;
             }
             catch (Exception ex)
@@ -148,10 +149,10 @@ namespace xpTURN.Tool.Common
             }
 
             string[] typeSplits = typeString.Split(new[] { ',' }, StringSplitOptions.RemoveEmptyEntries);
-            string fullName = typeSplits.Length > 0 ? typeSplits[0] : string.Empty;
-            string assemblyName = typeSplits.Length > 1 ? typeSplits[1] : string.Empty;
+            string fullName = typeSplits.Length > 0 ? typeSplits[0].Trim() : string.Empty;
 
-            var type = AssemblyUtils.GetTypeByName(fullName);
+            // Resolve by assembly-qualified name (FullName, AssemblyName) so assembly is used when available
+            var type = AssemblyUtils.GetTypeByName(typeString.Trim());
             if (type == null)
             {
                 Logger.Log.Tool.Error(debugInfo, $"Type not found: {fullName}");

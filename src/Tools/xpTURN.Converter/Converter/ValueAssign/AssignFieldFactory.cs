@@ -1,6 +1,6 @@
-﻿using System;
+using System;
 
-namespace xpTURN.Converter.AssginValue
+namespace xpTURN.Converter.AssignValue
 {
     public class AssignFieldFactory
     {

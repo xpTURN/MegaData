@@ -4,10 +4,15 @@ using System.Reflection;
 
 namespace xpTURN.Common
 {
+    /// <summary>
+    /// Reflection helpers for getting/setting properties and fields and invoking methods. Only public instance members are considered.
+    /// </summary>
     public static class InvokeUtils
     {
         public static void SetPropValue(object target, string propName, object value)
         {
+            if (target == null)
+                throw new ArgumentNullException(nameof(target));
             var property = target.GetType().GetProperty(propName);
             if (property != null)
             {
@@ -20,6 +25,8 @@ namespace xpTURN.Common
 
         public static object GetPropValue(object target, string propName)
         {
+            if (target == null)
+                throw new ArgumentNullException(nameof(target));
             var property = target.GetType().GetProperty(propName);
             if (property == null)
             {
@@ -31,6 +38,8 @@ namespace xpTURN.Common
     
         public static void SetFieldValue(object target, string fieldName, object value)
         {
+            if (target == null)
+                throw new ArgumentNullException(nameof(target));
             var field = target.GetType().GetField(fieldName);
             if (field != null)
             {
@@ -43,6 +52,8 @@ namespace xpTURN.Common
 
         public static object GetFieldValue(object target, string fieldName)
         {
+            if (target == null)
+                throw new ArgumentNullException(nameof(target));
             var field = target.GetType().GetField(fieldName);
             if (field == null)
             {
@@ -54,6 +65,8 @@ namespace xpTURN.Common
 
         public static IEnumerable GetFieldListEnumerable<TArg>(FieldInfo fieldInfo, object target)
         {
+            if (target == null)
+                throw new ArgumentNullException(nameof(target));
             if (fieldInfo.IsListArg<TArg>())
             {
                 return fieldInfo.GetValue(target) as IEnumerable;
@@ -64,6 +77,8 @@ namespace xpTURN.Common
 
         public static void InvokeFunc(object target, string methodName, params object[] parameters)
         {
+            if (target == null)
+                throw new ArgumentNullException(nameof(target));
             var method = target.GetType().GetMethod(methodName);
             if (method == null)
             {
@@ -75,6 +90,8 @@ namespace xpTURN.Common
 
         public static void InvokeFunc(object target, string methodName, Type[] parameterTypes, params object[] parameters)
         {
+            if (target == null)
+                throw new ArgumentNullException(nameof(target));
             var method = target.GetType().GetMethod(methodName, types: parameterTypes);
             if (method == null)
             {
@@ -86,6 +103,8 @@ namespace xpTURN.Common
     
         public static T InvokeFunc<T>(object target, string methodName, params object[] parameters)
         {
+            if (target == null)
+                throw new ArgumentNullException(nameof(target));
             var method = target.GetType().GetMethod(methodName);
             if (method == null)
             {
@@ -97,6 +116,8 @@ namespace xpTURN.Common
     
         public static T InvokeFunc<T>(object target, string methodName, Type[] parameterTypes, params object[] parameters)
         {
+            if (target == null)
+                throw new ArgumentNullException(nameof(target));
             var method = target.GetType().GetMethod(methodName, types: parameterTypes);
             if (method == null)
             {

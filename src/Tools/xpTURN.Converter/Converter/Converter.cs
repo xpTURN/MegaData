@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.IO;
 using System.Collections.Generic;
 
@@ -39,6 +39,7 @@ namespace xpTURN.Converter
         {
             _spaceName = string.Empty;
             _tableSetName = string.Empty;
+            _excelFile?.Close();
             _excelFile = new ExcelReader();
             DataMapper = new DataMapping();
         }
@@ -189,7 +190,7 @@ namespace xpTURN.Converter
                 // Check ExcludeData Condition
                 if (IsExcludeData(excludeOption, targetDate, dataName))
                 {
-                    Logger.Log.Info($"Exclude Data: {dataName} at {ExcelReader.CellName(sDATA_NAME_CELL.column, curY)} in {_excelFile.fileName}");
+                    Logger.Log.Info($"Exclude Data: {dataName} at {ExcelReader.CellName(sDATA_NAME_CELL.column, curY)} in {_excelFile.FileName}");
                     do
                     {
                         if (curY + 1 > _excelFile.LastY)
@@ -238,7 +239,7 @@ namespace xpTURN.Converter
             //
             Logger.Log.Info("");
             Logger.Log.Info("------------------------------------------------------");
-            Logger.Log.Info("CENVERT START");
+            Logger.Log.Info("CONVERT START");
             Logger.Log.Info("------------------------------------------------------");
             Logger.Log.Info("");
 
@@ -270,9 +271,10 @@ namespace xpTURN.Converter
 
                 //
                 Table table = null;
-                if (Path.GetExtension(file).Contains(".xls"))
+                var ext = Path.GetExtension(file);
+                if (ExcelExtensions.Contains(ext))
                     table = LoadTableFromXls(file, tableSet, ARGs.TargetDate);
-                else if (Path.GetExtension(file).Contains("json"))
+                else if (ext == ".json")
                     table = LoadTableFromJson(file, tableSet, ARGs.TargetDate);
 
                 if (table == null)

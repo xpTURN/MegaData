@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 
@@ -20,7 +20,7 @@ namespace xpTURN.TableGen
         {
         }
     
-        protected bool IsOndemandTableSet() => listTableDesc.Values.Any(table => table.ParsedExtraOpts.OnDemand);
+        protected bool IsOnDemandTableSet() => listTableDesc.Values.Any(table => table.ParsedExtraOpts.OnDemand);
         protected bool IsWeakRefTableSet() => listTableDesc.Values.Any(table => table.ParsedExtraOpts.WeakRef);
 
         private int GetTableId(string tableName)
@@ -127,9 +127,9 @@ namespace xpTURN.TableGen
             ctx.Outdent().WriteLine($"}};");
         }
 
-        protected void WriteIsOndemandTableFunction(GeneratorContext ctx)
+        protected void WriteIsOnDemandTableFunction(GeneratorContext ctx)
         {
-            ctx.WriteLine($"override protected bool IsOndemandTable(int tableId) => tableId switch");
+            ctx.WriteLine($"override protected bool IsOnDemandTable(int tableId) => tableId switch");
             ctx.WriteLine($"{{").Indent();
             // Generate switch cases for ondemand tables
             foreach (var table in listTableDesc.Values)
@@ -271,9 +271,9 @@ namespace xpTURN.TableGen
                 ctx.WriteLine();
                 ctx.WriteLine($"#region Protected.Method");
                 WriteRawCreateTableFunction(ctx);
-                if (IsOndemandTableSet()) WriteRawCreateDataFunction(ctx);
+                if (IsOnDemandTableSet()) WriteRawCreateDataFunction(ctx);
                 WriteTableAliasProperty(ctx);
-                if (IsOndemandTableSet()) WriteIsOndemandTableFunction(ctx);
+                if (IsOnDemandTableSet()) WriteIsOnDemandTableFunction(ctx);
                 if (IsWeakRefTableSet()) WriteIsWeakRefTableFunction(ctx);
                 ctx.WriteLine($"#endregion");
 
@@ -291,7 +291,7 @@ namespace xpTURN.TableGen
                 writer.Write(generated);
             }
 
-            return MD5Utils.ComputeMD5Hash(generated);
+            return HashUtils.ComputeSHA256Hash(generated);
         }
     }
 }

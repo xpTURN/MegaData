@@ -6,7 +6,7 @@ namespace xpTURN.MegaData
     public abstract partial class Table : Data, IDisposable
     {
         [IgnoreDataMember]
-        public bool IsOndemand { get; set; } = false;
+        public bool IsOnDemand { get; set; } = false;
 
         [IgnoreDataMember]
         public bool IsWeakRef { get; set; } = false;

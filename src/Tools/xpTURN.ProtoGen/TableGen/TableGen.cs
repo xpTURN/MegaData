@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
@@ -61,7 +61,7 @@ namespace xpTURN.TableGen
             CodeDomProvider provider = CodeDomProvider.CreateProvider("CSharp");
             if (!provider.IsValidIdentifier(table.Name))
             {
-                Logger.Log.Tool.Error(table.DebugInfo, $"Invaild table name, C# Language identifier : '{table.Name}'");
+                Logger.Log.Tool.Error(table.DebugInfo, $"Invalid table name, C# Language identifier : '{table.Name}'");
                 return;
             }
 
@@ -418,7 +418,7 @@ namespace xpTURN.TableGen
                     // Name validation
                     if (!provider.IsValidIdentifier(field.Name))
                     {
-                        Logger.Log.Tool.Error(field.DebugInfo, $"Invaild Field Name, C# Language identifier : '{table.Name}.{field.Name}'.");
+                        Logger.Log.Tool.Error(field.DebugInfo, $"Invalid Field Name, C# Language identifier : '{table.Name}.{field.Name}'.");
                     }
 
                     // Name validation

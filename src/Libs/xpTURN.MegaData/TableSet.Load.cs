@@ -1,6 +1,6 @@
-﻿using System;
+using System;
+using System.Buffers.Binary;
 using System.IO;
-using System.Linq;
 using System.Collections.Generic;
 
 using xpTURN.Common;
@@ -71,30 +71,40 @@ namespace xpTURN.MegaData
                 }
 
                 // Initialize the stream for on-demand data
-                var ondemand = Tables.Keys.Any(tableName => !alreadyLoadedTables.Contains(tableName) && Tables[tableName]?.IsOndemand == true);
+                var ondemand = false;
+                foreach (var pair in Tables)
+                {
+                    if (!alreadyLoadedTables.Contains(pair.Key) && pair.Value?.IsOnDemand == true)
+                    {
+                        ondemand = true;
+                        break;
+                    }
+                }
+
                 if (ondemand)
                 {
-                    StreamForOndemand = new FileStream(fileName, FileMode.Open, FileAccess.Read);
+                    StreamForOnDemand = new FileStream(fileName, FileMode.Open, FileAccess.Read);
                 }
 
                 foreach (var pair in Tables)
                 {
                     var tableName = pair.Key;
                     var table = pair.Value;
-                    if (!table.IsOndemand && alreadyLoadedTables.Contains(pair.Key))
+                    if (!table.IsOnDemand && alreadyLoadedTables.Contains(pair.Key))
                         continue;
 
-                    table.GetMetaNestedData().InitStream(StreamForOndemand, TableLocation);
+                    var metaNestedData = table.GetMetaNestedData();
+                    metaNestedData?.InitStream(StreamForOnDemand, TableLocation);
 
-                    if (IsPrepareAll)
+                    if (IsPrepareAll && metaNestedData != null)
                     {
                         var tableId = GetTableId(tableName);
-                        foreach (var key in table.GetMetaNestedData().MapIdOffset.Keys)
+                        foreach (var key in metaNestedData.MapIdOffset.Keys)
                         {
                             GetOrLoadDataById(table, tableId, key);
                         }
 
-                        foreach (var key in table.GetMetaNestedData().MapAliasOffset.Keys)
+                        foreach (var key in metaNestedData.MapAliasOffset.Keys)
                         {
                             GetOrLoadDataByAlias(table, tableId, key);
                         }
@@ -105,8 +115,14 @@ namespace xpTURN.MegaData
             }
             catch (Exception ex)
             {
-                Logger.Log.Error($"Error loading Header: {ex.Message}");
-                Logger.Log.Error(ex.StackTrace);
+                Logger.Log.Error("Error loading data file");
+#if DEBUG
+                Logger.Log.Debug($"Exception: {ex.Message}");
+                Logger.Log.Debug($"StackTrace: {ex.StackTrace}");
+#endif
+                // Clean up on-demand stream if an error occurs
+                StreamForOnDemand?.Dispose();
+                StreamForOnDemand = null;
                 return false;
             }
         }
@@ -150,8 +166,9 @@ namespace xpTURN.MegaData
                     return LoadHeader(fileStream);
                 }
             }
-            catch
+            catch (Exception ex)
             {
+                Logger.Log.Error($"Error loading Header: {ex.Message}");
                 return false;
             }
         }
@@ -160,14 +177,49 @@ namespace xpTURN.MegaData
         {
             try
             {
+                readStream.Seek(0, SeekOrigin.Begin);
+
+                // Magic number verification
+                byte[] magicBytes = new byte[4];
+                if (readStream.Read(magicBytes, 0, 4) != 4)
+                {
+                    Logger.Log.Error("Invalid file: unable to read magic number");
+                    return false;
+                }
+
+                uint magic = BinaryPrimitives.ReadUInt32LittleEndian(magicBytes);
+                if (magic != MAGIC_NUMBER)
+                {
+                    Logger.Log.Error($"Invalid file format: magic number mismatch (expected {MAGIC_NUMBER:X}, got {magic:X})");
+                    return false;
+                }
+
+                // Version verification
+                byte[] versionBytes = new byte[4];
+                if (readStream.Read(versionBytes, 0, 4) != 4)
+                {
+                    Logger.Log.Error("Invalid file: unable to read version");
+                    return false;
+                }
+                
+                uint version = BinaryPrimitives.ReadUInt32LittleEndian(versionBytes);
+                if (version > CURRENT_VERSION)
+                {
+                    Logger.Log.Error($"Unsupported version: {version}");
+                    return false;
+                }
+
                 readStream.Seek(HeaderLocation, SeekOrigin.Begin);
                 HeaderSize = xpParseUtils.ReadDelimitedFrom(Header, readStream);
                 return true;
             }
             catch (Exception ex)
             {
-                Logger.Log.Error($"Error loading Header: {ex.Message}");
-                Logger.Log.Error(ex.StackTrace);
+                Logger.Log.Error("Error loading Header");
+#if DEBUG
+                Logger.Log.Debug($"Exception: {ex.Message}");
+                Logger.Log.Debug($"StackTrace: {ex.StackTrace}");
+#endif
                 return false;
             }
         }
@@ -185,8 +237,11 @@ namespace xpTURN.MegaData
             }
             catch (Exception ex)
             {
-                Logger.Log.Error($"Error loading MetaData: {ex.Message}");
-                Logger.Log.Error(ex.StackTrace);
+                Logger.Log.Error("Error loading MetaData");
+#if DEBUG
+                Logger.Log.Debug($"Exception: {ex.Message}");
+                Logger.Log.Debug($"StackTrace: {ex.StackTrace}");
+#endif
                 return false;
             }
         }
@@ -249,8 +304,11 @@ namespace xpTURN.MegaData
             }
             catch (Exception ex)
             {
-                Logger.Log.Error($"Error loading Table: {ex.Message}");
-                Logger.Log.Error(ex.StackTrace);
+                Logger.Log.Error("Error loading Table");
+#if DEBUG
+                Logger.Log.Debug($"Exception: {ex.Message}");
+                Logger.Log.Debug($"StackTrace: {ex.StackTrace}");
+#endif
                 return false;
             }
         }
@@ -272,7 +330,7 @@ namespace xpTURN.MegaData
                 return null;
             }
 
-            var stream = metaData.StreamForOndemand;
+            var stream = metaData.StreamForOnDemand;
             if (stream == null)
             {
                 Logger.Log.Error($"Stream for on-demand data is not initialized for table '{table.GetType().Name}'.");
@@ -297,8 +355,11 @@ namespace xpTURN.MegaData
             }
             catch (Exception ex)
             {
-                Logger.Log.Error($"Error loading on-demand data: {ex.Message}");
-                Logger.Log.Error(ex.StackTrace);
+                Logger.Log.Error("Error loading on-demand data");
+#if DEBUG
+                Logger.Log.Debug($"Exception: {ex.Message}");
+                Logger.Log.Debug($"StackTrace: {ex.StackTrace}");
+#endif
             }
 
             return null;

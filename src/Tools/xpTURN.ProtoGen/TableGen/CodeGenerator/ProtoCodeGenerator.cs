@@ -150,7 +150,7 @@ namespace xpTURN.TableGen
                 writer.Write(generated);
             }
 
-            return MD5Utils.ComputeMD5Hash(generated);
+            return HashUtils.ComputeSHA256Hash(generated);
         }
     }
 }

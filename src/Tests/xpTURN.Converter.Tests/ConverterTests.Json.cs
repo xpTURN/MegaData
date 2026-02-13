@@ -140,7 +140,7 @@ namespace xpTURN.Converter.TestCases
             }
 
             // Arrange
-            var files = FileUtils.GetTartgetFile(
+            var files = FileUtils.GetTargetFile(
                 new List<string> { "./Tests/DataSet/Json/" },
                 new List<string> { "*.xls*", "*.json" },
                 SearchOption.AllDirectories,

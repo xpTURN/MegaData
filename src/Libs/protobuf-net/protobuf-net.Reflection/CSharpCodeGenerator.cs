@@ -1,4 +1,4 @@
-﻿using Google.Protobuf.Reflection;
+using Google.Protobuf.Reflection;
 using System;
 using System.Collections.Generic;
 using System.IO;
@@ -304,7 +304,7 @@ namespace ProtoBuf.Reflection
         /// Emit code beginning a constructor, if one is required
         /// </summary>
         /// <returns>true if a constructor is required</returns>
-        protected override bool WriteContructorHeader(GeneratorContext ctx, DescriptorProto message, ref object state)
+        protected override bool WriteConstructorHeader(GeneratorContext ctx, DescriptorProto message, ref object state)
         {
             if (ctx.Supports(CSharp6)) return false;
 

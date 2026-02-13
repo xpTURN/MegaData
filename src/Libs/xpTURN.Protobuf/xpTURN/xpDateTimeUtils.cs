@@ -1,4 +1,4 @@
-﻿#region Copyright notice and license
+#region Copyright notice and license
 // Protocol Buffers - Google's data interchange format
 // Copyright 2008 Google Inc.  All rights reserved.
 //
@@ -10,6 +10,10 @@ using System;
 
 namespace xpTURN.Protobuf
 {
+    /// <summary>
+    /// Helpers for serializing DateTime as protobuf wire format.
+    /// DateTime.Kind is stored in the top 2 bits (KindShift=62); ticks occupy the lower bits.
+    /// </summary>
     public static class xpDateTimeUtils
     {
         private const int KindShift = 62;

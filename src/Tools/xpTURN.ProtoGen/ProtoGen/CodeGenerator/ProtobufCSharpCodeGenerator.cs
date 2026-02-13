@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Linq;
 using Google.Protobuf.Reflection;
 
@@ -164,7 +164,7 @@ namespace xpTURN.ProtoGen
         /// Emit code beginning a constructor, if one is required
         /// </summary>
         /// <returns>true if a constructor is required</returns>
-        protected override bool WriteContructorHeader(GeneratorContext ctx, DescriptorProto message, ref object state)
+        protected override bool WriteConstructorHeader(GeneratorContext ctx, DescriptorProto message, ref object state)
         {
             var name = message.Name;
             ctx.WriteLine($"public {Escape(name)}()") // note: the .ctor is still public even if the type is internal; it is protected by the scope
@@ -787,7 +787,7 @@ namespace xpTURN.ProtoGen
             bool hasMapFields = message.Fields.Any(field => IsMapField(ctx, field));
             if (hasMapFields)
             {
-                ctx.WriteLine($"#region Paser.Field");
+                ctx.WriteLine($"#region Parser.Field");
                 foreach (var inner in message.Fields)
                 {
                     WriteParserField(ctx, inner, ref state, oneOfs);
@@ -797,7 +797,7 @@ namespace xpTURN.ProtoGen
             }
 
             ctx.WriteLine($"#region xpTURN.Protobuf.Method");
-            if (WriteContructorHeader(ctx, message, ref state))
+            if (WriteConstructorHeader(ctx, message, ref state))
             {
                 WriteConstructorFooter(ctx, message, ref state);
             }

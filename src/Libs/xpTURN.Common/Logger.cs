@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.Diagnostics;
 using System.Linq;
@@ -108,7 +108,7 @@ namespace xpTURN.Common
         public void Outdent()
         {
             if (!_enableIndent) return;
-            IndentLevel--;
+            IndentLevel = Math.Max(0, IndentLevel - 1);
         }
 
         public void CaptureStart()
@@ -184,7 +184,7 @@ namespace xpTURN.Common
         {
             private List<string> sErrors { get; } = new List<string>();
 
-            private string sFile{ get; set; } = string.Empty;
+            private string sFile { get; set; } = string.Empty;
             private string sLine { get; set; } = string.Empty;
 
             public string GetFile() => sFile;
@@ -260,7 +260,7 @@ namespace xpTURN.Common
                 if (!string.IsNullOrEmpty(file) && !string.IsNullOrEmpty(line))
                     messageLine = $"{file}(Line: {line}) -> {message}";
                 else if (!string.IsNullOrEmpty(line))
-                    messageLine = $"{sFile} -> {message}";
+                    messageLine = $"{sFile}(Line: {line}) -> {message}";
 
                 switch (level)
                 {

@@ -58,7 +58,7 @@ namespace Tests.RefId
             { nameof(TextDataTable), 5 },
             { nameof(TranslatedDataTable), 6 },
         };
-        override protected bool IsOndemandTable(int tableId) => tableId switch
+        override protected bool IsOnDemandTable(int tableId) => tableId switch
         {
             4 => true, // LocaleDataTable
             5 => true, // TextDataTable

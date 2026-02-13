@@ -1,7 +1,7 @@
-﻿using System;
+using System;
 using System.Reflection;
 
-namespace xpTURN.Converter.AssginValue
+namespace xpTURN.Converter.AssignValue
 {
     public interface IAssignField
     {

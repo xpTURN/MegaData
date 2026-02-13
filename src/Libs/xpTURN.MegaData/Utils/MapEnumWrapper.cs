@@ -7,7 +7,7 @@ using static xpTURN.Common.ConvertTypeUtils;
 
 namespace xpTURN.MegaData
 {
-    public class MapEnumWrapper<TKey, TValue> : IMapIntWrapper where TKey : struct where TValue : Data
+    public class MapEnumWrapper<TKey, TValue> : IMapIntWrapper where TKey : struct, Enum where TValue : Data
     {
         private readonly Dictionary<TKey, TValue> _mapField;
 
@@ -28,7 +28,7 @@ namespace xpTURN.MegaData
         public void Clear() => _mapField.Clear();
     }
 
-    public class WeakMapEnumWrapper<TKey, TValue> : IMapIntWrapper where TKey : struct where TValue : Data
+    public class WeakMapEnumWrapper<TKey, TValue> : IMapIntWrapper where TKey : struct, Enum where TValue : Data
     {
         private readonly Dictionary<TKey, WeakReference<TValue>> _mapField;
 

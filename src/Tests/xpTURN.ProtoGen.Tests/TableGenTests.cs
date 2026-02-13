@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.IO;
 using System.Collections.Generic;
 
@@ -71,7 +71,7 @@ namespace xpTURN.TableGen.TestCases
             };
             var searchPatterns = new List<string> { "*.xls*" };
 
-            List<string> inputFiles = GetTartgetFile(new List<string> { options.GetCustomOption("Input") }, searchPatterns, SearchOption.AllDirectories, ignoreFiles, ignoreFolders);
+            List<string> inputFiles = GetTargetFile(new List<string> { options.GetCustomOption("Input") }, searchPatterns, SearchOption.AllDirectories, ignoreFiles, ignoreFolders);
 
             // Act
             bool result = xpTURN.TableGen.TableGen.DoGenerate(inputFiles, options);
@@ -108,7 +108,7 @@ namespace xpTURN.TableGen.TestCases
             };
             var searchPatterns = new List<string> { "*.xls*" };
 
-            List<string> inputFiles = GetTartgetFile(new List<string> { options.GetCustomOption("Input") }, searchPatterns, SearchOption.AllDirectories, ignoreFiles, ignoreFolders);
+            List<string> inputFiles = GetTargetFile(new List<string> { options.GetCustomOption("Input") }, searchPatterns, SearchOption.AllDirectories, ignoreFiles, ignoreFolders);
 
             // Act
             bool result = xpTURN.TableGen.TableGen.DoGenerate(inputFiles, options);
@@ -147,7 +147,7 @@ namespace xpTURN.TableGen.TestCases
             };
             var searchPatterns = new List<string> { "*.xls*" };
 
-            List<string> inputFiles = GetTartgetFile(new List<string> { options.GetCustomOption("Input") }, searchPatterns, SearchOption.AllDirectories, ignoreFiles, ignoreFolders);
+            List<string> inputFiles = GetTargetFile(new List<string> { options.GetCustomOption("Input") }, searchPatterns, SearchOption.AllDirectories, ignoreFiles, ignoreFolders);
 
             // Act
             bool result = xpTURN.TableGen.TableGen.DoGenerate(inputFiles, options);
@@ -186,7 +186,7 @@ namespace xpTURN.TableGen.TestCases
             };
             var searchPatterns = new List<string> { "*.xls*" };
 
-            List<string> inputFiles = GetTartgetFile(new List<string> { options.GetCustomOption("Input") }, searchPatterns, SearchOption.AllDirectories, ignoreFiles, ignoreFolders);
+            List<string> inputFiles = GetTargetFile(new List<string> { options.GetCustomOption("Input") }, searchPatterns, SearchOption.AllDirectories, ignoreFiles, ignoreFolders);
 
             // Act
             bool result = xpTURN.TableGen.TableGen.DoGenerate(inputFiles, options);
@@ -225,7 +225,7 @@ namespace xpTURN.TableGen.TestCases
             };
             var searchPatterns = new List<string> { "*.xls*" };
 
-            List<string> inputFiles = GetTartgetFile(new List<string> { options.GetCustomOption("Input") }, searchPatterns, SearchOption.AllDirectories, ignoreFiles, ignoreFolders);
+            List<string> inputFiles = GetTargetFile(new List<string> { options.GetCustomOption("Input") }, searchPatterns, SearchOption.AllDirectories, ignoreFiles, ignoreFolders);
 
             // Act
             bool result = xpTURN.TableGen.TableGen.DoGenerate(inputFiles, options);
@@ -264,7 +264,7 @@ namespace xpTURN.TableGen.TestCases
             };
             var searchPatterns = new List<string> { "*.xls*" };
 
-            List<string> inputFiles = GetTartgetFile(new List<string> { options.GetCustomOption("Input") }, searchPatterns, SearchOption.AllDirectories, ignoreFiles, ignoreFolders);
+            List<string> inputFiles = GetTargetFile(new List<string> { options.GetCustomOption("Input") }, searchPatterns, SearchOption.AllDirectories, ignoreFiles, ignoreFolders);
 
             // Act
             bool result = xpTURN.TableGen.TableGen.DoGenerate(inputFiles, options);
@@ -303,7 +303,7 @@ namespace xpTURN.TableGen.TestCases
             };
             var searchPatterns = new List<string> { "*.xls*" };
 
-            List<string> inputFiles = GetTartgetFile(new List<string> { options.GetCustomOption("Input") }, searchPatterns, SearchOption.AllDirectories, ignoreFiles, ignoreFolders);
+            List<string> inputFiles = GetTargetFile(new List<string> { options.GetCustomOption("Input") }, searchPatterns, SearchOption.AllDirectories, ignoreFiles, ignoreFolders);
 
             // Act
             bool result = xpTURN.TableGen.TableGen.DoGenerate(inputFiles, options);
@@ -342,7 +342,7 @@ namespace xpTURN.TableGen.TestCases
             };
             var searchPatterns = new List<string> { "*.xls*" };
 
-            List<string> inputFiles = GetTartgetFile(new List<string> { options.GetCustomOption("Input") }, searchPatterns, SearchOption.AllDirectories, ignoreFiles, ignoreFolders);
+            List<string> inputFiles = GetTargetFile(new List<string> { options.GetCustomOption("Input") }, searchPatterns, SearchOption.AllDirectories, ignoreFiles, ignoreFolders);
 
             // Act
             bool result = xpTURN.TableGen.TableGen.DoGenerate(inputFiles, options);
@@ -381,7 +381,7 @@ namespace xpTURN.TableGen.TestCases
             };
             var searchPatterns = new List<string> { "*.xls*" };
 
-            List<string> inputFiles = GetTartgetFile(new List<string> { options.GetCustomOption("Input") }, searchPatterns, SearchOption.AllDirectories, ignoreFiles, ignoreFolders);
+            List<string> inputFiles = GetTargetFile(new List<string> { options.GetCustomOption("Input") }, searchPatterns, SearchOption.AllDirectories, ignoreFiles, ignoreFolders);
 
             // Act
             bool result = xpTURN.TableGen.TableGen.DoGenerate(inputFiles, options);
@@ -420,7 +420,7 @@ namespace xpTURN.TableGen.TestCases
             };
             var searchPatterns = new List<string> { "*.xls*" };
 
-            List<string> inputFiles = GetTartgetFile(new List<string> { options.GetCustomOption("Input") }, searchPatterns, SearchOption.AllDirectories, ignoreFiles, ignoreFolders);
+            List<string> inputFiles = GetTargetFile(new List<string> { options.GetCustomOption("Input") }, searchPatterns, SearchOption.AllDirectories, ignoreFiles, ignoreFolders);
 
             // Act
             bool result = xpTURN.TableGen.TableGen.DoGenerate(inputFiles, options);
@@ -459,7 +459,7 @@ namespace xpTURN.TableGen.TestCases
             };
             var searchPatterns = new List<string> { "*.xls*" };
 
-            List<string> inputFiles = GetTartgetFile(new List<string> { options.GetCustomOption("Input") }, searchPatterns, SearchOption.AllDirectories, ignoreFiles, ignoreFolders);
+            List<string> inputFiles = GetTargetFile(new List<string> { options.GetCustomOption("Input") }, searchPatterns, SearchOption.AllDirectories, ignoreFiles, ignoreFolders);
 
             // Act
             bool result = xpTURN.TableGen.TableGen.DoGenerate(inputFiles, options);
@@ -498,7 +498,7 @@ namespace xpTURN.TableGen.TestCases
             };
             var searchPatterns = new List<string> { "*.xls*" };
 
-            List<string> inputFiles = GetTartgetFile(new List<string> { options.GetCustomOption("Input") }, searchPatterns, SearchOption.AllDirectories, ignoreFiles, ignoreFolders);
+            List<string> inputFiles = GetTargetFile(new List<string> { options.GetCustomOption("Input") }, searchPatterns, SearchOption.AllDirectories, ignoreFiles, ignoreFolders);
 
             // Act
             bool result = xpTURN.TableGen.TableGen.DoGenerate(inputFiles, options);
@@ -537,7 +537,7 @@ namespace xpTURN.TableGen.TestCases
             };
             var searchPatterns = new List<string> { "*.xls*" };
 
-            List<string> inputFiles = GetTartgetFile(new List<string> { options.GetCustomOption("Input") }, searchPatterns, SearchOption.AllDirectories, ignoreFiles, ignoreFolders);
+            List<string> inputFiles = GetTargetFile(new List<string> { options.GetCustomOption("Input") }, searchPatterns, SearchOption.AllDirectories, ignoreFiles, ignoreFolders);
 
             // Act
             bool result = xpTURN.TableGen.TableGen.DoGenerate(inputFiles, options);
@@ -576,7 +576,7 @@ namespace xpTURN.TableGen.TestCases
             };
             var searchPatterns = new List<string> { "*.xls*" };
 
-            List<string> inputFiles = GetTartgetFile(new List<string> { options.GetCustomOption("Input") }, searchPatterns, SearchOption.AllDirectories, ignoreFiles, ignoreFolders);
+            List<string> inputFiles = GetTargetFile(new List<string> { options.GetCustomOption("Input") }, searchPatterns, SearchOption.AllDirectories, ignoreFiles, ignoreFolders);
 
             // Act
             bool result = xpTURN.TableGen.TableGen.DoGenerate(inputFiles, options);
@@ -615,7 +615,7 @@ namespace xpTURN.TableGen.TestCases
             };
             var searchPatterns = new List<string> { "*.xls*" };
 
-            List<string> inputFiles = GetTartgetFile(new List<string> { options.GetCustomOption("Input") }, searchPatterns, SearchOption.AllDirectories, ignoreFiles, ignoreFolders);
+            List<string> inputFiles = GetTargetFile(new List<string> { options.GetCustomOption("Input") }, searchPatterns, SearchOption.AllDirectories, ignoreFiles, ignoreFolders);
 
             // Act
             bool result = xpTURN.TableGen.TableGen.DoGenerate(inputFiles, options);
@@ -654,7 +654,7 @@ namespace xpTURN.TableGen.TestCases
             };
             var searchPatterns = new List<string> { "*.xls*" };
 
-            List<string> inputFiles = GetTartgetFile(new List<string> { options.GetCustomOption("Input") }, searchPatterns, SearchOption.AllDirectories, ignoreFiles, ignoreFolders);
+            List<string> inputFiles = GetTargetFile(new List<string> { options.GetCustomOption("Input") }, searchPatterns, SearchOption.AllDirectories, ignoreFiles, ignoreFolders);
 
             // Act
             bool result = xpTURN.TableGen.TableGen.DoGenerate(inputFiles, options);
@@ -693,7 +693,7 @@ namespace xpTURN.TableGen.TestCases
             };
             var searchPatterns = new List<string> { "*.xls*" };
 
-            List<string> inputFiles = GetTartgetFile(new List<string> { options.GetCustomOption("Input") }, searchPatterns, SearchOption.AllDirectories, ignoreFiles, ignoreFolders);
+            List<string> inputFiles = GetTargetFile(new List<string> { options.GetCustomOption("Input") }, searchPatterns, SearchOption.AllDirectories, ignoreFiles, ignoreFolders);
 
             // Act
             bool result = xpTURN.TableGen.TableGen.DoGenerate(inputFiles, options);
@@ -732,7 +732,7 @@ namespace xpTURN.TableGen.TestCases
             };
             var searchPatterns = new List<string> { "*.xls*" };
 
-            List<string> inputFiles = GetTartgetFile(new List<string> { options.GetCustomOption("Input") }, searchPatterns, SearchOption.AllDirectories, ignoreFiles, ignoreFolders);
+            List<string> inputFiles = GetTargetFile(new List<string> { options.GetCustomOption("Input") }, searchPatterns, SearchOption.AllDirectories, ignoreFiles, ignoreFolders);
 
             // Act
             bool result = xpTURN.TableGen.TableGen.DoGenerate(inputFiles, options);

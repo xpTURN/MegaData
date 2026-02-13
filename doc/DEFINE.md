@@ -1,12 +1,11 @@
 ## Data Definition
 
-### Simple Example
-After creating a new file in your spreadsheet program, create a Define sheet and define types as shown below. You can define multiple types in one file or split them across several files. Since there is no import feature, you cannot use Message/Enum types defined elsewhere; all types must be defined and used internally.
+Define your TableSet, Tables, Data types, and Enums in an Excel **Define** sheet. You can put multiple types in one file or split them across files. There is no import: every Message/Enum type must be defined in your Define sheets.
 
-* TableSet: Refers to a collection of all Tables defined across multiple sheets.
-* Table: The unit for organizing data within a single sheet.
-* Data: The unit of data records contained in a Table (e.g., a row in Excel. If NestedData exists, it may span multiple columns).
-* NestedData: Sub-data records contained within Data.
+* **TableSet**: The root container; it holds all Tables for one logical dataset.
+* **Table**: A container for one Data type (e.g. `PersonDataTable` holds `PersonData`).
+* **Data**: One record shape (e.g. one row, or a row plus nested rows). Defines fields and nested types.
+* **NestedData**: A message type used as a field of Data (single or in a List/Map).
 
 |    |  A      |  B               |  C          |  D                           |  E            |  F                                |  G                                |
 | -- | ------- | ---------------- | ----------- | ---------------------------- | ------------- | --------------------------------- | --------------------------------- |
@@ -35,138 +34,53 @@ After creating a new file in your spreadsheet program, create a Define sheet and
 * [Sample Define](../src/Samples/DataSet/Sample1/[Define]/)
 * [Sample Output](../src/Samples/xpTURN.TableSet.Samples/Sample1/)
 
-#### Message Type Definition (Table, Data Type Definition)
+#### Table and Data Type Rows
 
-* The first column is always ignored. You can use it for comments or leave it blank.
-* Add the Type/Name/Obsolete/FType/ExtraOptions/Desc columns to indicate the start of a new type.
-    - Type column: Enter either Table or Data.
-    - Name column: Enter the type name.
-    - Obsolete column: Specify whether the type or field is deprecated.
+* **Column A** is ignored (use for comments or leave blank).
+* A row with **Type / Name / Obsolete / FType / ExtraOptions / Desc** starts a new type.
+    - **Type**: `Table` or `Data`.
+    - **Name**: Type name (e.g. `PersonDataTable`, `PersonData`).
+    - **Obsolete**: Deprecation level:
+        - **Warning**: C# `[Obsolete]` (compiler warning).
+        - **Error**: C# `[Obsolete(error: true)]` (compile error).
+        - **Delete**: No code generated; type/field must not be referenced.
+    - **ExtraOptions** (JSON):
+        - **Key**: Field used as the key for lookups (`"Id"` or alias field name; default `"Id"`).
+        - **Hide**: If true, no Getter is generated for this Table/Data (default `false`).
+        - **OnDemand**: Lazy-load Data when accessed.
+        - **WeakRef**: Hold lazily loaded Data as WeakReference so it can be collected when unused.
+        - Example: `{"Key":"PawnId", "OnDemand": true}` or `{"OnDemand": true, "WeakRef": true}`.
+    - **Desc**: Description; emitted as a C# comment.
 
-        + Warning: Outputs a warning in the reference code (C# `[Obsolete]` attribute).
+* A row with **Num / Name / Obsolete / FType / ExtraOptions** (and optional Desc) starts field definitions for that type.
 
-        + Error: Causes a compile error in the reference code (C# `[Obsolete(error:true)]` attribute).
+    - **Num**: Field number (must follow Protocol Buffers numbering rules).
+    - **Name**: Field name.
+    - **Obsolete**: Same as above (Warning/Error/Delete).
+    - **FType**: Field type: a basic proto type, a user-defined Message/Enum, or a collection (List/Map).
 
-        + Delete: Does not generate code for the type or field (must not be referenced in TableSet).
+        - **Basic types**: Bool, Int32, SInt32, SFixed32, UInt32, Fixed32, Int64, SInt64, SFixed64, UInt64, Fixed64, Float, Double, String, Bytes (Base64 in sheet).
+        - **Custom types**: DateTime, TimeSpan, Guid, Uri (stored as UInt64/Int64/String internally).
+        - **Message/Enum**: Types defined in your Define sheet.
+        - **Collections**: `List<ElementType>`, `Map<KeyType,ValueType>` (e.g. `List<String>`, `Map<Int32,String>`).
 
-    - ExtraOptions column: Additional settings (JSON format).
+    - **ExtraOptions** (for RefId fields): **Get** generates a getter that resolves the reference.
+        - `{"Get": "String"}` → `public String Name => Instance.GetString(NameRefId);`
+        - `{"Get": "BoxData"}` → `public BoxData Box => Instance.GetBoxData(BoxRefId);`
+    - **Desc**: Description; emitted as a C# comment.
 
-        + Key: Data handling key field name (specify Id field or Alias field, default is "Id").
+* **Conventions**
+    - **Table**: Name should end with `Table` (e.g. `BoxDataTable`). It must have one field of type `Map<Key,Data>` (e.g. `Map<SFixed32,PersonData>`).
+    - **Data**: Name should end with `Data` (e.g. `BoxData`). Must have an **Id** field (Int32/SInt32/SFixed32 or Enum). **IdAlias** (String) is optional and allows lookup by alias. **RefId** / **RefIdAlias** reference other Data by Id or Alias. You can have one collection of NestedData (List or Map) per Table; multiple single (non-collection) NestedData types are allowed.
 
-        + Hide: When generating the TableSet class, does not generate Getter functions for Table or Data (default is "false").
+## Other Notes
 
-        + OnDemand: Enables lazy loading when accessing Data records managed by the Table.
+* **Field numbers (Num)**:
+    - Allowed range: 1 to 536,870,911 (Protocol Buffers rules).
+    - Reserved: 19,000–19,999 (Google), 18,000–18,999 (xpTURN.MegaData).
+    - 1–15 use 1 byte when encoded; 16–2047 use 2 bytes. Prefer 1–15 or at least &lt; 2047.
+    - Do not reuse a number for a different purpose; see [Updating A Message Type](https://protobuf.dev/programming-guides/proto3/#updating).
 
-        + WeakRef: Manages lazily loaded Data as WeakReference; if the reference is removed, it will be collected by GC.
+* Rows or columns whose name starts with **#** are ignored (comments or helper data).
 
-            + Example
-                ```json
-                {"Key":"PawnId", "OnDemand": true}
-                ```
-                ```json
-                {"OnDemand": true, "WeakRef": true}
-                ```
-
-    - Desc column: Enter a description for the table; this will be generated as a C# comment.
-
-* Add the Num/Name/Obsolete/FType/ExtraOptions columns to indicate the start of field definitions.
-
-    - Num column: Enter the field number (must follow proto Number conventions for input and management).
-
-    - Name column: Enter the field name.
-
-    - Obsolete column: Set deprecation attributes (Warning/Error/Delete).
-
-    - FType column: Enter the basic proto variable type, a user-defined Message/Enum type, or a collection type such as List or Map.
-
-        + Basic types:
-            + Bool
-            + Int32, SInt32, SFixed32
-            + UInt32, Fixed32
-            + Int64, SInt64, SFixed64
-            + UInt64, Fixed64
-            + Float
-            + Double
-            + String
-            + Bytes (input as Base64 text in the sheet)
-
-        + Custom types:
-            + DateTime (serialized internally as UInt64: Ticks | Kind << 62)
-            + TimeSpan (serialized internally as Int64)
-            + Guid (serialized internally as String)
-            + Uri (serialized internally as String)
-        
-        + Message / Enum types: Defined by the user in the table definition.
-
-        + Collection types:
-            + List
-            + Map
-
-                > List\<String\>
-
-                > Map\<Int32,String\>
-
-    - ExtraOptions column: Additional settings (JSON format).
-
-        + Get: Generates a Getter function (set in RefId; creates a function that returns the Data referenced by the key).
-
-            If you set the ExtraOptions for the NameRefId field as follows:
-            ```json
-            {"Get": "String"}
-            ```
-            The following code is automatically generated:
-            ```cs
-            public String Name => Instance.GetString(NameRefId);
-            ```
-            If you set the ExtraOptions for the BoxRefId field as follows:
-            ```json
-            {"Get": "BoxData"}
-            ```
-            The following code is automatically generated:
-            ```cs
-            public BoxData Box => Instance.GetBoxData(BoxRefId);
-            ```
-
-    - Desc column: Enter a description for the table; this will be generated as a C# comment.
-
-* Required conventions when using Table
-
-    - Table definition
-
-        + It is recommended that the name ends with "Table" (e.g., BoxDataTable).
-
-        + The Data field must be defined as a Map collection type (Map<Int32,BoxData> or Map<String,BoxData>).
-
-    - Data definition
-
-        + It is recommended that the type name ends with "Data" (e.g., BoxData).
-
-        + The Id field must be provided (NestedData is not required).
-            + Id can only use Int32 (Int32, SInt32, SFixed32) or Enum types.
-
-        + If an IdAlias field is provided, you can assign a string alias to the Data record and use it as a Key value (optional).
-
-        + If a field ending with RefId is provided, you can access Data type record indexes defined elsewhere using the Id value.
-
-        + If a RefIdAlias field is provided, you can access data using the Alias Key value (must be used together with RefId).
-
-        + You can define child Nested Data using List<NestedData> or Map<Int32,NestedData> (no limit on the number of owned items, but only one can be used per sheet).
-
-        + There is no limit on the number of single NestedData types owned.
-
-## Etc
-
-* Guidelines for entering Num values:
-    - According to proto conventions, you can enter values between 1 and 536,870,911.
-
-    - Note: Values between 19,000 and 19,999 are reserved by Google. Values between 18,000 and 18,999 are reserved by xpTURN.MegaData.
-
-    - Using values between 1 and 15 will serialize as 1 byte; using values between 16 and 2047 will serialize as 2 bytes. (Optimal to use 1–15, recommended to use values below 2047)
-
-    - Be cautious when reusing a previously used number for a different purpose.
-
-        > Note: Refer to Google’s [Updating A Message Type](https://protobuf.dev/programming-guides/proto3/#updating) documentation.
-
-* Fields starting with # are ignored. You can use these for comments or as intermediate data when composing data records.
-
-* Enum type definitions use only the Type, Name, Num, and Obsolete columns.
+* **Enum** definitions use only the Type, Name, Num, and Obsolete columns.

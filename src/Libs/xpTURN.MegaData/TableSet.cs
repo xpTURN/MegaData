@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.IO;
 using System.Collections.Generic;
 using System.Runtime.Serialization;
@@ -11,6 +11,9 @@ namespace xpTURN.MegaData
     [DataContract]
     public abstract partial class TableSet : IDisposable
     {
+        private const uint MAGIC_NUMBER = 0x4D454741; // "MEGA"
+        private const uint CURRENT_VERSION = 1;
+
         #region Protobuf Serialize
         [DataMember]
         protected Header Header { get; set; } = new();
@@ -20,12 +23,15 @@ namespace xpTURN.MegaData
         protected SortedList<string, Table> Tables { get; set; } = new();
         #endregion
 
-        #region FileSturcture
+        #region FileStructure
         private string FileName { get; set; } = string.Empty;
+
+        private const int MagicSize = 4;
+        private const int VersionSize = 4;
         private int HeaderSize { get; set; } = 0;
         private int MetaSize { get; set; } = 0;
-        private long HeaderLocation => 0;
-        private int MetaLocation => HeaderSize != 0 ? ComputeInt32Size(HeaderSize) + HeaderSize : 0;
+        private long HeaderLocation => MagicSize + VersionSize;
+        private long MetaLocation => HeaderLocation + (HeaderSize != 0 ? ComputeInt32Size(HeaderSize) + HeaderSize : 0);
         private long TableLocation => MetaLocation + (MetaSize != 0 ? ComputeLengthSize(MetaSize) + MetaSize : 0);
         #endregion
 
@@ -33,7 +39,7 @@ namespace xpTURN.MegaData
         public bool IsRuntimeMode { get; private set; } = true;
         public bool IsPrepareAll { get; private set; } = false;
         public bool EnableWeakRef { get; private set; } = true;
-        private Stream StreamForOndemand { get; set; } = null;
+        private Stream StreamForOnDemand { get; set; } = null;
         #endregion
 
         #region Public Method
@@ -63,8 +69,8 @@ namespace xpTURN.MegaData
                 table.Dispose();
             }
 
-            StreamForOndemand?.Dispose();
-            StreamForOndemand = null;
+            StreamForOnDemand?.Dispose();
+            StreamForOnDemand = null;
         }
 
         public string ToJson() => JsonWrapper.ToJson(this);
@@ -74,7 +80,7 @@ namespace xpTURN.MegaData
         abstract protected Table RawCreateTable(int tableId);
         virtual protected Data RawCreateData(int tableId) => null;
         abstract protected SortedDictionary<string, int> TableAlias { get; }
-        virtual protected bool IsOndemandTable(int tableId) => false;
+        virtual protected bool IsOnDemandTable(int tableId) => false;
         virtual protected bool IsWeakRefTable(int tableId) => false;
 
         public int GetTableId(string tableAlias)
@@ -91,7 +97,7 @@ namespace xpTURN.MegaData
         protected long GetDataOffset(Table table, int dataId, string dataAlias)
         {
             var metaData = table.GetMetaNestedData();
-            if (!table.IsOndemand || metaData == null)
+            if (!table.IsOnDemand || metaData == null)
             {
                 return -1L;
             }
@@ -127,7 +133,7 @@ namespace xpTURN.MegaData
                 return null;
             }
 
-            table.IsOndemand = IsOndemandTable(tableId);
+            table.IsOnDemand = IsOnDemandTable(tableId);
             table.IsWeakRef = IsWeakRefTable(tableId);
 
             return table;
@@ -198,7 +204,7 @@ namespace xpTURN.MegaData
             if (data != null)
                 return data; // Data already loaded
 
-            if (!table.IsOndemand || table.GetMetaNestedData() == null)
+            if (!table.IsOnDemand || table.GetMetaNestedData() == null)
                 return null;
 
             data = LoadOnDemand(table, tableId, dataId: dataId);
@@ -328,13 +334,13 @@ namespace xpTURN.MegaData
             }
 
             var tableId = TableAlias[tableName];
-            table.IsOndemand = IsOndemandTable(tableId);
+            table.IsOnDemand = IsOnDemandTable(tableId);
             table.IsWeakRef = IsWeakRefTable(tableId);
 
             // If the table is on-demand, initialize the stream for on-demand data
-            if (table.IsOndemand)
+            if (table.IsOnDemand)
             {
-                table.GetMetaNestedData()?.InitStream(StreamForOndemand, TableLocation);
+                table.GetMetaNestedData()?.InitStream(StreamForOnDemand, TableLocation);
             }
 
             // If it doesn't exist, add the new data table

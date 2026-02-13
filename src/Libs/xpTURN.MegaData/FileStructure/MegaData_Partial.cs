@@ -21,7 +21,7 @@ namespace xpTURN.MegaData
         public List<Data> ListOnDemandData { get; set; } = null;
 
         [IgnoreDataMember]
-        public Stream StreamForOndemand { get; private set; } = null;
+        public Stream StreamForOnDemand { get; private set; } = null;
 
         [IgnoreDataMember]
         public long TableLocation { get; set; } = 0;
@@ -56,13 +56,13 @@ namespace xpTURN.MegaData
 
         public void InitStream(Stream stream, long tableLocation)
         {
-            StreamForOndemand = stream;
+            StreamForOnDemand = stream;
             TableLocation = tableLocation;
         }
 
         public void Dispose()
         {
-            StreamForOndemand = null;
+            StreamForOnDemand = null;
         }
 
         public void AddOnDemandData(Data data)

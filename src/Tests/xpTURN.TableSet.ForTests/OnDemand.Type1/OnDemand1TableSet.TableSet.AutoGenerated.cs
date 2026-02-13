@@ -51,7 +51,7 @@ namespace Tests.OnDemand.Type1
             { nameof(NumbersDataTable), 2 },
             { nameof(SampleDataTable), 3 },
         };
-        override protected bool IsOndemandTable(int tableId) => tableId switch
+        override protected bool IsOnDemandTable(int tableId) => tableId switch
         {
             1 => true, // NumberDataTable
             2 => true, // NumbersDataTable

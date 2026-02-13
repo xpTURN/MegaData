@@ -72,7 +72,7 @@ namespace xpTURN.MegaData
     {
         protected List<TableSetPostProcess> GetAllPostProcessors()
         {
-            //
+            // Discover and instantiate post-processor types.
             List<TableSetPostProcess> postProcessors = new List<TableSetPostProcess>();
 
             // Load all dependencies
@@ -108,7 +108,7 @@ namespace xpTURN.MegaData
 
         protected List<TableSetCheckPostProcess> GetAllCheckPostProcessors()
         {
-            // 
+            // Discover and instantiate check post-processor types.
             List<TableSetCheckPostProcess> checkPostProcessors = new List<TableSetCheckPostProcess>();
 
             // Load all dependencies
@@ -155,10 +155,10 @@ namespace xpTURN.MegaData
         protected void CallFunctionNested(IPostProcess postProcessor, IPostProcess.Context context, Data data, string functionName)
         {
             var type = data.GetType();
-            var fields = type.GetFields(BindingFlags.Public | BindingFlags.NonPublic | BindingFlags.Instance);
+            var fields = type.GetFields(BindingFlags.Public | BindingFlags.NonPublic | BindingFlags.Instance).ToList();
 
             // NestedData : Dictionary<key?, Message>
-            var mapFields = fields.ToList().FindAll(field => field.IsDictionary() &&
+            var mapFields = fields.FindAll(field => field.IsDictionary() &&
                                                     typeof(Data).IsAssignableFrom(field.FieldType.GetCollectionElementType()));
             foreach (var field in mapFields)
             {
@@ -176,7 +176,7 @@ namespace xpTURN.MegaData
             }
 
             // NestedData : Message field
-            var dataFields = fields.ToList().FindAll(field => typeof(Data).IsAssignableFrom(field.FieldType));
+            var dataFields = fields.FindAll(field => typeof(Data).IsAssignableFrom(field.FieldType));
 
             foreach (var field in dataFields)
             {
@@ -191,7 +191,7 @@ namespace xpTURN.MegaData
             }
 
             // NestedData : List<Message> field
-            var listFields = fields.ToList().FindAll(field => field.IsListArg<Data>());
+            var listFields = fields.FindAll(field => field.IsListArg<Data>());
 
             foreach (var field in listFields)
             {
@@ -211,10 +211,8 @@ namespace xpTURN.MegaData
 
         protected void CallFunction(IPostProcess postProcessor, IPostProcess.Context context, string functionName)
         {
-            //
+            // Log and inject TableSet into post-processor.
             Logger.Log.Info($"{functionName}");
-
-            //
             InvokeUtils.SetPropValue(postProcessor, "TableSet", this);
             InvokeUtils.InvokeFunc(postProcessor, functionName, new Type[] { typeof(IPostProcess.Context), typeof(TableSet) }, new object[] { context, this });
 
@@ -232,7 +230,7 @@ namespace xpTURN.MegaData
 
         public void PostProcess()
         {
-            //
+            // Run all post-processors in order.
             IPostProcess.Context context = new IPostProcess.Context();
             List<TableSetPostProcess> postProcessors = GetAllPostProcessors();
 
@@ -245,16 +243,9 @@ namespace xpTURN.MegaData
                 Logger.Log.Info($"{postProcessor.GetType().FullName} (Order: {postProcessor.Order})");
                 Logger.Log.Indent();
 
-                // Begin
-                //
+                // Begin / PostProcess / End phases.
                 CallFunction(postProcessor, context, "Begin");
-
-                // PostProcess
-                //
                 CallFunction(postProcessor, context, "PostProcess");
-
-                // End
-                // 
                 CallFunction(postProcessor, context, "End");
 
                 Logger.Log.Outdent();
@@ -268,20 +259,16 @@ namespace xpTURN.MegaData
 
         public void CheckData()
         {
-            //
+            // Run all check post-processors in order.
             IPostProcess.Context context = new IPostProcess.Context();
             List<TableSetCheckPostProcess> checkPostProcessors = GetAllCheckPostProcessors();
 
             Logger.Log.Info($"CheckData Start");
             Logger.Log.Info($"");
 
-            //
             foreach (var postProcessor in checkPostProcessors)
             {
                 Logger.Log.Info($"{postProcessor.GetType().FullName}.CheckData (Order: {postProcessor.Order})");
-
-                // CheckData
-                //
                 CallFunction(postProcessor, context, "CheckData");
             }
         }

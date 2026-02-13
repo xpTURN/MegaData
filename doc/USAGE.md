@@ -1,17 +1,18 @@
 # Project Integration
-You can refer to [SampleProj](../examples/SampleProj) for an example of using MegaData in a Unity project.
+
+See [SampleProj](../examples/SampleProj) for a Unity example.
 
 ### Getting the Source
-Download the project from the [source repository](https://github.com/xpTURN/MegaData) and perform the basic build.
+Clone or download from the [repository](https://github.com/xpTURN/MegaData) and build the solution.
 
 ### Initial Project Setup
-Create a TableSet project for your own project. You can refer to [xpTURN.TableSet.Samples](../src/Samples/xpTURN.TableSet.Samples) to create one yourself, or copy and rename the sample project.
+Create a TableSet project (or copy and rename [xpTURN.TableSet.Samples](../src/Samples/xpTURN.TableSet.Samples)).
 
-### TableSet Configuration
-Define the data structures you will use in your project by referring to [Data Definition](./DATA.md).
+### Data Structure Definition
+Define your TableSet, Tables, and Data types in Excel as described in [Data Definition](./DEFINE.md).
 
 ### TableSet Source Generation
-Generate code based on your definitions. The generated TableSet project's .dll file should be placed in the same folder as xpTURN.ProtoGen.dll.
+Generate C# and .proto from your Define sheets. Build the TableSet project and place its output .dll in the same directory as xpTURN.Converter (and ProtoGen) so the converter can load your types.
 
 Example code generation:
 ```sh
@@ -31,10 +32,10 @@ Note: MyProduct.TableSet.dll is an example .dll containing your own TableSet.
 Note: System.Runtime.CompilerServices.Unsafe.dll is required for .NET Standard 2.1 binaries, but not needed for .NET 8.0 or higher.
 
 ### Data Input
-Structure your data according to the defined Table structure. See [How to Structure Data](DATA.md).
+Enter or export data in Excel or JSON following your Table definitions. See [Data Input](DATA.md).
 
-### Data Binarization
-Convert your data for runtime use with the converter tool.
+### Data Conversion
+Run the converter to produce binary files for runtime.
 
 Example data conversion:
 ```sh
@@ -42,7 +43,7 @@ dotnet ./xpTURN.Converter.dll --input="../../../Samples/DataSet/Sample1" --outpu
 ```
 
 ### Data Loading and Usage
-Write code as below to load your data:
+Load the binary data in code, for example:
 ```cs
 // Set the logger to use Unity's Debug class
 xpTURN.Common.Logger.Log.SetLogger(new xpLogger());
@@ -55,8 +56,7 @@ Sample1TableSet.Instance.LoadAdditive($"{Application.streamingAssetsPath}/Sample
 var cultureInfo = new CultureInfo("en-US");
 Sample1TableSet.Instance.SetLocale(cultureInfo.LCID);
 ```
-Note: Adjust Subset files (Sample1TableSet.Locale.bytes) and SetLocale settings as needed for your project.
-Note: SetLogger can also be configured as needed.
+Adjust subset files (e.g. `Sample1TableSet.Locale.bytes`) and `SetLocale` to match your project. You can also configure `SetLogger` as needed.
 
 Example of accessing data:
 ```cs
@@ -68,13 +68,13 @@ Debug.Log($"BoxData: {boxData.Name}");
 ### Continuous Management
 Data definitions and inputs change regularly during project development. Automating these tasks with a CI tool is recommended.
 
-#### Table Processing
-If you need to process data, inherit from TableSetPostProcess. See [example](../src/Samples/xpTURN.TableSet.Samples/Sample1/LocaleTablePostProcess.cs).
+#### Post-Processing
+To run logic after loading (e.g. locale resolution), inherit from **TableSetPostProcess**. Example: [LocaleTablePostProcess](../src/Tests/xpTURN.TableSet.ForTests/Locale.Type2/LocaleTablePostProcess.cs).
 
-For logical validation of input data, also inherit from TableSetPostProcess and write your validation code.
+For validation, inherit from **TableSetCheckPostProcess** and implement `CheckData`.
 
-#### Mass Data Production / Data Integration with Internal Tools
-If you generate data with internal tools, you can save it as a Json file and integrate it into TableSet as shown below.
+#### Bulk Data from Internal Tools
+To feed data from your own tools, export to JSON and load it via the converter. Example:
 
 Example of saving:
 ```cs
@@ -97,8 +97,7 @@ JsonUtils.ToJsonFile(boxDataTable, $"{Application.dataPath}/../DataSet/BoxDataTa
 See [JsonUtils](../examples/SampleProj/Assets/Scripts/JsonUtils.cs) for reference.
 
 #### Using Subsets
-If you need to distribute some tables separately, configure as below and place it in the root of your data folder. The data will be saved separately during conversion.
-You can set multiple subsets, but the same table cannot be included in multiple subsets.
+To ship some tables in separate files (e.g. locale data), add a **Subset.json** file in the root of your data folder. The converter will write those tables to separate binaries. You can define multiple subsets; each table may belong to at most one subset.
 
 ```json
 {
@@ -114,5 +113,4 @@ You can set multiple subsets, but the same table cannot be included in multiple 
   }
 }
 ```
-* The "Locale" part is where you enter the subset name.
-* The "Tables" list contains the tables to be saved separately.
+Replace `"Locale"` with your subset name; list the table names under `"Tables"` that should be saved in that subset file.
